@@ -48,10 +48,10 @@ A multihomed network topology with various nodes are implemented with UDP and TC
 
 ### [Term Project Phase2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Term%20project/Group68_part2)
 Same network topology extended and some experiments done on it.
-Specifically, a unique multihomed and pipelined Reliable Data Transfer (RDT) has been implemented.
+Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol (RDT) has been implemented.
 
 ### [Wireshark Assignments](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Wireshark%20assignments)
 
 ## [CENG 445 Software Engineering with Scripting Languages](https://github.com/ysyesilyurt/Metu-CENG/tree/master/445)
-### [LogWatcher](https://github.com/ysyesilyurt/LogWatcher)
+### [LogWatcher](https://github.com/simsekhalit/LogWatcher)
 
