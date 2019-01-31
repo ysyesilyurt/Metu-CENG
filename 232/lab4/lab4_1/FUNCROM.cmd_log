@@ -1,0 +1,63 @@
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCROM.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCROM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc FUNCROM.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCROM_map.ncd FUNCROM.ncd FUNCROM.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCROM.twx FUNCROM.ncd -o FUNCROM.twr FUNCROM.pcf 

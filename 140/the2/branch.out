@@ -1,0 +1,78 @@
+
+ 11       0 1 2 3
+          + + + + -
+  1:  ilk +
+ 12:  bnm + +
+123:abcty +
+234:cdehg + + +
+345: werf +
+456:  rqe + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+890:  htv + +
+901:bghdf +
+
+ -3:      -> 678:    y -> 
+
+                          678:    y -> 
+                             |         
+ -2:      -> 234:cdehg -> 678:    y -> 
+
+                          234:cdehg ->              678:    y -> 
+                             |                         |         
+ -1:      ->  12:  bnm -> 234:cdehg -> 456:  rqe -> 678:    y -> 890:  htv -> 
+
+                           12:  bnm ->              234:cdehg ->              456:  rqe ->              678:    y ->              890:  htv -> 
+                             |                         |                         |                         |                         |         
+  0:      ->   1:  ilk ->  12:  bnm -> 123:abcty -> 234:cdehg -> 345: werf -> 456:  rqe -> 567:   rr -> 678:    y -> 789: rtrd -> 890:  htv -> 901:bghdf -> 
+
+
+
+ 11       0 1 2
+          + + + -
+  1:  ilk +
+ 12:  bnm +
+123:abcty + +
+234:cdehg +
+345: werf +
+456:  rqe + +
+567:   rr +
+678:    y +
+789: rtrd + + +
+890:  htv +
+901:bghdf +
+
+ -2:      -> 789: rtrd -> 
+
+                                       789: rtrd -> 
+                                          |         
+ -1:      -> 123:abcty -> 456:  rqe -> 789: rtrd -> 
+
+                                       123:abcty ->                           456:  rqe ->                           789: rtrd -> 
+                                          |                                      |                                      |         
+  0:      ->   1:  ilk ->  12:  bnm -> 123:abcty -> 234:cdehg -> 345: werf -> 456:  rqe -> 567:   rr -> 678:    y -> 789: rtrd -> 890:  htv -> 901:bghdf -> 
+
+
+
+ 11       0 1
+          + + -
+  1:  ilk +
+ 12:  bnm +
+123:abcty +
+234:cdehg + +
+345: werf +
+456:  rqe +
+567:   rr +
+678:    y + +
+789: rtrd +
+890:  htv +
+901:bghdf +
+
+ -1:      -> 234:cdehg -> 678:    y -> 
+
+                                                    234:cdehg ->                                        678:    y -> 
+                                                       |                                                   |         
+  0:      ->   1:  ilk ->  12:  bnm -> 123:abcty -> 234:cdehg -> 345: werf -> 456:  rqe -> 567:   rr -> 678:    y -> 789: rtrd -> 890:  htv -> 901:bghdf -> 
+
+

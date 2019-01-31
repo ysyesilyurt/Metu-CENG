@@ -1,0 +1,31 @@
+==3137== Memcheck, a memory error detector
+==3137== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==3137== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==3137== Command: ./the2
+==3137== 
+new list
+  0       0
+          + -
+
+ 10       0 1 2 3
+          + + + + -
+123:  abc +
+234:  cde + +
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+890:  htv + + + +
+901:  bgh +
+912:  bnm + +
+
+==3137== 
+==3137== HEAP SUMMARY:
+==3137==     in use at exit: 0 bytes in 0 blocks
+==3137==   total heap usage: 25 allocs, 25 frees, 480 bytes allocated
+==3137== 
+==3137== All heap blocks were freed -- no leaks are possible
+==3137== 
+==3137== For counts of detected and suppressed errors, rerun with: -v
+==3137== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

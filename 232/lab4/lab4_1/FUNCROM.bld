@@ -1,0 +1,35 @@
+Release 12.4 ngdbuild M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: /home/yavuz/Xilinxx/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCROM.ngc
+FUNCROM.ngd
+
+Reading NGO file "/home/yavuz/Desktop/lab4_1/FUNCROM.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 243844 kilobytes
+
+Writing NGD file "FUNCROM.ngd" ...
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+Writing NGDBUILD log file "FUNCROM.bld"...

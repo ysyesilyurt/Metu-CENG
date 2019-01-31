@@ -1,0 +1,157 @@
+#/* $begin ncopy-ys */
+##################################################################
+# ncopy.ys - Copy a src block of len words to dst.
+# Return the number of positive words (>0) contained in src.
+#
+# Include your name and ID here.
+# name = Yavuz Selim Yesilyurt
+# ID = 2259166
+##
+# Describe how and why you modified the baseline code.
+## 
+# I used "iaddq" instruction here, which I implemented in "pipe-full.hcl" file,
+# in many places when I increment registers, to make increment operations faster
+##
+# In function entrance I constructed a loop which advances with decrementing len 
+# by 7 on each loop test for utilization of loop unrolling 7 times. Loop body
+# basically retrieves 7 in order values from src and checks if val > 0 for each
+# in order value and copies these values to dest in order again.
+##
+# Whenever len < 7 in the loop, then loop breaks and starts making its job one by one;
+# that is, first it checks if len == 0 and if it's not, it retrieves the value
+# of the next item in src and checks for if val > 0. This operation is repeated until
+# len = 0 and eventually directed to the "Done" label and returns.
+##
+# Also, I tried to be careful against Load-Use Hazards (data dependence), whenever I  
+# loaded a register with a value I tried to not to use that register immediately, if 
+# possible, I inserted at least 1 instruction in between (loading and usage).
+##
+##################################################################
+# Do not modify this portion
+# Function prologue.
+# %rdi = src, %rsi = dst, %rdx = len
+
+ncopy:
+	iaddq $-7, %rdx 			# len -= 7
+	jl len_lt_7					# if (len < 0) then go to len_lt_7
+								# else fall through to loop for len >= 7
+loop7: 
+	mrmovq (%rdi), %r8 			# read 1st val from src
+	mrmovq 8(%rdi), %r9 		# read 2nd val from src
+	mrmovq 16(%rdi), %r10 		# read 3rd val from src
+	mrmovq 24(%rdi), %r11 		# read 4th val from src
+	andq %r8, %r8 				# check if 1st val <= 0 
+	jle npos1 					# if so, go to npos1
+	iaddq $1, %rax 				# else, count++
+
+npos1:
+	rmmovq %r8, (%rsi) 			# deploy 1st val to dest
+	rmmovq %r9, 8(%rsi) 		# deploy 2nd val to dest
+	rmmovq %r10, 16(%rsi) 		# deploy 3rd val to dest
+	rmmovq %r11, 24(%rsi) 		# deploy 4th val to dest
+	andq %r9, %r9 				# check if 2nd val <= 0 
+	jle npos2					# if so, go to npos2
+	iaddq $1, %rax				# else, count++ and fall through
+
+npos2:
+	andq %r10, %r10 			# check if 3rd val <= 0 
+	jle npos3					# if so, go to npos3
+	iaddq $1, %rax				# else, count++ and fall through
+
+npos3:
+	mrmovq 32(%rdi), %r8 		# read 5th val from src
+	mrmovq 40(%rdi), %r9 		# read 6th val from src
+	mrmovq 48(%rdi), %r10 		# read 7th val from src
+	andq %r11, %r11				# check if 4th val <= 0 
+	jle npos4					# if so, go to npos4
+	iaddq $1, %rax				# else, count++ and fall through
+
+npos4:
+	rmmovq %r8, 32(%rsi) 		# deploy 5th val to dest
+	rmmovq %r9, 40(%rsi) 		# deploy 6th val to dest
+	rmmovq %r10, 48(%rsi) 		# deploy 6th val to dest
+	andq %r8, %r8 				# check if 5th val <= 0
+	jle npos5					# if so, go to npos5
+	iaddq $1, %rax				# else, count++ and fall through
+
+npos5:
+	andq %r9, %r9				# check if 6th val <= 0
+	jle npos6					# if so, go to npos6
+	iaddq $1, %rax				# else, count++ and fall through
+
+npos6:
+	andq %r10, %r10				# check if 7th val <= 0
+	jle iter					# if so, go to npos7
+	iaddq $1, %rax				# else, count++ and fall through
+
+iter:
+	iaddq $56, %rdi 			# increment src by 7 quad
+	iaddq $56, %rsi 			# increment dest by 7 quad
+	iaddq $-7, %rdx 			# len -= 7
+	jge loop7 					# check if len >= 0
+
+len_lt_7:  
+	iaddq $6, %rdx          	# return len to the right value
+
+Remainder1:
+	jl     0x31           		# return if len == 0
+	mrmovq (%rdi), %r8	     	# read 1st val from src
+	mrmovq 8(%rdi), %r9    		# read 2nd val from src
+	rmmovq %r8, (%rsi)     		# deploy 1st val to dest
+	andq   %r8, %r8       		# check if 1st val <= 0
+	jle    Remainder2           # if so, go to Remainder2
+	iaddq  $1, %rax         	# else, count++ and fall through
+
+Remainder2: 
+	iaddq  $-1, %rdx        	# len-- 
+	jl     0x31             	# return if len == 0
+	rmmovq %r9, 8(%rsi)	    	# deploy 2nd val to dest
+	andq   %r9, %r9       		# check if 2nd val <= 0
+	jle    Remainder3           # if so, go to Remainder3 
+	iaddq  $1, %rax         	# else, count++ and fall through
+
+Remainder3: 
+	iaddq  $-1, %rdx        	# len-- 
+	jl     0x31             	# return if len == 0
+	mrmovq 16(%rdi), %r8	   	# read 3rd val from src
+	mrmovq 24(%rdi), %r9		# read 4th val from src
+	rmmovq %r8, 16(%rsi) 	  	# deploy 3rd val to dest
+	andq   %r8, %r8        		# check if 3rd val <= 0
+	jle    Remainder4           # if so, go to Remainder4 
+	iaddq  $1, %rax         	# else, count++ and fall through
+
+Remainder4: 
+	iaddq  $-1, %rdx        	# len--
+	jl     0x31	      			# return if len == 0 
+	rmmovq %r9, 24(%rsi)   		# deploy 4th val to dest
+	andq   %r9, %r9       		# check if 4th val <= 0
+	jle    Remainder5           # if so, go to Remainder5
+	iaddq  $1, %rax 			# else, count++ and fall through
+
+Remainder5: 
+	iaddq  $-1, %rdx        	# len--
+	jl     0x31             	# return if len == 0 
+	mrmovq 32(%rdi), %r8   		# read 5th val from src
+	mrmovq 40(%rdi), %r9		# read 6th val from src
+	rmmovq %r8, 32(%rsi)   		# deploy 5th val to dest
+	andq   %r8, %r8       		# check if 5th val <= 0
+	jle    Remainder6           # if so, go to Remainder6
+	iaddq $1, %rax 				# else, count++ and fall through
+
+Remainder6: 
+	iaddq  $-1, %rdx        	# len--
+	jl     0x31             	# return if len == 0 
+	rmmovq %r9, 40(%rsi)   		# deploy 6th val to dest
+	andq   %r9, %r9       		# check if 6th val <= 0
+	jle    0x31             	# if so, go to Done
+	iaddq $1, %rax 				# else, count++ and fall through 
+
+##################################################################
+# Do not modify the following section of code
+# Function epilogue.
+Done:
+	ret
+##################################################################
+# Keep the following label at the end of your function
+End:
+#/* $end ncopy-ys */

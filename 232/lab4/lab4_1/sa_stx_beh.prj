@@ -1,0 +1,2 @@
+verilog isim_temp "testbench_ROM.v"
+verilog isim_temp "/home/yavuz/Xilinxx/ISE_DS/ISE//verilog/src/glbl.v"

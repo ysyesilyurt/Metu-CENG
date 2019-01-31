@@ -1,0 +1,261 @@
+Release 12.4 - xst M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Board232.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Board232.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Board232"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : Board232
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab5_2.v" in library work
+Compiling verilog file "Board232.v" in library work
+Module <Elevator> compiled
+Module <Board232> compiled
+No errors in compilation
+Analysis of file <"Board232.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Board232> in library <work>.
+
+Analyzing hierarchy for module <Elevator> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Board232>.
+WARNING:Xst:905 - "Board232.v" line 61: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <currentFloor1>, <doorOpen1>, <currentFloor2>, <doorOpen2>, <seg_digits>
+Module <Board232> is correct for synthesis.
+ 
+Analyzing module <Elevator> in library <work>.
+Module <Elevator> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Elevator>.
+    Related source file is "lab5_2.v".
+    Found 4-bit updown counter for signal <currentFloor2>.
+    Found 1-bit register for signal <state>.
+    Found 1-bit register for signal <doorOpen1>.
+    Found 1-bit register for signal <doorOpen2>.
+    Found 1-bit register for signal <listBusy>.
+    Found 4-bit register for signal <listingLeds>.
+    Found 4-bit updown counter for signal <currentFloor1>.
+    Found 33-bit adder for signal <$add0000> created at line 144.
+    Found 33-bit adder for signal <$add0001> created at line 170.
+    Found 33-bit subtractor for signal <$sub0000> created at line 89.
+    Found 33-bit subtractor for signal <$sub0001> created at line 89.
+    Found 33-bit subtractor for signal <$sub0002> created at line 89.
+    Found 33-bit subtractor for signal <$sub0003> created at line 89.
+    Found 33-bit subtractor for signal <$sub0004> created at line 89.
+    Found 33-bit subtractor for signal <$sub0005> created at line 89.
+    Found 33-bit subtractor for signal <$sub0006> created at line 89.
+    Found 33-bit subtractor for signal <$sub0007> created at line 144.
+    Found 33-bit subtractor for signal <$sub0008> created at line 170.
+    Found 33-bit comparator greater for signal <currentFloor1$cmp_gt0000> created at line 151.
+    Found 33-bit comparator greater for signal <currentFloor2$cmp_gt0000> created at line 177.
+    Found 33-bit comparator equal for signal <doorOpen1$cmp_eq0000> created at line 144.
+    Found 34-bit comparator equal for signal <doorOpen1$cmp_eq0001> created at line 144.
+    Found 33-bit comparator equal for signal <doorOpen1$cmp_eq0002> created at line 144.
+    Found 33-bit comparator equal for signal <doorOpen2$cmp_eq0000> created at line 170.
+    Found 34-bit comparator equal for signal <doorOpen2$cmp_eq0001> created at line 170.
+    Found 33-bit comparator equal for signal <doorOpen2$cmp_eq0002> created at line 170.
+    Found 32-bit comparator equal for signal <old_listBusy_5$cmp_eq0001> created at line 62.
+    Found 32-bit subtractor for signal <old_taskCount_10$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_10$cmp_eq0000> created at line 85.
+    Found 32-bit subtractor for signal <old_taskCount_11$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_11$cmp_eq0000> created at line 85.
+    Found 32-bit subtractor for signal <old_taskCount_12$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_12$cmp_eq0000> created at line 85.
+    Found 32-bit subtractor for signal <old_taskCount_13$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_13$cmp_eq0000> created at line 85.
+    Found 32-bit adder for signal <old_taskCount_3$addsub0000> created at line 53.
+    Found 32-bit subtractor for signal <old_taskCount_7$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_7$cmp_eq0000> created at line 85.
+    Found 32-bit subtractor for signal <old_taskCount_8$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_8$cmp_eq0000> created at line 85.
+    Found 32-bit subtractor for signal <old_taskCount_9$addsub0000> created at line 92.
+    Found 4-bit comparator equal for signal <old_taskCount_9$cmp_eq0000> created at line 85.
+    Found 4-bit register for signal <task1>.
+    Found 4-bit register for signal <task2>.
+    Found 32-bit register for signal <taskCount>.
+    Found 32-bit subtractor for signal <taskCount$addsub0000> created at line 109.
+    Found 32-bit register for signal <tasks>.
+    Found 4-bit comparator equal for signal <tasks_6$cmp_eq0000> created at line 104.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  80 D-type flip-flop(s).
+	inferred  20 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 324 Multiplexer(s).
+Unit <Elevator> synthesized.
+
+
+Synthesizing Unit <Board232>.
+    Related source file is "Board232.v".
+WARNING:Xst:647 - Input <btn<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sw<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <seg_digits> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16x7-bit ROM for signal <seg>.
+    Found 1-of-4 decoder for signal <an>.
+    Found 27-bit up counter for signal <mclk_counter>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <Board232> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 20
+ 32-bit adder                                          : 1
+ 32-bit subtractor                                     : 8
+ 33-bit adder                                          : 2
+ 33-bit subtractor                                     : 9
+# Counters                                             : 3
+ 27-bit up counter                                     : 1
+ 4-bit updown counter                                  : 2
+# Registers                                            : 16
+ 1-bit register                                        : 4
+ 32-bit register                                       : 1
+ 4-bit register                                        : 11
+# Comparators                                          : 17
+ 32-bit comparator equal                               : 1
+ 33-bit comparator equal                               : 4
+ 33-bit comparator greater                             : 2
+ 34-bit comparator equal                               : 2
+ 4-bit comparator equal                                : 8
+# Multiplexers                                         : 12
+ 32-bit 4-to-1 multiplexer                             : 10
+ 4-bit 4-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1709 - Edge <Mmux__index0000>, from block <Elevator>, has no source
+INTERNAL_ERROR:Xst:cmain.c:3483:1.56.16.1 - 
+
+   Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support. 
+
+

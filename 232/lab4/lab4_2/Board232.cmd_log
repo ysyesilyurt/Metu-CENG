@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_2/Board232.xst" -ofn "/home/yavuz/Desktop/lab4_2/Board232.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Board232.ucf -p xc3s250e-cp132-5 Board232.ngc Board232.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o Board232_map.ncd Board232.ngd Board232.pcf 
+par -w -intstyle ise -ol high -t 1 Board232_map.ncd Board232.ncd Board232.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Board232.twx Board232.ncd -o Board232.twr Board232.pcf -ucf Board232.ucf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_2/Board232.xst" -ofn "/home/yavuz/Desktop/lab4_2/Board232.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Board232.ucf -p xc3s250e-cp132-5 Board232.ngc Board232.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o Board232_map.ncd Board232.ngd Board232.pcf 
+par -w -intstyle ise -ol high -t 1 Board232_map.ncd Board232.ncd Board232.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Board232.twx Board232.ncd -o Board232.twr Board232.pcf -ucf Board232.ucf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_2/Board232.xst" -ofn "/home/yavuz/Desktop/lab4_2/Board232.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Board232.ucf -p xc3s250e-cp132-5 Board232.ngc Board232.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o Board232_map.ncd Board232.ngd Board232.pcf 
+par -w -intstyle ise -ol high -t 1 Board232_map.ncd Board232.ncd Board232.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Board232.twx Board232.ncd -o Board232.twr Board232.pcf -ucf Board232.ucf 

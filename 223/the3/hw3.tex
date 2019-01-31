@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name :  Yavuz Selim YEŞİLYURT \\
+Id Number :  2259166 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+Let $P(n)$ be the proposition that the square of the sum of the first n positive integers, \ $(1 + 2 + ... + n)^2 =
+(\sum\limits_{k=1}^n k)^2  \geq \sum\limits_{k=1}^n k^2 $. We must do two things to prove that $P(n)$ is true for $n = 1, 2, 3, ...$
+Namely,we must show that $P(1)$ is true and that the conditional statement $P(n)$ implies $P(n + 1)$
+is true for $n = 1, 2, 3, ...$ \\\\
+
+\textbf{BASIS STEP}: For $n = 1$, $P(1)$ is true, set the limits of the sums $n = 1$ and get: $(1)^2 \geq 1^2$ . So Basis Step is complete.\\\\
+
+\textbf{INDUCTIVE STEP}: For the inductive hypothesis we assume that $P(n)$ holds for $n > 1$. That is, we assume that $(\sum\limits_{k=1}^n k)^2  \geq \sum\limits_{k=1}^n k^2 $, namely, $(1 + 2 + ... + n)^2 \geq 1^2 + 2^2 + 3^2 + ... n^2 $
+Under this assumption, it must be shown that $P(n + 1)$ which is $(\sum\limits_{k=1}^{n+1} k)^2  \geq \sum\limits_{k=1}^{n+1} k^2 $ is true, namely, that $(1 + 2 + ... + n + (n+1))^2 \geq 1^2 + 2^2 + 3^2 + ... n^2 + (n+1)^2 $ is also true.\\\\
+To prove $P(n+1)$, we know  $(1 + 2 + ... + n)^2 \geq 1^2 + 2^2 + 3^2 + ... n^2 $ by inductive hypothesis, let $a = 1 + 2 + ... + n $ and $b = 1^2 + 2^2 + 3^2 + ... n^2$, then this inequality can be shown as $a^2 \geq b$.\\\\
+$P(n+1)$ is $(1 + 2 + ... + n + (n+1))^2 \geq 1^2 + 2^2 + 3^2 + ... n^2 + (n+1)^2 $ , so we can call left hand-side of this inequality as $(a + (n+1))^2$ and  right hand-side as $b + (n+1)^2$  \textbf{by inductive hypothesis}.\\
+\begin{equation*}
+\begin{split}
+(a + (n+1))^2  			 &\geq  b + (n+1)^2  \\
+a^2 + 2a(n+1) + (n+1)^2	 &\geq  b + (n+1)^2 \\
+a^2 + 2a(n+1)			 &\geq  b \\
+\end{split}	 
+\end{equation*} \\ 
+We know from inductive hypothesis that $a^2 \geq b$, eliminate both sides, we have $2a(n+1) \geq 0$, namely, $2(1 + 2 + ... + n)(n+1) \geq 0$, since $n > 0$ this last inequality shows that $P(n + 1)$ is true under the assumption that P(n) is true. This
+completes the inductive step. We have completed the basis step and the inductive step, so by mathematical induction we know that $P(n)$ is true for all positive integers $n$. That is, we have proven that $(\sum\limits_{k=1}^n k)^2  \geq \sum\limits_{k=1}^n k^2 $ for all positive integers n.
+
+\section*{Answer 2}
+\textbf{a)} Since, in the game, if a number which is picked up by Alice or Bob sums up to 42 with any of the already picked numbers that person loses the game. So if they play their best strategies the game will not end until 22 choice of picking distinct numbers between 1 and 41 and exactly on $22^{nd}$ choice, the person who chooses the number will lose the game. Let us place the numbers that sums up to 42 to the same box, so the 21 choice of numbers which has been chosen before will be placed to 21 distinct boxes. By Pigeonhole Principle on $22^{nd}$ choice there will be one box which will have $\left \lceil{22/21}\right \rceil$ number in its interior because on $22^{nd}$ Choice some number which sums up to 42 with a number which has already picked (say $a$) will be picked and that number will go to box which contains $a$. Hence, we can say that the person who picks up  $22^{nd}$ Number will lose the game, namely Bob will lose the game.\\\\\\
+\textbf{b)} 
+We have indistinguishable objects and indistinguishable boxes type question. So let's enumerate all ways to pick 3 nonnegative integers that sum up to 5. For each way to pick 3 nonnegative integers, list the integers as seperated with commas. Make the listing in decreasing order (i.e largest integer is followed by integers which adds up to 5 and lower than the largest integer). The ways we can pack the books are:
+\\\\
+5 \\
+4,1 \\
+3,2 \\
+3,1,1 \\
+2,2,1 \\\\
+So there are 5 ways to pick these 3 nonnegative integers.\\
+\\\\
+\textbf{c)} 
+Since $ x_1 , x_2$ and $x_3$ need to be positive integers (i.e at least 1) rewrite the equation as \\
+\begin{equation*}
+\begin{split}
+x_1^{'} +1 + x_2^{'} +1 + x_3^{'} +1 &= 5  \\
+x_1^{'}  + x_2^{'}  + x_3^{'}	 &=  2 \\
+\end{split}	 
+\end{equation*} \\
+Now the question is transformed into, how many ways are there to distribute 2 insdistinguishable balls in 3 distinguishable boxes.
+\\
+We have \\
+$ | | * * $ \\
+number of ways we can list them is $ C(4,2) = 6$
+\section*{Answer 3}
+\begin{align*}
+ (1-x^3)^n &= ((1-x)^3 +3x(1-x))^n  \\
+&=\sum_{k=0}^{n} C(n,k)(1-x)^{3(n-k)}(3x(1-x))^k \\
+&=\sum_{k=0}^{n} C(n,k)(3x)^k(1-x)^{3(n-k)+k} \\
+&= \sum_{k=0}^{n} [C(n,k)3^k]x^k(1-x)^{3n-2k} \\
+\end{align*}
+now turn back to original equation and match the two equations:\\\\
+ $ a_kx^k(1-x)^{3n-2k} = [C(n,k)3^k]x^k(1-x)^{3n-2k} $ \\ 
+\\
+Hence $  a_r = a_k = [C(n,k)3^k] $
+
+\section*{Answer 4}
+The characteristic polynomial of this recurrence relation is $r^3 - 4r^2 + r + 6 = 0$ . The characteristic roots are $r_1 =-1$,  $r_2 = 2$, and $r_3 = 3$, because $r^3 - 4r^2 + r + 6 = (r+1)(r-2)(r-3)$. Hence, the solutions to this recurrence relation are of the form $a_n = c_1 . (-1)^n + c_2 . (2)^n + c_3 . (3)^n + f(n)$ where $c_1$, $c_2$ and $c_3$ are constants and $f(n)$ is a function of the form $f(n) = cn+d$. Solve for $c$ and $d$;\\
+\begin{equation*}
+\begin{split}
+cn +d 		 	 &= (4)(c(n-1)+d) + (-1)(c(n-2)+d) + (-6)(c(n-3)+d) + n-2 \\
+cn +d		 	 &= -3d-3cn+16c+n-2 \\
+4cn-n-16c-4d+2	 	 &= 0 \\
+n(4c-1)+(-16c+4d+2)	 &= 0 \\
+\end{split}	 
+\end{equation*} \\ 
+Equate the coefficients of the last equation and get $c=1/4$ and $d=1/2$. So the solutions of this recurrence relation are of the form  $a_n = c_1 . (-1)^n + c_2 . (2)^n + c_3 . (3)^n + \frac{1}{4}n + \frac{1}{2}$. To find the constants $c_1$, $c_2$ and $c_3$ use the initial conditions. This gives:\\
+\begin{equation*}
+\begin{split}
+a_0		 	 &=  c_1 + c_2 + c_3 + \frac{1}{2} = 3.5 \\
+a_1		 	 &= -c_1 + 2c_2 + 3c_3 + \frac{3}{4} = 4.75\\
+a_2	 		 &=  c_1 + 4c_2 + 9c_3 + 1 = 13\\
+\end{split}	 
+\end{equation*} \\ 
+When these three simultaneous equations are solved for $c_1$, $c_2$ and $c_3$, we find that $c_1 = \frac{5}{6}$,
+$c_2 = \frac{5}{3}$, and $c_3 = \frac{1}{2}$. Hence, the unique solution to this recurrence relation and the given initial
+conditions is  $a_n =  \frac{5}{6}(-1)^n +  \frac{5}{3}(2)^n +  \frac{1}{2}(3)^n + \frac{1}{4}n + \frac{1}{2}$
+
+
+\end{document}
+
+​
+

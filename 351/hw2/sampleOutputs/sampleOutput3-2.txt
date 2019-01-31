@@ -1,0 +1,10 @@
+<index>
+8
+</index>
+<index>
+2
+6
+</index>
+<data>
+<record>2|2003|Database Management Systems 3. Ed.|Raghu Ramakrishan</record>
+</data>

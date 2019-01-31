@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab5_part2/Board232.xst" -ofn "/home/yavuz/Desktop/lab5_part2/Board232.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab5_part2/Board232.xst" -ofn "/home/yavuz/Desktop/lab5_part2/Board232.syr" 

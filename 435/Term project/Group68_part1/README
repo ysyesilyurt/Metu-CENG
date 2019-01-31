@@ -1,0 +1,104 @@
+This packet belongs to Group 68
+2259166 - Yavuz Selim Yesilyurt
+2171916 - Gokhan San
+
+It consists of two parts namely: Code and Report
+
+Code Part has 6 files in the "codes" folder: "source.py" "broker.py" , "router1.py" , "router2.py", "destination.py", "readings.txt"
+
+First of all, scripts in the "codes folder" needs to be deployed to their proper nodes on the network.
+
+Then on each node: "chmod +x <script_name>" command needs to be executed to make the script executable by user.
+
+Afterwards, since nodes' time are not synchronized, we synchronize them with binding them to the same NTP server. 
+Following command is used for this purpose:
+	"sudo ntpdate -u pool.ntp.org"
+
+Then to initiate sending process:
+
+	Firstly broker.py must be executed on b node:
+	./broker.py
+
+	Then router1.py, router2.py and destination.py scripts must be executed on r1, r2 and d nodes respectively:
+	./router1.py
+	./router2.py
+	./destination.py
+
+	Then on s node a file named "readings.txt" which contains data of sensor readings needs to be created for source script to read from and then send.
+	Following bash script has been used for this purpose: 
+		"for i in $(seq 1 11350); do echo DATA$i; done > readings.txt ; echo "DATA1" >> readings.txt"
+	Also this "readings.txt" file is available under "codes" folder, so it can be copied directly from there too.
+	
+	(The reason for us to use this file for sending is, it contains 102400 = 1024 * 100 bytes and 
+		since we send 1024 bytes 100 times (for experiment) this file is useful in that sense)
+
+	Finally source.py script on s node needs to be executed:
+	./source.py
+
+	After this final execution source node will read 1024 bytes from readings.txt file and it will send it 100 times to be able to finish reading file
+
+To show network delay for a node following command has been used:
+	sudo tc qdisc show dev <adapter_name>
+
+To delete network delay for a node following command has been used:
+	sudo tc qdisc del dev <adapter_name> root
+
+To add network delay for experiment following commands has been used:
+	
+	No commands used in s node
+
+	In b:
+		For 1st experiment:
+			sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 1ms 5ms distribution normal
+			sudo tc qdisc add dev eth3 root netem delay 1ms 5ms distribution normal
+		For 2nd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 20ms 5ms distribution normal
+			sudo tc qdisc add dev eth3 root netem delay 20ms 5ms distribution normal
+		For 3rd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 60ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 60ms 5ms distribution normal
+			sudo tc qdisc add dev eth3 root netem delay 60ms 5ms distribution normal
+
+	In r1:
+		For 1st experiment:
+			sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 1ms 5ms distribution normal
+		For 2nd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 20ms 5ms distribution normal
+		For 3rd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 60ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 60ms 5ms distribution normal
+
+	In r2:
+		For 1st experiment:
+			sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 1ms 5ms distribution normal
+		For 2nd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 20ms 5ms distribution normal
+		For 3rd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 60ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 60ms 5ms distribution normal
+
+	In d:
+		For 1st experiment:
+			sudo tc qdisc add dev eth1 root netem delay 1ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 1ms 5ms distribution normal
+		For 2nd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 20ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 20ms 5ms distribution normal
+		For 3rd experiment:
+			(Assuming previous network delays are deleted)
+			sudo tc qdisc add dev eth1 root netem delay 60ms 5ms distribution normal
+			sudo tc qdisc add dev eth2 root netem delay 60ms 5ms distribution normal
+

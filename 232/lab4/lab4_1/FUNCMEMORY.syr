@@ -1,0 +1,378 @@
+Release 12.4 - xst M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: FUNCMEMORY.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FUNCMEMORY.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FUNCMEMORY"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : FUNCMEMORY
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab4_1.v" in library work
+Module <FUNCROM> compiled
+Module <FUNCRAM> compiled
+Module <FUNCMEMORY> compiled
+No errors in compilation
+Analysis of file <"FUNCMEMORY.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <FUNCMEMORY> in library <work>.
+
+Analyzing hierarchy for module <FUNCROM> in library <work>.
+
+Analyzing hierarchy for module <FUNCRAM> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <FUNCMEMORY>.
+Module <FUNCMEMORY> is correct for synthesis.
+ 
+Analyzing module <FUNCROM> in library <work>.
+Module <FUNCROM> is correct for synthesis.
+ 
+Analyzing module <FUNCRAM> in library <work>.
+WARNING:Xst:905 - "lab4_1.v" line 39: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <memo_funcram>
+Module <FUNCRAM> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <FUNCROM>.
+    Related source file is "lab4_1.v".
+    Found 16x5-bit ROM for signal <romData>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <FUNCROM> synthesized.
+
+
+Synthesizing Unit <FUNCRAM>.
+    Related source file is "lab4_1.v".
+WARNING:Xst:1781 - Signal <memo_funcram> is used but never assigned. Tied to default value.
+WARNING:Xst:737 - Found 9-bit latch for signal <dataOut>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4x31-bit ROM for signal <arg$rom0000>.
+    Found 7-bit adder for signal <$add0000> created at line 184.
+    Found 9-bit adder for signal <$add0001> created at line 184.
+    Found 8-bit adder for signal <$add0002> created at line 200.
+    Found 33-bit adder for signal <FAKE_25$add0000> created at line 114.
+    Found 7-bit adder for signal <old_der0_4$sub0000> created at line 95.
+    Found 5-bit adder for signal <old_der0_48$sub0000> created at line 168.
+    Found 5-bit adder for signal <old_der1_49$addsub0000> created at line 172.
+    Found 5-bit adder for signal <old_der1_5$sub0000> created at line 99.
+    Found 3-bit adder for signal <old_der2_50$sub0000> created at line 176.
+    Found 4-bit adder for signal <old_der2_6$sub0000> created at line 103.
+    Found 3-bit adder for signal <old_der3_51$addsub0000> created at line 180.
+    Found 32-bit adder for signal <old_temp_10$addsub0000> created at line 108.
+    Found 33-bit comparator less for signal <old_temp_10$cmp_lt0000> created at line 108.
+    Found 32-bit adder for signal <old_temp_28$addsub0000> created at line 119.
+    Found 33-bit comparator less for signal <old_temp_28$cmp_lt0000> created at line 119.
+    Found 11-bit subtractor for signal <old_temp_52$sub0000> created at line 184.
+    Found 32-bit subtractor for signal <old_temp_53$addsub0000> created at line 189.
+    Found 33-bit comparator greater for signal <old_temp_53$cmp_gt0000> created at line 187.
+    Found 32-bit subtractor for signal <old_temp_54$addsub0000> created at line 189.
+    Found 33-bit comparator greater for signal <old_temp_54$cmp_gt0000> created at line 187.
+    Found 32-bit subtractor for signal <old_temp_55$addsub0000> created at line 189.
+    Found 33-bit comparator greater for signal <old_temp_55$cmp_gt0000> created at line 187.
+    Found 32-bit subtractor for signal <old_temp_56$addsub0000> created at line 189.
+    Found 33-bit comparator greater for signal <old_temp_56$cmp_gt0000> created at line 187.
+    Found 32-bit subtractor for signal <old_temp_58$addsub0000> created at line 189.
+    Found 33-bit comparator greater for signal <old_temp_58$cmp_gt0000> created at line 187.
+    Found 32-bit adder for signal <old_temp_7$addsub0000> created at line 107.
+    Found 32-bit adder for signal <old_temp_7$addsub0001> created at line 107.
+    Found 10-bit adder for signal <old_temp_75$add0000> created at line 200.
+    Found 32-bit subtractor for signal <old_temp_76$addsub0000> created at line 205.
+    Found 33-bit comparator greater for signal <old_temp_76$cmp_gt0000> created at line 203.
+    Found 32-bit subtractor for signal <old_temp_77$addsub0000> created at line 205.
+    Found 33-bit comparator greater for signal <old_temp_77$cmp_gt0000> created at line 203.
+    Found 32-bit subtractor for signal <old_temp_78$addsub0000> created at line 205.
+    Found 33-bit comparator greater for signal <old_temp_78$cmp_gt0000> created at line 203.
+    Found 32-bit subtractor for signal <old_temp_79$addsub0000> created at line 205.
+    Found 33-bit comparator greater for signal <old_temp_79$cmp_gt0000> created at line 203.
+    Found 32-bit subtractor for signal <old_temp_81$addsub0000> created at line 205.
+    Found 33-bit comparator greater for signal <old_temp_81$cmp_gt0000> created at line 203.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  29 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <FUNCRAM> synthesized.
+
+
+Synthesizing Unit <FUNCMEMORY>.
+    Related source file is "lab4_1.v".
+Unit <FUNCMEMORY> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x5-bit ROM                                          : 1
+ 4x31-bit ROM                                          : 1
+# Adders/Subtractors                                   : 29
+ 10-bit adder                                          : 1
+ 11-bit subtractor                                     : 1
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 11
+ 33-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 3
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Latches                                              : 1
+ 9-bit latch                                           : 1
+# Comparators                                          : 12
+ 33-bit comparator greater                             : 10
+ 33-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <RO> is unconnected in block <FUNCMEMORY>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <8>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x5-bit ROM                                          : 1
+# Latches                                              : 1
+ 9-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <8> in Unit <LPM_LATCH_1> is equivalent to the following 8 FFs/Latches, which will be removed : <7> <6> <5> <4> <3> <2> <1> <0> 
+WARNING:Xst:1710 - FF/Latch <8> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <FUNCMEMORY> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FUNCMEMORY, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FUNCMEMORY.ngr
+Top Level Output File Name         : FUNCMEMORY
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 9
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                        0  out of    960     0%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                   9  out of     83    10%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.03 secs
+ 
+--> 
+
+
+Total memory usage is 339960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

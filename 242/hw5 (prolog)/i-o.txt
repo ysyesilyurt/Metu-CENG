@@ -1,0 +1,99 @@
+?- configuration([], [], PlacementList).
+PlacementList = [].
+
+?- configuration([cpu], [], PlacementList).
+PlacementList = [put(cpu, sA)] ;
+PlacementList = [put(cpu, sB)] ;
+PlacementList = [put(cpu, sC)] ;
+PlacementList = [put(cpu, sD)] ;
+PlacementList = [put(cpu, sE)].
+
+?- configuration([fan], [outer_edge(fan)], PlacementList).
+PlacementList = [put(fan, sA)] ;
+PlacementList = [put(fan, sB)] ;
+PlacementList = [put(fan, sD)] ;
+PlacementList = [put(fan, sE)].
+
+% PlacementList = [put(cpu, sA), put(ram, sC)] ;
+% PlacementList = [put(cpu, sB), put(ram, sC)] ;
+% PlacementList = [put(cpu, sC), put(ram, sA)] ;
+% PlacementList = [put(cpu, sC), put(ram, sB)] ;
+% PlacementList = [put(cpu, sC), put(ram, sD)] ;
+% PlacementList = [put(cpu, sC), put(ram, sE)] ;
+% PlacementList = [put(cpu, sD), put(ram, sC)] ;
+% PlacementList = [put(cpu, sE), put(ram, sC)] ;
+% false.
+
+?- configuration([cpu, ram], [close_to(cpu, ram)], PlacementList).
+PlacementList = [put(cpu, sA), put(ram, sC)] ;
+PlacementList = [put(cpu, sB), put(ram, sC)] ;
+PlacementList = [put(cpu, sC), put(ram, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sD)] ;
+PlacementList = [put(cpu, sD), put(ram, sC)] ;
+PlacementList = [put(cpu, sE), put(ram, sC)] ;
+false.
+
+?- configuration([cpu, ram, ssd, hdd, fan, gpu], [], PlacementList).
+false.
+
+?- configuration([cpu, ram, ssd, hdd, fan], [outer_edge(fan), close_to(cpu, ram), close_to(ssd, hdd)], PlacementList).
+false.
+
+?- configuration([cpu, ram, ssd, hdd, fan], [outer_edge(fan), close_to(cpu, ram)], PlacementList).
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sB), put(hdd, sD), put(fan, sE)] ;
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sB), put(hdd, sE), put(fan, sD)] ;
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sD), put(hdd, sB), put(fan, sE)] ;
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sD), put(hdd, sE), put(fan, sB)] ;
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sE), put(hdd, sB), put(fan, sD)] ;
+PlacementList = [put(cpu, sA), put(ram, sC), put(ssd, sE), put(hdd, sD), put(fan, sB)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sA), put(hdd, sD), put(fan, sE)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sA), put(hdd, sE), put(fan, sD)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sD), put(hdd, sA), put(fan, sE)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sD), put(hdd, sE), put(fan, sA)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sE), put(hdd, sA), put(fan, sD)] ;
+PlacementList = [put(cpu, sB), put(ram, sC), put(ssd, sE), put(hdd, sD), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sA), put(hdd, sD), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sA), put(hdd, sE), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sD), put(hdd, sA), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sD), put(hdd, sE), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sE), put(hdd, sA), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sB), put(ssd, sE), put(hdd, sD), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sB), put(hdd, sD), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sB), put(hdd, sE), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sD), put(hdd, sB), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sD), put(hdd, sE), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sE), put(hdd, sB), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sA), put(ssd, sE), put(hdd, sD), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sA), put(hdd, sB), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sA), put(hdd, sD), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sB), put(hdd, sA), put(fan, sD)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sB), put(hdd, sD), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sD), put(hdd, sA), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sE), put(ssd, sD), put(hdd, sB), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sA), put(hdd, sB), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sA), put(hdd, sE), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sB), put(hdd, sA), put(fan, sE)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sB), put(hdd, sE), put(fan, sA)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sE), put(hdd, sA), put(fan, sB)] ;
+PlacementList = [put(cpu, sC), put(ram, sD), put(ssd, sE), put(hdd, sB), put(fan, sA)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sA), put(hdd, sB), put(fan, sE)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sA), put(hdd, sE), put(fan, sB)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sB), put(hdd, sA), put(fan, sE)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sB), put(hdd, sE), put(fan, sA)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sE), put(hdd, sA), put(fan, sB)] ;
+PlacementList = [put(cpu, sD), put(ram, sC), put(ssd, sE), put(hdd, sB), put(fan, sA)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sA), put(hdd, sB), put(fan, sD)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sA), put(hdd, sD), put(fan, sB)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sB), put(hdd, sA), put(fan, sD)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sB), put(hdd, sD), put(fan, sA)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sD), put(hdd, sA), put(fan, sB)] ;
+PlacementList = [put(cpu, sE), put(ram, sC), put(ssd, sD), put(hdd, sB), put(fan, sA)] ;
+false.
+
+?- configuration([cpu, ram, ssd, hdd, fan], [outer_edge(fan), close_to(cpu, ram)], [put(cpu, sD), put(ram, sC), put(ssd, sB), put(hdd, sE), put(fan, sA)]).
+true.
+
+
+

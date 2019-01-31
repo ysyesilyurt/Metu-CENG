@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="12.4">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="par" timeStamp="Mon Apr  2 23:08:38 2018">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/yavuz/xlinix/ISE_DS/ISE//bin/lin64:/home/yavuz/bin:/home/yavuz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/yavuz/xlinix/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/yavuz/xlinix/ISE_DS/ISE//lib/lin64"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.4 LTS"/>
+      </item>
+      <item stringID="User_EnvHost" value="yavuz-X550VX"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz"/>
+          <item stringID="speed" value="2600.000 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="PAR_OPTION_SUMMARY">
+      <section stringID="PAR_OPTION_SUMMARY">
+        <item DEFAULT="1" label="-t" stringID="PAR_COSTTABLE_ENTRY" value="1"/>
+        <item DEFAULT="" label="-intstyle" stringID="PAR_INTSTYLE" value="ise"/>
+        <item DEFAULT="std" label="-ol" stringID="PAR_OVERALL_EFFORTLEVEL" value="high"/>
+        <item DEFAULT="false" label="-w" stringID="PAR_OVERWRITE_OUTPUT" value="true"/>
+      </section>
+    </task>
+    <task stringID="PAR_DEVICE_UTILIZATION">
+      <section stringID="PAR_DESIGN_SUMMARY"></section>
+    </task>
+    <task stringID="PAR_PAR">
+      <section stringID="PAR_DESIGN_SUMMARY">
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="6 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="5 secs "/>
+        <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
+        <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="6 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="5 secs "/>
+      </section>
+    </task>
+    <task stringID="PAR_par">
+      <section stringID="PAR_DLY_CLK_REPORT"/>
+      <section stringID="PAR_CLOCK_REPORT">
+        <table stringID="PAR_CLOCK_TABLE">
+          <column label="Clock Net" stringID="CLOCK_NET"/>
+          <column label="Routed" stringID="ROUTED"/>
+          <column label="Resource" stringID="RESOURCE"/>
+          <column label="Locked" stringID="LOCKED"/>
+          <column label="Fanout" stringID="FANOUT"/>
+          <column label="Net Skew(ns)" stringID="NET_SKEW"/>
+          <column label="Max Delay(ns)" stringID="MAX_DELAY"/>
+          <row stringID="row" value="1">
+            <item label="Clock Net" stringID="CLOCK_NET" value="clk_BUFGP"/>
+            <item label="Routed" stringID="ROUTED" value="ROUTED"/>
+            <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y10"/>
+            <item label="Locked" stringID="LOCKED" value="No"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="2.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.003000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.084000"/>
+          </row>
+        </table>
+      </section>
+      <section stringID="PAR_PAD_PIN_REPORT">
+        <table stringID="PAR_PINOUT_BY_PIN_NUMBER">
+          <column label="Pin&#xA;Number" sort="smart" stringID="Pin_Number"/>
+          <column label="Signal&#xA;Name" stringID="Signal_Name"/>
+          <column label="Pin&#xA;Usage" stringID="Pin_Usage"/>
+          <column label="Pin&#xA;Name" sort="smart" stringID="Pin_Name"/>
+          <column stringID="Direction"/>
+          <column label="IO&#xA;Standard" sort="smart" stringID="IO_Standard"/>
+          <column label="IO Bank&#xA;Number" stringID="IO_Bank_Number"/>
+          <column label="Drive&#xA;(mA)" stringID="Drive"/>
+          <column label="Slew&#xA;Rate" stringID="Slew_Rate"/>
+          <column label="Termination" stringID="Termination"/>
+          <column label="IOB&#xA;Delay" stringID="IOB_Delay"/>
+          <column label="Voltage" stringID="Voltage"/>
+          <column label="Constraint" stringID="Constraint"/>
+          <column label="IO&#xA;Register" stringID="IO_Register"/>
+          <column label="Signal&#xA;Integrity" stringID="Signal_Integrity"/>
+          <row stringID="row" value="1">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A1"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="PROG_B"/>
+          </row>
+          <row stringID="row" value="2">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A2"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="TDI"/>
+          </row>
+          <row stringID="row" value="3">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="4">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A4"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="5">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A5"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCAUX"/>
+            <item label="Voltage" stringID="Voltage" value="2.5"/>
+          </row>
+          <row stringID="row" value="6">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A6"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+            <item label="Voltage" stringID="Voltage" value="2.50"/>
+          </row>
+          <row stringID="row" value="7">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A7"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07P_0/GCLK10"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="8">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A8"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="9">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A9"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05N_0/GCLK7"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="10">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A10"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04P_0/GCLK4"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="11">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A11"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCINT"/>
+            <item label="Voltage" stringID="Voltage" value="1.2"/>
+          </row>
+          <row stringID="row" value="12">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02N_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="13">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="14">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="TDO"/>
+          </row>
+          <row stringID="row" value="15">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01N_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="16">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01P_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="17">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11N_0/HSWAP"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="18">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="19">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B5"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="20">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B6"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="21">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B7"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07N_0/GCLK11"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="22">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B8"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFMI"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP_L06P_0/GCLK8"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="23">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B9"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05P_0/GCLK6"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="24">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B10"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+            <item label="Voltage" stringID="Voltage" value="2.50"/>
+          </row>
+          <row stringID="row" value="25">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B11"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03N_0/VREF_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="26">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="27">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B13"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="TCK"/>
+          </row>
+          <row stringID="row" value="28">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="TMS"/>
+          </row>
+          <row stringID="row" value="29">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C1"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="30">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02N_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="31">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02P_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="32">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10N_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="33">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C5"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09N_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="34">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C6"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08N_0/VREF_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="35">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C7"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="36">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C8"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="clk"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP_L06N_0/GCLK9"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="37">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C9"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04N_0/GCLK5"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="38">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C10"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="39">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C11"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03P_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="40">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01N_0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+          </row>
+          <row stringID="row" value="41">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10N_1/LDC2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="42">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C14"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10P_1/LDC1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="43">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03N_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="44">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03P_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="45">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D3"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCINT"/>
+            <item label="Voltage" stringID="Voltage" value="1.2"/>
+          </row>
+          <row stringID="row" value="46">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09N_1/LDC0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="47">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09P_1/HDC"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="48">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="NC"/>
+          </row>
+          <row stringID="row" value="49">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E1"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Voltage" stringID="Voltage" value="any******"/>
+          </row>
+          <row stringID="row" value="50">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP/VREF_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="51">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E3"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="52">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E12"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCAUX"/>
+            <item label="Voltage" stringID="Voltage" value="2.5"/>
+          </row>
+          <row stringID="row" value="53">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E13"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_1"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="Voltage" stringID="Voltage" value="2.50"/>
+          </row>
+          <row stringID="row" value="54">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="55">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05P_3/LHCLK2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="56">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04N_3/LHCLK1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="57">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04P_3/LHCLK0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="58">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/A0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="59">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08N_1/A1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="60">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F14"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08P_1/A2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="61">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05N_3/LHCLK3/IRDY2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="62">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G2"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="63">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06P_3/LHCLK4/TRDY2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="64">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP/VREF_1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="65">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07N_1/A3/RHCLK7"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="66">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G14"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07P_1/A4/RHCLK6"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="67">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06N_3/LHCLK5"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="68">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07P_3/LHCLK6"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="69">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07N_3/LHCLK7"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="70">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06N_1/A5/RHCLK5"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="71">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06P_1/A6/RHCLK4/IRDY1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="72">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="73">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J1"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="74">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J2"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Voltage" stringID="Voltage" value="any******"/>
+          </row>
+          <row stringID="row" value="75">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="76">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J12"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="f1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04N_1/A9/RHCLK1"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="77">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05P_1/A8/RHCLK2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="78">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J14"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L05N_1/A7/RHCLK3/TRDY1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="79">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K1"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCAUX"/>
+            <item label="Voltage" stringID="Voltage" value="2.5"/>
+          </row>
+          <row stringID="row" value="80">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K2"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="NC"/>
+          </row>
+          <row stringID="row" value="81">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/VREF_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="82">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K12"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="83">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K13"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="y"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/VREF_1"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Termination" stringID="Termination" value="NONE**"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="84">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K14"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="a1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04P_1/A10/RHCLK0"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="85">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08P_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="86">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08N_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="87">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09P_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="88">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L12"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCINT"/>
+            <item label="Voltage" stringID="Voltage" value="1.2"/>
+          </row>
+          <row stringID="row" value="89">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L13"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="q1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03P_1/A12"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Termination" stringID="Termination" value="NONE**"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="90">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L14"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="q0"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03N_1/A11"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Termination" stringID="Termination" value="NONE**"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="91">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09N_3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+          </row>
+          <row stringID="row" value="92">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01P_2/CSO_B"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="93">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M3"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="94">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03P_2/D7/GCLK12"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="95">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M5"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04P_2/D4/GCLK14"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="96">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M6"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFMI"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP_L05P_2/RDWR_B/GCLK0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="97">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M7"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="98">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M8"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_2"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+            <item label="Voltage" stringID="Voltage" value="any******"/>
+          </row>
+          <row stringID="row" value="99">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M9"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08N_2/A22"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="100">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M10"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09N_2/A20"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="101">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M11"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10N_2/VS1/A18"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="102">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02P_1/A14"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="103">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M13"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="f0"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02N_1/A13"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="104">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_1"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="Voltage" stringID="Voltage" value="2.50"/>
+          </row>
+          <row stringID="row" value="105">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01N_2/INIT_B"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="106">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02N_2/MOSI/CSI_B"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="107">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFSI"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP/VREF_2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="108">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L03N_2/D6/GCLK13"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="109">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N5"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L04N_2/D3/GCLK15"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="110">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N6"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFSI"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IP_L05N_2/M2/GCLK1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="111">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N7"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/M1"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="112">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N8"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07N_2/DIN/D0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="113">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N9"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L08P_2/A23"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="114">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N10"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L09P_2/A21"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="115">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N11"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L10P_2/VS2/A19"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="116">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11N_2/CCLK"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="117">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N13"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01P_1/A16"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+          </row>
+          <row stringID="row" value="118">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N14"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="a0"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IBUF"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L01N_1/A15"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS25*"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="1"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="UNLOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
+          </row>
+          <row stringID="row" value="119">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P1"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L02P_2/DOUT/BUSY"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="120">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P2"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCINT"/>
+            <item label="Voltage" stringID="Voltage" value="1.2"/>
+          </row>
+          <row stringID="row" value="121">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P3"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_2"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+            <item label="Voltage" stringID="Voltage" value="any******"/>
+          </row>
+          <row stringID="row" value="122">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/D5"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="123">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P5"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="124">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P6"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06P_2/D2/GCLK2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="125">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P7"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFS"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L06N_2/D1/GCLK3"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="126">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P8"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L07P_2/M0"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="127">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P9"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCAUX"/>
+            <item label="Voltage" stringID="Voltage" value="2.5"/>
+          </row>
+          <row stringID="row" value="128">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P10"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+          <row stringID="row" value="129">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P11"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO/VREF_2"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="130">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P12"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="DIFFM"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11P_2/VS0/A17"/>
+            <item stringID="Direction" value="UNUSED"/>
+            <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+          </row>
+          <row stringID="row" value="131">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P13"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="DONE"/>
+          </row>
+          <row stringID="row" value="132">
+            <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="P14"/>
+            <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="GND"/>
+          </row>
+        </table>
+        <table stringID="PAR_PSEUDO_LOGIC">
+          <column label="Signal&#xA;Name" stringID="Signal_Name"/>
+          <column stringID="Type"/>
+          <column stringID="Site"/>
+        </table>
+      </section>
+      <section stringID="PAR_UNROUTES_REPORT">
+        <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
+        <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="0"/>
+      </section>
+    </task>
+  </application>
+
+</document>

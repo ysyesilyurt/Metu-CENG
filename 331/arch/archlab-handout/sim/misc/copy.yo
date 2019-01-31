@@ -1,0 +1,47 @@
+                            | # copy.ys
+                            | # name = Yavuz Selim Yesilyurt
+                            | # ID = 2259166
+                            | 
+                            | # Execution begins at address 0 
+0x000:                      | .pos 0 
+0x000: 30f40001000000000000 | 	irmovq stack, %rsp  	# Set up stack pointer  
+0x00a: 30f73800000000000000 | 	irmovq src, %rdi		# set first parameter
+0x014: 30f65000000000000000 | 	irmovq dest, %rsi		# set second parameter
+0x01e: 30f20300000000000000 | 	irmovq $3, %rdx			# set third parameter
+0x028: 806800000000000000   | 	call copy_block			# call copy_block(src,dest,len)
+0x031: 00                   | 	halt					# Terminate program 
+                            |  
+0x038:                      | .align 8
+                            | # Source block
+0x038:                      | src:
+0x038: 0a00000000000000     | 	.quad 0x00a
+0x040: b000000000000000     | 	.quad 0x0b0
+0x048: 000c000000000000     | 	.quad 0xc00
+                            | # Destination block
+0x050:                      | dest:
+0x050: 1101000000000000     | 	.quad 0x111
+0x058: 2202000000000000     | 	.quad 0x222
+0x060: 3303000000000000     | 	.quad 0x333
+                            | 
+                            | /* $begin copy_block */
+                            | # long copy_block(long *src, long *dest, long len)
+0x068:                      | copy_block:
+0x068: 6300                 | 	xorq %rax, %rax 		# result = 0
+0x06a: 6222                 | 	andq %rdx,%rdx			# test len
+0x06c: 70a900000000000000   | 	jmp test 				# jump directly to test
+0x075:                      | loop:
+0x075: 50a70000000000000000 | 	mrmovq (%rdi), %r10 	# val = *src
+0x07f: 40a60000000000000000 | 	rmmovq %r10, (%rsi) 	# *dest = val
+0x089: 63a0                 | 	xorq %r10, %rax			# result ^= val
+0x08b: c0f70800000000000000 | 	iaddq  $8, %rdi         # src++
+0x095: c0f60800000000000000 | 	iaddq  $8, %rsi         # dest++
+0x09f: c0f2ffffffffffffffff | 	iaddq $-1, %rdx         # len--
+0x0a9:                      | test:
+0x0a9: 747500000000000000   | 	jne loop 				# return loop if it's not null
+0x0b2: 90                   | 	ret 					
+                            | /* $end copy_block */
+                            | 
+                            | 
+                            | # The stack starts here and grows to lower addresses
+0x100:                      | 	.pos 0x100		
+0x100:                      | stack:	 

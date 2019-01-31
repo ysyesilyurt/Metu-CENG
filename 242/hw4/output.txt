@@ -1,0 +1,78 @@
+----00
+--HH--
+----01
+-- START ROUND 1 --
+Tracer00(100) moved LEFT.
+Berserk01(100) moved UP.
+-- END ROUND 1 --
+--00--
+--HH01
+------
+-- START ROUND 2 --
+Tracer00(100) moved DOWN.
+Berserk01(100) ATTACKED Tracer00(100)! (-10)
+-- END ROUND 2 --
+------
+--0001
+------
+-- START ROUND 3 --
+Tracer00(90) ATTACKED Berserk01(100)! (-10)
+Berserk01(90) ATTACKED Tracer00(90)! (-10)
+-- END ROUND 3 --
+------
+--0001
+------
+-- START ROUND 4 --
+Tracer00(80) ATTACKED Berserk01(90)! (-10)
+Berserk01(80) ATTACKED Tracer00(80)! (-10)
+-- END ROUND 4 --
+------
+--0001
+------
+-- START ROUND 5 --
+Tracer00(70) ATTACKED Berserk01(80)! (-10)
+Berserk01(70) ATTACKED Tracer00(70)! (-10)
+-- END ROUND 5 --
+------
+--0001
+------
+-- START ROUND 6 --
+Tracer00(60) ATTACKED Berserk01(70)! (-10)
+Berserk01(60) is STORMED! (-5)
+Berserk01(55) ATTACKED Tracer00(60)! (-10)
+-- END ROUND 6 --
+------
+--0001
+------
+-- START ROUND 7 --
+Tracer00(50) ATTACKED Berserk01(55)! (-10)
+Berserk01(45) is STORMED! (-5)
+Berserk01(40) ATTACKED Tracer00(50)! (-10)
+-- END ROUND 7 --
+------
+--0001
+------
+-- START ROUND 8 --
+Tracer00(40) ATTACKED Berserk01(40)! (-10)
+Berserk01(30) is STORMED! (-5)
+Berserk01(25) ATTACKED Tracer00(40)! (-10)
+-- END ROUND 8 --
+------
+--0001
+------
+-- START ROUND 9 --
+Tracer00(30) ATTACKED Berserk01(25)! (-10)
+Berserk01(15) is STORMED! (-5)
+Berserk01(10) ATTACKED Tracer00(30)! (-10)
+-- END ROUND 9 --
+------
+--0001
+------
+-- START ROUND 10 --
+Tracer00(20) ATTACKED Berserk01(10)! (-10)
+Berserk01(0) DIED.
+-- END ROUND 10 --
+------
+--00--
+------
+Tracer00 won!!!

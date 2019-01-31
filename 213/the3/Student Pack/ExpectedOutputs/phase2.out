@@ -1,0 +1,213 @@
+
+---------------- phase 1 -----------------
+
+|-------------|
+|   K   |  I  |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+
+---------------- phase 2 -----------------
+
+a is inserted with probe count 0
+b is inserted with probe count 0
+c is inserted with probe count 0
+d is inserted with probe count 1
+e is inserted with probe count 1
+f is inserted with probe count 2
+g is inserted with probe count 1
+h is inserted with probe count 3
+i is inserted with probe count 1
+j is inserted with probe count 4
+k is inserted with probe count 1
+l is inserted with probe count 5
+m is inserted with probe count 1
+n is inserted with probe count 1
+o is inserted with probe count 0
+p is inserted with probe count 0
+q is inserted with probe count 0
+r is inserted with probe count 1
+s is inserted with probe count 4
+t is inserted with probe count 1
+u is inserted with probe count 2
+v is inserted with probe count 2
+w is inserted with probe count 1
+x is inserted with probe count 1
+y is inserted with probe count 6
+z is inserted with probe count 1
+a is inserted with probe count 1
+Table has a load factor of 0.341772
+
+|--------|
+| K |  I |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| m | 13 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| s | 19 |
+|--------|
+|   | -1 |
+|--------|
+| r | 18 |
+|--------|
+|   | -1 |
+|--------|
+| g | 7  |
+|--------|
+|   | -1 |
+|--------|
+| e | 5  |
+|--------|
+|   | -1 |
+|--------|
+| n | 14 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| h | 8  |
+|--------|
+| w | 23 |
+|--------|
+| c | 3  |
+|--------|
+| u | 21 |
+|--------|
+|   | -1 |
+|--------|
+| j | 10 |
+|--------|
+| y | 25 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| f | 6  |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| z | 26 |
+|--------|
+| q | 17 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| a | 27 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| d | 4  |
+|--------|
+|   | -1 |
+|--------|
+| b | 2  |
+|--------|
+|   | -1 |
+|--------|
+| t | 20 |
+|--------|
+| v | 22 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| o | 15 |
+|--------|
+| i | 9  |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| a | 1  |
+|--------|
+| l | 12 |
+|--------|
+| x | 24 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| k | 11 |
+|--------|
+|   | -1 |
+|--------|
+| p | 16 |
+|--------|

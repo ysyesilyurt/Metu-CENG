@@ -1,0 +1,80 @@
+Release 12.4 Map M.81d (lin64)
+Xilinx Map Application Log File for Design 'Board232'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off
+-c 100 -o Board232_map.ncd Board232.ngd Board232.pcf 
+Target Device  : xc3s250e
+Target Package : cp132
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
+Mapped Date    : Sun Apr 15 23:51:40 2018
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net HH/Mrom_listMode_mux0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <sw<3>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn<1>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <btn<2>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    4
+Logic Utilization:
+  Number of Slice Flip Flops:           165 out of   4,896    3%
+  Number of 4 input LUTs:             1,105 out of   4,896   22%
+Logic Distribution:
+  Number of occupied Slices:            634 out of   2,448   25%
+    Number of Slices containing only related logic:     634 out of     634 100%
+    Number of Slices containing unrelated logic:          0 out of     634   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,229 out of   4,896   25%
+    Number used as logic:             1,105
+    Number used as a route-thru:        124
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 43 out of      92   46%
+    IOB Flip Flops:                       2
+    IOB Latches:                          4
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Average Fanout of Non-Clock Nets:                3.02
+
+Peak Memory Usage:  379 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Board232_map.mrp" for details.

@@ -1,0 +1,33 @@
+
+ 11       0 1 2 3
+          + + + + -
+  1:  ilk +
+ 12:  bnm + +
+123:abcty +
+234:cdehg + + +
+345: werf +
+456:  rqe + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+890:  htv + +
+901:bghdf +
+
+Found node 234:cdehg at 0x921a0f8 
+Found node 1:ilk at 0x921a038 
+Found node 678:y at 0x921a1d0 
+Found node 789:rtrd at 0x921a1e8 
+Found node 901:bghdf at 0x921a230 
+Cannot find node -1
+Cannot find node 555
+Cannot find node -100
+
+2011 v  -3 v  -2 > 234:cdehg
+2011 v  -3 v  -2 v  -1 v   0 >   1:  ilk
+2011 v  -3 > 678:    y
+2011 v  -3 > 678 v 678 v 678 v 678 > 789: rtrd
+2011 v  -3 > 678 v 678 v 678 > 890 v 890 > 901:bghdf
+
+
+
+

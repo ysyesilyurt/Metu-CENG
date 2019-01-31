@@ -1,0 +1,46 @@
+# name = Yavuz Selim Yesilyurt
+# ID = 2259166
+
+# Execution begins at address 0 
+.pos 0 
+	irmovq stack, %rsp  	# Set up stack pointer  
+	irmovq src, %rdi		# set first parameter
+	irmovq dest, %rsi		# set second parameter
+	irmovq $3, %rdx			# set third parameter
+	call copy_block			# call copy_block(src,dest,len)
+	halt					# Terminate program 
+ 
+.align 8
+# Source block
+src:
+	.quad 0x00a
+	.quad 0x0b0
+	.quad 0xc00
+# Destination block
+dest:
+	.quad 0x111
+	.quad 0x222
+	.quad 0x333
+
+/* $begin copy_block */
+# long copy_block(long *src, long *dest, long len)
+copy_block:
+	xorq %rax, %rax 		# result = 0
+	andq %rdx,%rdx			# test len
+	jmp test 				# jump directly to test
+loop:
+	mrmovq (%rdi), %r10 	# val = *src
+	rmmovq %r10, (%rsi) 	# *dest = val
+	xorq %r10, %rax			# result ^= val
+	iaddq  $8, %rdi         # src++
+	iaddq  $8, %rsi         # dest++
+	iaddq $-1, %rdx         # len--
+test:
+	jne loop 				# return loop if it's not null
+	ret 					
+/* $end copy_block */
+
+
+# The stack starts here and grows to lower addresses
+	.pos 0x100		
+stack:	 

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="lin64" product="ISE" version="12.4">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="Map" timeStamp="Mon Apr 16 20:55:03 2018">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/home/yavuz/Xilinxx/ISE_DS/ISE//bin/lin64:/home/yavuz/bin:/home/yavuz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="/home/yavuz/Xilinxx/ISE_DS/ISE/"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/home/yavuz/Xilinxx/ISE_DS/ISE//lib/lin64"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 16.04.4 LTS"/>
+      </item>
+      <item stringID="User_EnvHost" value="yavuz-X550VX"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz"/>
+          <item stringID="speed" value="2901.239 MHz"/>
+        </row>
+      </table>
+    </section>
+    <section stringID="MAP_OPTION_SUMMARY">
+      <item DEFAULT="OFF" label="-ir" stringID="MAP_IGNORERLOCS" value="OFF"/>
+      <item DEFAULT="area" label="-cm" stringID="MAP_COVER_MODE" value="area"/>
+      <item DEFAULT="None" label="-intstyle" stringID="MAP_INTSTYLE" value="ise"/>
+      <item DEFAULT="None" label="-o" stringID="MAP_OUTFILE" value="FUNCMEMORY_map.ncd"/>
+      <item DEFAULT="off" label="-pr" stringID="MAP_PACK_INTERNAL" value="off"/>
+      <item DEFAULT="None" label="-p" stringID="MAP_PARTNAME" value="xc3s100e-cp132-5"/>
+    </section>
+    <task stringID="MAP_PACK_REPORT">
+      <section stringID="MAP_DESIGN_INFORMATION">
+        <item stringID="MAP_PART" value="3s100ecp132-5"/>
+        <item stringID="MAP_DEVICE" value="xc3s100e"/>
+        <item stringID="MAP_ARCHITECTURE" value="spartan3e"/>
+        <item stringID="MAP_PACKAGE" value="cp132"/>
+        <item stringID="MAP_SPEED" value="-5"/>
+      </section>
+      <section stringID="MAP_DESIGN_SUMMARY">
+        <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="371864"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="0 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="0 secs "/>
+      </section>
+      <section stringID="MAP_SLICE_REPORTING">
+        <item dataType="int" label="Number of Slice Flip Flops" stringID="MAP_NUM_SLICE_FF" value="0"/>
+        <item dataType="int" stringID="MAP_NUM_SLICE_LATCH" value="0"/>
+        <item dataType="int" stringID="MAP_AVAILABLE_SLICEL" value="480"/>
+        <item dataType="int" stringID="MAP_AVAILABLE_SLICEM" value="480"/>
+        <item dataType="int" stringID="MAP_FLOPS_PER_SLICE" value="2"/>
+        <item dataType="int" stringID="MAP_LUTS_PER_SLICE" value="2"/>
+        <item AVAILABLE="480" dataType="int" stringID="MAP_NUM_SLICEM" value="0"/>
+        <item AVAILABLE="480" dataType="int" stringID="MAP_NUM_SLICEL" value="0"/>
+        <item dataType="int" label="Number of 4 input LUTs" stringID="MAP_NUM_4_INPUT_LUT" value="0"/>
+        <item dataType="int" label="Number of occupied Slices" stringID="MAP_AGG_SLICE" value="0"/>
+        <item dataType="int" label="Number of Slices containing unrelated logic" stringID="MAP_NUM_SLICE_UNRELATED" value="0"/>
+      </section>
+      <section stringID="MAP_IOB_REPORTING">
+        <section stringID="MAP_IOB_DATA">
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_IPAD" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_IPAD" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_OPAD" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_OPADAGG_BONDED_IO" value="0"/>
+          <item AVAILABLE="145" dataType="int" stringID="MAP_AGG_UNBONDED_IO" value="0"/>
+          <item AVAILABLE="0" dataType="int" label="IOB Flip Flops" stringID="MAP_NUM_IOB_FF" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_IOB_LATCH" value="0"/>
+          <item AVAILABLE="52" dataType="int" stringID="MAP_NUM_DIFFM" value="0"/>
+          <item AVAILABLE="24" dataType="int" stringID="MAP_NUM_DIFFMI" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_DIFFM" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_DIFFMINUM_DIFFS" value="0"/>
+          <item AVAILABLE="24" dataType="int" stringID="MAP_NUM_DIFFSI" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_DIFFS" value="0"/>
+          <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_BONDED_DIFFSI" value="0"/>
+        </section>
+      </section>
+      <section stringID="MAP_HARD_IP_REPORTING">
+        <item AVAILABLE="4" dataType="int" stringID="MAP_NUM_RAMB16" value="0"/>
+        <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_MULT18X18" value="0"/>
+        <item AVAILABLE="24" dataType="int" label="Number of BUFGMUXs" stringID="MAP_NUM_BUFGMUX" value="0"/>
+        <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_DCM" value="0"/>
+        <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_ICAP" value="0"/>
+        <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_STARTUP" value="0"/>
+        <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_BSCAN" value="0"/>
+        <item AVAILABLE="1" dataType="int" stringID="MAP_NUM_CAPTURE" value="0"/>
+        <item AVAILABLE="0" dataType="int" stringID="MAP_NUM_DCIRESET" value="0"/>
+        <item AVAILABLE="4" dataType="int" stringID="MAP_NUM_MULT18X18SIO" value="0"/>
+        <item AVAILABLE="2" dataType="int" stringID="MAP_NUM_PCILOGICSE" value="0"/>
+      </section>
+      <section stringID="MAP_MACRO_RPM_REPORTING">
+        <item dataType="int" stringID="MAP_HARD_MACROS" value="0"/>
+        <item dataType="int" stringID="MAP_RPMS" value="0"/>
+      </section>
+      <section stringID="MAP_IOB_PROPERTIES">
+        <table stringID="MAP_IOB_TABLE">
+          <column label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME"/>
+          <column stringID="Type"/>
+          <column stringID="Direction"/>
+          <column label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD"/>
+          <column label="Diff&#xA;Term" stringID="DIFF_TERM"/>
+          <column label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH"/>
+          <column label="Slew&#xA;Rate" stringID="SLEW_RATE"/>
+          <column label="Reg&#xA;(s)" stringID="REGS"/>
+          <column stringID="Resistor"/>
+          <column label="IOB&#xA;Delay" stringID="IOB_DELAY"/>
+          <row stringID="row" value="1">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;0>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="2">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;1>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="3">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;2>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="4">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;3>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="5">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;4>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="6">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;5>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="7">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;6>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="8">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;7>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+          <row stringID="row" value="9">
+            <item label="IOB&#xA;Name" sort="smart" stringID="IOB_NAME" value="result&lt;8>"/>
+            <item stringID="Type" value="IOB"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_STANDARD" value="LVCMOS25"/>
+            <item label="Drive&#xA;Strength" stringID="DRIVE_STRENGTH" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="SLEW_RATE" value="SLOW"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_DELAY" value="0 / 0"/>
+          </row>
+        </table>
+      </section>
+      <section stringID="MAP_RPM_MACROS">
+        <section stringID="MAP_SHAPE_SECTION">
+          <item dataType="int" stringID="MAP_NUM_SHAPE" value="0"/>
+        </section>
+      </section>
+      <section stringID="MAP_GUIDE_REPORT"/>
+      <section stringID="MAP_AREA_GROUPS_PARTITIONS"/>
+      <section stringID="MAP_TIMING_REPORT"/>
+      <section stringID="MAP_CONFIGURATION_STRING_DETAILS"/>
+      <section stringID="MAP_GENERAL_CONFIG_DATA"/>
+      <section stringID="MAP_CONTROL_SET_INFORMATION"/>
+    </task>
+  </application>
+
+</document>

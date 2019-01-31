@@ -1,0 +1,41 @@
+# name = Yavuz Selim Yesilyurt
+# ID = 2259166
+
+# Execution begins at address 0 
+.pos 0 
+	irmovq stack, %rsp  	# Set up stack pointer  
+	irmovq ele1, %rdi		# set parameter
+	call sum_list			# call sum_list(ele1)
+	halt					# Terminate program 
+
+# Sample linked list
+.align 8
+ele1:
+	.quad 0x00a
+	.quad ele2
+ele2:
+	.quad 0x0b0
+	.quad ele3
+ele3:
+	.quad 0xc00
+	.quad 0
+
+/* $begin sum_list */
+# long sum_list(list_ptr ls)
+sum_list:
+	xorq %rax, %rax 		# val = 0
+	jmp test 				# jump directly to test
+loop:
+	mrmovq (%rdi), %r10 	# mov current node's value to r10
+	addq %r10, %rax 		# val += ls->val
+	mrmovq $8(%rdi), %rdi   # ls = ls->next
+test:
+	andq %rdi, %rdi 		# test loop variable
+	jne loop 				# return loop if it's not null
+	ret 					
+/* $end sum_list */
+
+
+# The stack starts here and grows to lower addresses
+	.pos 0x100		
+stack:	 

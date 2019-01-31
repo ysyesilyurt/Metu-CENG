@@ -1,0 +1,61 @@
+Release 12.4 Map M.81d (lin64)
+Xilinx Map Application Log File for Design 'FUNCROM'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off
+-c 100 -o FUNCROM_map.ncd FUNCROM.ngd FUNCROM.pcf 
+Target Device  : xc3s100e
+Target Package : cp132
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.52.76.2 $
+Mapped Date    : Sun Apr 15 16:56:38 2018
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of 4 input LUTs:                 2 out of   1,920    1%
+Logic Distribution:
+  Number of occupied Slices:              1 out of     960    1%
+    Number of Slices containing only related logic:       1 out of       1 100%
+    Number of Slices containing unrelated logic:          0 out of       1   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:           2 out of   1,920    1%
+  Number of bonded IOBs:                  9 out of      83   10%
+
+Average Fanout of Non-Clock Nets:                2.17
+
+Peak Memory Usage:  363 MB
+Total REAL time to MAP completion:  0 secs 
+Total CPU time to MAP completion:   0 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "FUNCROM_map.mrp" for details.

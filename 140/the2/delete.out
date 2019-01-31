@@ -1,0 +1,139 @@
+
+ 11       0 1 2 3
+          + + + + -
+  1:  ilk +
+ 12:  bnm + +
+123:abcty +
+234:cdehg + + +
+345: werf +
+456:  rqe + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+890:  htv + +
+901:bghdf +
+
+ 10       0 1 2 3
+          + + + + -
+  1:  ilk +
+ 12:  bnm + +
+234:cdehg + + +
+345: werf +
+456:  rqe + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+890:  htv + +
+901:bghdf +
+
+Removed node 1
+
+  6       0 1 2 3
+          + + + + -
+ 12:  bnm + +
+234:cdehg + + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+901:bghdf +
+
+ -3:      -> 678:    y -> 
+
+                          678:    y -> 
+                             |         
+ -2:      -> 234:cdehg -> 678:    y -> 
+
+                          234:cdehg -> 678:    y -> 
+                             |            |         
+ -1:      ->  12:  bnm -> 234:cdehg -> 678:    y -> 
+
+              12:  bnm -> 234:cdehg ->              678:    y -> 
+                |            |                         |         
+  0:      ->  12:  bnm -> 234:cdehg -> 567:   rr -> 678:    y -> 789: rtrd -> 901:bghdf -> 
+
+
+Key does not exist
+
+  6       0 1 2 3
+          + + + + -
+ 12:  bnm + +
+234:cdehg + + +
+567:   rr +
+678:    y + + + +
+789: rtrd +
+901:bghdf +
+new list
+  0       0
+          + -
+
+after inserting 10 items
+ 10       0 1 2 3
+          + + + + -
+123:  abc +
+234:  cde + +
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+890:  htv + + + +
+901:  bgh +
+912:  bnm + +
+
+after deleting 123
+  9       0 1 2 3
+          + + + + -
+234:  cde + +
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+890:  htv + + + +
+901:  bgh +
+912:  bnm + +
+
+after deleting 234
+  8       0 1 2 3
+          + + + + -
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+890:  htv + + + +
+901:  bgh +
+912:  bnm + +
+
+after deleting 890
+  7       0 1 2
+          + + + -
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+901:  bgh +
+912:  bnm + +
+
+after deleting 912
+  6       0 1 2
+          + + + -
+345:  wer +
+456:  rqe + + +
+567:  rre +
+678:  yey + +
+789:  rtr +
+901:  bgh +
+
+after deleting 3 more
+  3       0
+          + -
+345:  wer +
+789:  rtr +
+901:  bgh +
+
+after deleting all
+  0       0
+          + -
+

@@ -1,0 +1,376 @@
+\documentclass[10pt]{article}
+
+\usepackage{float}
+%\topmargin=0cm
+\usepackage{algorithm}
+
+\begin{document}
+
+\section*{Student Information} 
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 \\
+
+\section*{Part 1 - Proposed Algorithm and Pseudocode}
+\hspace{4mm}	
+To accomplish this homework's task, I have basically created one fundamental and one helper function. In fundamental function (\textbf{saveBunny}), I have used Dijkstra's idea to find shortest path from designated source to destination. Basically what \textbf{saveBunny} does is, it calculates the path with maximum amount ammo from given source node(room) to given destination node(room) according to given time informations timesteps. To achieve that, it uses Dijsktra's Shortest Path algorithm to find distances and extends it with the calculation of timeSteps and ammo nodes. \\
+
+There are two files in my submission, one is \textit{graph.hpp} which contains \textit{Graph} class and its methods to implement graph data structure as adjacency list. It maintains graph as a vector of vectors of pairs where pair's first element is "neighbour node number" and the second is "that edge's(vertice - neighbour) weight". It has a method for adding edge to the graph, it has a method for $Print$ing the graph, I also have overloaded the "Indexing operator" ([]) for graph to access elements smoothly. \textit{graph.hpp} also contains \textit{edgeComparetor} structure for handling of the comparison between edges of the graph. \\
+
+The other file is \textit{the3.cpp} which contains \textbf{saveBunny}, \textbf{choiceHandler} and \textbf{main} function of the homework. In \textbf{main} I have opened file with "$If$stream" and read whole input accordingly. Then I have called \textbf{choiceHandler} which calls \textbf{saveBunny} function inside. \\
+
+For solution of the problem, I have used \textit{choiceHandler} function to exhaust all the possibilities of ammo nodes (which can be 2 in number at most), to find the best optimized solution. In total there are 19 cases in which ammo nodes can be interchangably used and not used. All cases and their implementation can be seen in \textit{choiceHandler} function's pseucode in below. \\ 
+
+In all of these cases, function calls \textit{saveBunny} function for each part of path (i.e. from key to scientist, or from scientist to bunny) with decent time, ammo amount information and arranging which nodes to pass for that part of path, and at the end, it gathers all parts of a shortest path from initial position to bunny (with accomplishing the aims accordingly of course) and constructs the path and it stores the path with remaining ammo amount to a container for later usage. After exhausting all choices and doing the same for path calculation, function simply finds the path with maximum amount of ammo and $Print$s that. $If$ in from any call of saveBunny function, it gets a value which is same as \textit{failVector}, it just passes the remaining computation of that choice. \\
+
+In \textit{saveBunny} function (The function that I used as a backbone for path calculations) I simply used Dijkstra's shortest path algorithm with time constraints for a given source to a given destination. I have used a priority queue for keeping track of the nodes with an "edgeComparetor" which I defined under \textit{graph.hpp} and I have used a distance container for keeping track of the weight and parent information, then till queue gets empty I have traversed all neighbours of all nodes with checking 2 conditions; "$If$ node is visitable (not in roomsToPass)" and "$If$ node is not locked in next time Step". On my traversal, I have used the same logic as Dijkstra for updates on the path costs. Before function return, I constructed the shortest path $If$ there is any and decreased the ammo amount accordingly and I returned the path. $If$ there is not a path from src to dst I simply returned a container with value "-1". \\
+
+Below is the Pseudocodes for \textbf{saveBunny} and \textbf{choiceHandler} function: \\
+
+$function$ saveBunny(src, dst, time, ammoAmount, oddLockedNodes, evenLockedNodes, roomsToPass, graph) \\
+
+	$comment$ to keep track of the nodes with edgeComperator \\
+	$comment$ holds pQueue.top().first = (destnode, weight), pQueue.top.second = currentTime  \\
+	$Initialize$ pQueue  \\ \\
+
+	$comment$ for keeping track of the weight and parent information \\
+	$comment$ An node in distVector is seen as "node = index + 1"  \\
+	$comment$ holds distVector.first = cost to that node, distVector.second = that node's parent node \\
+	$Initialize$ distVector with (INT MAX,INT MAX) \\
+ 
+	$comment$ Initialize pQueue with src, its min costed path and current time \\
+	$Push$ ((src,0),time) to pQueue \\
+
+	$comment$ src's distance to itself is zero \\
+	$Set$ distVector[src - 1].first to 0 \\
+
+	$Set$ finished to True \\
+
+	$While$ pQueue is not empty: \\
+
+		$comment$ Get minimum costed vertex \\
+		$Set$ destNode to pQueue.top().first.first \\
+		$comment$ Get also its timeStep \\
+		$Set$ timeStep to pQueue.top().second \\
+
+		$$If$$ destNode equals to dst \\
+
+			$Set$ finished True \\
+			$Set$ time to timeStep \\
+			$Break$ \\
+
+		$Pop$ node from pQueue \\
+
+		$comment$ Traverse all neighbours of destNode with an iterator it \\
+		$For$ it = graph[destNode].begin() ; it != graph[destNode].end() ; ++it: \\
+
+			$comment$ Check $If$ current room to visit is visitable ((*it).first = currently being traversed neighbour)  \\
+			$If$ (*it).first is not in roomsToPass \\
+
+				$comment$ Check $If$ room is locked in next time step, $If$ so continue \\
+				$If$ timeStep \% 2 equals to 1 and (*it).first is not in evenLockedNodes or timeStep \% 2 equals to 1 and (*it).first is not in oddLockedNodes \\
+
+					$comment$ Check $If$ calculated cost is smaller than old calculated cost, $If$ so Update the cost \\
+					$If$ distVector[(*it).first - 1].first > distVector[destNode - 1].first + (*it).second \\
+
+						$comment$ Update old cost \\
+	                    $Set$ distVector[(*it).first - 1].first to distVector[destNode - 1].first + (*it).second \\
+	                    $comment$ Update parent \\
+	                    $Set$ distVector[(*it).first - 1].second to destNode \\
+	                    $Push$ (((*it).first, distVector[(*it).first - 1].first), timeStep + 1) to pQueue \\
+	
+	$If$ finished is True \\
+
+        $Set$ dest to dst \\
+        
+        $comment$ Construct shortest path from src to dst from distVector \\
+        $Initialize$ path with dst;      \\
+        $For$ i = 0; dst != src; ++i: \\
+        	$$Append$$ distVector[dst - 1].second to path \\
+            $Set$ dst to distVector[dst - 1].second \\
+        
+        $Reverse$ path \\
+        $Decrement$ ammoAmount by distVector[dest - 1].first \\
+        $return$ path \\
+    
+    $Else$ \\
+    	$return$ {-1}    \\
+
+
+$function$ choiceHandler(input parameters, graph)  \\
+
+	$Initialize$ time to 1 \\
+	$Initialize$ failVector to {-1} \\
+
+	$If$ the number of rooms with ammo equals to zero \\
+
+		$comment$  Find shortest path to bunny room \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths as resultingPath \\
+
+		$If$ resultingPath == failVector \\
+			$Print$ "Mission Failed, There is no such path to accomplish mission" to "the3.out"  \\
+ 
+		$Else$ \\
+			$Print$ remainingAmmo to "the3.out" \\
+			$Print$ number of nodes traversed to "the3.out" \\
+			$Print$ path to "the3.out" \\
+
+	$Else$ $If$ number of rooms with ammo equals to one \\
+
+		$comment$  Find shortest path to bunny room without going to ammo room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the ammo room before going to the skull key's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo Node to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the ammo room before going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$Get$ path with maximum amount of remainingAmmo \\
+
+		$If$ resultingPath == failVector \\
+			$Print$ "Mission Failed, There is no such path to accomplish mission" to "the3.out"  \\
+
+		$Else$ \\
+			$Print$ remainingAmmo to "the3.out" \\
+			$Print$ number of nodes traversed to "the3.out" \\
+			$Print$ path to "the3.out" \\
+
+	$Else$ \\
+		$comment$  Find shortest path to bunny room without going to ammo room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the skull key's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo1 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the skull key's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo2 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+		
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the skull key's room and \\
+		$comment$ going to the second ammo room before going to the scientist's room with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo1 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the skull key's room and  \\
+		$comment$ going to the first ammo room before going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo2 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the scientist's room and  \\
+		$comment$ going to the second ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the scientist's room and  \\
+		$comment$ going to the first ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room before going to the skull key's room and  \\
+		$comment$ going to the second ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo1 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room before going to the skull key's room and  \\
+		$comment$ going to the first ammo room before going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo2 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room and then going to the second ammo room before  \\
+		$comment$ going to the skull key's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo1 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room and then going to the first ammo room before  \\
+		$comment$ going to the skull key's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Ammo2 Node with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Skull Key with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room and then going to the second ammo room before  \\
+		$comment$ going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths 
+		$Append$ (path, remainingAmmo) to resultVector
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room and then going to the first ammo room before  \\
+		$comment$ going to the scientist's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the first ammo room and then going to the second ammo room before  \\
+		$comment$ going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$comment$  Find shortest path to bunny room with going to the second ammo room and then going to the first ammo room before  \\
+		$comment$ going to the bunny's room with saveBunny \\
+		 $Find$ path with maximum amount of ammo from 1 to Skull Key with saveBunny  \\
+		 $Find$ path with maximum amount of ammo from Skull Key to Scientist with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Scientist to Ammo2 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo2 Node to Ammo1 Node with saveBunny \\
+		 $Find$ path with maximum amount of ammo from Ammo1 Node to Bunny with saveBunny \\
+		$Concatenate$ paths  \\
+		$Append$ (path, remainingAmmo) to resultVector \\
+
+		$Get$ path with maximum amount of remainingAmmo \\
+
+		$If$ resultingPath == failVector \\
+			$Print$ "Mission Failed, There is no such path to accomplish mission" to "the3.out"  \\
+
+		$Else$ \\
+			$Print$ remainingAmmo to "the3.out" \\
+			$Print$ number of nodes traversed to "the3.out" \\
+			$Print$ path to "the3.out" \\
+
+
+
+\section*{Part 2 - Complexity Analysis}
+\hspace{4mm}	
+\textbf{For saveBunny:} 
+\begin{itemize}
+	\item The implementation is done with adjacency list and priority queue.
+	\item O(V) operations for Initializing distVector with INT MAX.
+	\item Statements in the inner loop are executed $\mathcal{O}(V+E)$ times.
+	\item \textit{roomsToPass} size can only be at most 2 at a time, so searching it for each neighbour will make $V*2$ in the worst case.
+	\item \textit{oddLockedNodes} size can only be at most $V-1$ at a time, so searching it for each neighbour will make $V*(V-1)$ in the worst case.
+	\item \textit{evenLockedNodes} size can only be at most $V-1$ at a time, so searching it for each neighbour will make $V*(V-1)$ in the worst case.
+	\item Construction of path can take $V$ time in worst case.
+	\item So in total, this function has a time complexity $\mathcal{O}(V^2)$.
+\end{itemize} 
+\textbf{For choiceHandler:}
+\begin{itemize}
+	\item $If$ node with ammo number is 2, this function calls \textit{saveBunny} 3 times for 1 choice.
+	\item $If$ node with ammo number is 1, this function calls \textit{saveBunny} 4 times for 3 choices and 3 times for 1 choice.
+	\item $If$ node with ammo number is 2, this function calls \textit{saveBunny} 5 times for 12 times, 4 times for 6 choices and 3 times for 1 choice.
+	\item In all three time complexity is nothing but $constant * V+E$. So in total, this function has also a time complexity $\mathcal{O}(V+E)$
+\end{itemize}
+
+\end{document}
+
+
+​
+

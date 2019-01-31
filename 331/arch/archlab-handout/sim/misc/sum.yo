@@ -1,0 +1,42 @@
+                            | # sum.ys
+                            | # name = Yavuz Selim Yesilyurt
+                            | # ID = 2259166
+                            | 
+                            | # Execution begins at address 0 
+0x000:                      | .pos 0 
+0x000: 30f40001000000000000 | 	irmovq stack, %rsp  	# Set up stack pointer  
+0x00a: 30f72000000000000000 | 	irmovq ele1, %rdi		# set parameter
+0x014: 805000000000000000   | 	call sum_list			# call sum_list(ele1)
+0x01d: 00                   | 	halt					# Terminate program 
+                            | 
+                            | # Sample linked list
+0x020:                      | .align 8
+0x020:                      | ele1:
+0x020: 0a00000000000000     | 	.quad 0x00a
+0x028: 3000000000000000     | 	.quad ele2
+0x030:                      | ele2:
+0x030: b000000000000000     | 	.quad 0x0b0
+0x038: 4000000000000000     | 	.quad ele3
+0x040:                      | ele3:
+0x040: 000c000000000000     | 	.quad 0xc00
+0x048: 0000000000000000     | 	.quad 0
+                            | 
+                            | /* $begin sum_list */
+                            | # long sum_list(list_ptr ls)
+0x050:                      | sum_list:
+0x050: 6300                 | 	xorq %rax, %rax 		# val = 0
+0x052: 707100000000000000   | 	jmp test 				# jump directly to test
+0x05b:                      | loop:
+0x05b: 50a70000000000000000 | 	mrmovq (%rdi), %r10 	# mov current node's value to r10
+0x065: 60a0                 | 	addq %r10, %rax 		# val += ls->val
+0x067: 50770800000000000000 | 	mrmovq $8(%rdi), %rdi   # ls = ls->next
+0x071:                      | test:
+0x071: 6277                 | 	andq %rdi, %rdi 		# test loop variable
+0x073: 745b00000000000000   | 	jne loop 				# return loop if it's not null
+0x07c: 90                   | 	ret 					
+                            | /* $end sum_list */
+                            | 
+                            | 
+                            | # The stack starts here and grows to lower addresses
+0x100:                      | 	.pos 0x100		
+0x100:                      | stack:	 

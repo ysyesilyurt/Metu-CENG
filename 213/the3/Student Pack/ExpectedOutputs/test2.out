@@ -1,0 +1,130 @@
+
+---------------- phase 0 -----------------
+
+
+---------------- phase 1 -----------------
+
+a is inserted with probe count 0
+a is removed 0
+b is inserted with probe count 0
+b is removed 0
+c is inserted with probe count 0
+c is removed 0
+d is inserted with probe count 0
+d is removed 0
+e is inserted with probe count 0
+e is removed 0
+f is inserted with probe count 0
+f is removed 0
+g is inserted with probe count 0
+g is removed 0
+h is inserted with probe count 0
+h is removed 0
+i is inserted with probe count 0
+i is removed 0
+j is inserted with probe count 0
+j is removed 0
+k is inserted with probe count 0
+k is removed 0
+l is inserted with probe count 0
+l is removed 0
+m is inserted with probe count 0
+m is removed 0
+n is inserted with probe count 0
+n is removed 0
+o is inserted with probe count 0
+o is removed 0
+p is inserted with probe count 0
+p is removed 0
+q is inserted with probe count 0
+q is removed 0
+r is inserted with probe count 0
+r is removed 0
+s is inserted with probe count 0
+s is removed 0
+t is inserted with probe count 0
+t is removed 0
+u is inserted with probe count 0
+u is removed 0
+v is inserted with probe count 0
+v is removed 0
+w is inserted with probe count 0
+w is removed 0
+x is inserted with probe count 0
+x is removed 0
+y is inserted with probe count 0
+y is removed 0
+z is inserted with probe count 0
+z is removed 0
+
+---------------- phase 2 -----------------
+
+a is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+b is tried to be gotten -1
+Path : 6->2->5->1->4->0->End
+c is tried to be gotten -1
+Path : 4->0->3->6->2->5->End
+d is tried to be gotten -1
+Path : 4->0->3->6->2->5->End
+e is tried to be gotten -1
+Path : 6->2->5->1->4->0->End
+f is tried to be gotten -1
+Path : 6->2->5->1->4->0->End
+g is tried to be gotten -1
+Path : 4->0->3->6->2->5->End
+h is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+i is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+j is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+k is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+l is tried to be gotten -1
+Path : 4->0->3->6->2->5->End
+m is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+n is tried to be gotten -1
+Path : 2->5->1->4->0->3->End
+o is tried to be gotten -1
+Path : 3->6->2->5->1->4->End
+p is tried to be gotten -1
+Path : 0->3->6->2->5->1->End
+q is tried to be gotten -1
+Path : 1->4->0->3->6->2->End
+r is tried to be gotten -1
+Path : 6->2->5->1->4->0->End
+s is tried to be gotten -1
+Path : 4->0->3->6->2->5->End
+t is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+u is tried to be gotten -1
+Path : 0->3->6->2->5->1->End
+v is tried to be gotten -1
+Path : 1->4->0->3->6->2->End
+w is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+x is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+y is tried to be gotten -1
+Path : 5->1->4->0->3->6->End
+z is tried to be gotten -1
+Path : 6->2->5->1->4->0->End
+|-------------|
+|   K   |  I  |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|

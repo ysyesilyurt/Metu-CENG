@@ -1,0 +1,43 @@
+# name = Yavuz Selim Yesilyurt
+# ID = 2259166
+
+# Execution begins at address 0 
+.pos 0 
+	irmovq stack, %rsp  	# Set up stack pointer  
+	irmovq ele1, %rdi		# set parameter
+	call rsum_list			# call rsum_list(ele1)
+	halt					# Terminate program 
+
+# Sample linked list
+.align 8
+ele1:
+	.quad 0x00a
+	.quad ele2
+ele2:
+	.quad 0x0b0
+	.quad ele3
+ele3:
+	.quad 0xc00
+	.quad 0
+
+/* $begin rsum_list */
+# long rsum_list(list_ptr ls)
+rsum_list:
+	xorq %rax, %rax 		# val = 0
+	andq %rdi, %rdi 		# test loop variable
+	je done 				# go to done if it's null
+	pushq %r10				# else, save value from caller
+	mrmovq (%rdi), %r10		# val = ls->val
+	mrmovq $8(%rdi), %rdi	# ls = ls->next
+	call rsum_list   		# rest = rsum_list(ls)
+	addq %r10, %rax 		# val += rest
+	popq %r10				# restore caller's value
+done:
+	iaddq $0, %rax			# return 0
+	ret 					
+/* $end rsum_list */
+
+
+# The stack starts here and grows to lower addresses
+	.pos 0x100		
+stack:	 

@@ -1,0 +1,73 @@
+\documentclass[10pt]{article}
+
+
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+
+\begin{document}
+
+\section*{Student Information } 
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 \\
+
+\section*{Answer 1}
+\hspace{4mm}	
+IP address = 144.122.145.146 and MAC address = 00:00:c0:f0:4e:f9
+
+\section*{Answer 2}
+\hspace{4mm}	
+Number = 45, Time = 8.656587229, Destination address = 144.122.145.146
+
+\section*{Answer 3}
+\hspace{4mm}	
+Number of 1st HTTP request = 45, Time of 1st HTTP request = 8.656587229
+
+Number of 2nd HTTP request = 85, Time of 2nd HTTP request = 8.974345863
+
+Number of 3rd HTTP request = 86, Time of 3rd HTTP request = 8.974396851
+
+Number of 4th HTTP request = 87, Time of 4th HTTP request = 8.974426990
+
+Number of 5th HTTP request = 88, Time of 5th HTTP request = 8.974453629
+
+
+\section*{Answer 4}
+\hspace{4mm}	
+   Number of 1st HTTP response = 64, Time of 1st HTTP response = 8.908823256 (mathing response of first HTTP request)
+   
+   Number of 2nd HTTP response = 96, Time of 2nd HTTP response = 8.979147442 (mathing response of second HTTP request)
+
+   Number of 3rd HTTP response = 105, Time of 3rd HTTP response = 8.980336274 (mathing response of third HTTP request)
+
+   Number of 4th HTTP response = 111, Time of 4th HTTP response = 8.987639900 (mathing response of fourth HTTP request)
+
+   Number of 5th HTTP response = 126, Time of 5th HTTP response = 8.987703730 (mathing response of fifth HTTP request)
+
+\section*{Answer 5}
+\hspace{4mm}	
+We can match a HTTP request and a HTTP response on Wireshark environment with the following way:
+   We can filter captured packages according to their destination IP addresses (my own IP address), source IP addresses (server IP address), Protocol used (HTTP) and their TCP ports.
+   To make such a filtering, I first get the TCP port numbers of corresponding HTTP requests from their TCP headers
+   and then I included them on my each filtering with "tcp.port" keyword. The filterings that I have performed are the following:\\
+   
+   "ip.dst == 10.70.196.158 and ip.src == 144.122.145.146 and http and tcp.port == 47672"
+   
+   "ip.dst == 10.70.196.158 and ip.src == 144.122.145.146 and http and tcp.port == 47674"
+
+   "ip.dst == 10.70.196.158 and ip.src == 144.122.145.146 and http and tcp.port == 47676"
+
+   "ip.dst == 10.70.196.158 and ip.src == 144.122.145.146 and http and tcp.port == 47678"
+
+   "ip.dst == 10.70.196.158 and ip.src == 144.122.145.146 and http and tcp.port == 47680"
+
+
+\section*{Answer 6}
+\hspace{4mm}	
+Web browser uses a non-persistent HTTP connection since it opens a new TCP connection for each request-response operation. After the 1 request-response operation is done, the connection gets dropped. Then, for a new request-response operation a new TCP connection gets created with a new TCP Port and used.  
+
+\end{document}
+
+​
+

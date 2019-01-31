@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/ic1500.xst" -ofn "/home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/ic1500.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-cp132-5 "ic1500.ngc" ic1500.ngd  
+map -intstyle ise -p xc3s250e-cp132-5 -cm area -ir off -pr off -c 100 -o ic1500_map.ncd ic1500.ngd ic1500.pcf 
+par -w -intstyle ise -ol high -t 1 ic1500_map.ncd ic1500.ncd ic1500.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ic1500.twx ic1500.ncd -o ic1500.twr ic1500.pcf 

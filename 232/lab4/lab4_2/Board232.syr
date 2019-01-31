@@ -1,0 +1,745 @@
+Release 12.4 - xst M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Board232.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Board232.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Board232"
+Output Format                      : NGC
+Target Device                      : xc3s250e-5-cp132
+
+---- Source Options
+Top Module Name                    : Board232
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lab4_2.v" in library work
+Compiling verilog file "Board232.v" in library work
+Module <lab4_2> compiled
+Module <Board232> compiled
+No errors in compilation
+Analysis of file <"Board232.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Board232> in library <work>.
+
+Analyzing hierarchy for module <lab4_2> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Board232>.
+WARNING:Xst:2725 - "Board232.v" line 94: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 95: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 96: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 97: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 98: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 99: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 100: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 101: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 102: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 103: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 104: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 105: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 106: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 107: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 108: Size mismatch between case item and case selector.
+WARNING:Xst:2725 - "Board232.v" line 109: Size mismatch between case item and case selector.
+WARNING:Xst:905 - "Board232.v" line 64: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sw>, <led>, <listOut>, <tmp_digit>
+Module <Board232> is correct for synthesis.
+ 
+Analyzing module <lab4_2> in library <work>.
+Module <lab4_2> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <lab4_2> has a constant value of 101 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <lab4_2>.
+    Related source file is "lab4_2.v".
+    Found 4x1-bit ROM for signal <listMode$mux0000>.
+    Found 8-bit register for signal <numPlyLP>.
+    Found 1-bit register for signal <capWngCF>.
+    Found 1-bit register for signal <listMode>.
+    Found 1-bit register for signal <findRes>.
+    Found 1-bit register for signal <capWngLP>.
+    Found 1-bit register for signal <teamWng>.
+    Found 4-bit register for signal <listOut>.
+    Found 8-bit register for signal <numPlyCF>.
+    Found 33-bit comparator greater for signal <capWngCF$cmp_gt0000> created at line 162.
+    Found 33-bit comparator less for signal <capWngCF$cmp_lt0000> created at line 162.
+    Found 33-bit comparator greater for signal <capWngLP$cmp_gt0000> created at line 130.
+    Found 33-bit comparator less for signal <capWngLP$cmp_lt0000> created at line 130.
+    Found 20-bit register for signal <cengPlayers>.
+    Found 33-bit comparator greatequal for signal <cengPlayers_0$cmp_ge0000> created at line 154.
+    Found 32-bit register for signal <countCF>.
+    Found 32-bit register for signal <countLP>.
+    Found 1-bit 4-to-1 multiplexer for signal <findRes$mux0000>.
+    Found 32-bit register for signal <j>.
+    Found 32-bit adder for signal <j$addsub0000> created at line 205.
+    Found 32-bit 4-to-1 multiplexer for signal <j$mux0000>.
+    Found 20-bit register for signal <logicPlayers>.
+    Found 33-bit comparator greatequal for signal <logicPlayers_0$cmp_ge0000> created at line 122.
+    Found 4-bit comparator equal for signal <old_countCF_13$cmp_eq0000> created at line 84.
+    Found 4-bit comparator equal for signal <old_countCF_15$cmp_eq0000> created at line 84.
+    Found 4-bit comparator equal for signal <old_countCF_17$cmp_eq0000> created at line 84.
+    Found 4-bit comparator equal for signal <old_countCF_19$cmp_eq0000> created at line 84.
+    Found 32-bit adder for signal <old_countCF_34$add0000> created at line 157.
+    Found 4-bit comparator equal for signal <old_countLP_10$cmp_eq0000> created at line 69.
+    Found 32-bit adder for signal <old_countLP_27$add0000> created at line 125.
+    Found 4-bit comparator equal for signal <old_countLP_4$cmp_eq0000> created at line 69.
+    Found 4-bit comparator equal for signal <old_countLP_6$cmp_eq0000> created at line 69.
+    Found 4-bit comparator equal for signal <old_countLP_8$cmp_eq0000> created at line 69.
+    Found 4-bit comparator equal for signal <old_flag_25$cmp_eq0000> created at line 116.
+    Found 4-bit comparator equal for signal <old_flag_32$cmp_eq0000> created at line 148.
+    Found 33-bit comparator greatequal for signal <old_index_22$cmp_ge0000> created at line 111.
+    Found 33-bit comparator greatequal for signal <old_index_23$cmp_ge0000> created at line 111.
+    Found 33-bit comparator greatequal for signal <old_index_24$cmp_ge0000> created at line 111.
+    Found 33-bit comparator greatequal for signal <old_index_26$cmp_ge0000> created at line 111.
+    Found 33-bit comparator greatequal for signal <old_index_29$cmp_ge0000> created at line 143.
+    Found 33-bit comparator greatequal for signal <old_index_30$cmp_ge0000> created at line 143.
+    Found 33-bit comparator greatequal for signal <old_index_31$cmp_ge0000> created at line 143.
+    Found 33-bit comparator greatequal for signal <old_index_33$cmp_ge0000> created at line 143.
+    Found 1-bit xor2 for signal <teamWng$xor0000> created at line 99.
+    Summary:
+	inferred   1 ROM(s).
+	inferred 161 D-type flip-flop(s).
+	inferred  13 Adder/Subtractor(s).
+	inferred  24 Comparator(s).
+	inferred 297 Multiplexer(s).
+Unit <lab4_2> synthesized.
+
+
+Synthesizing Unit <Board232>.
+    Related source file is "Board232.v".
+WARNING:Xst:647 - Input <btn<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sw<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <tmp_digit> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <numPlyLP> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <numPlyCF> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 8-bit latch for signal <$old_tmp_digit_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16x7-bit ROM for signal <seg$mux0000>.
+    Found 27-bit up counter for signal <mclk_counter>.
+    Found 8-bit 4-to-1 multiplexer for signal <old_tmp_digit_2$mux0000> created at line 67.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   8 Multiplexer(s).
+Unit <Board232> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 13
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 10
+# Counters                                             : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 21
+ 1-bit register                                        : 5
+ 32-bit register                                       : 3
+ 4-bit register                                        : 11
+ 8-bit register                                        : 2
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 24
+ 33-bit comparator greatequal                          : 10
+ 33-bit comparator greater                             : 2
+ 33-bit comparator less                                : 2
+ 4-bit comparator equal                                : 10
+# Multiplexers                                         : 13
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 9
+ 4-bit 5-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <lab4_2>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_listMode_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <lab4_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 13
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 10
+# Counters                                             : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 161
+ Flip-Flops                                            : 161
+# Latches                                              : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 24
+ 33-bit comparator greatequal                          : 10
+ 33-bit comparator greater                             : 2
+ 33-bit comparator less                                : 2
+ 4-bit comparator equal                                : 10
+# Multiplexers                                         : 13
+ 1-bit 4-to-1 multiplexer                              : 1
+ 32-bit 4-to-1 multiplexer                             : 9
+ 4-bit 5-to-1 multiplexer                              : 2
+ 8-bit 4-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <mclk_counter_26> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_1> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_2> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_3> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_4> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_5> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_6> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_tmp_digit_2_7> (without init value) has a constant value of 0 in block <Board232>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Board232> ...
+
+Optimizing unit <lab4_2> ...
+WARNING:Xst:1293 - FF/Latch <logicPlayers_0_3> has a constant value of 0 in block <lab4_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <logicPlayers_1_3> has a constant value of 0 in block <lab4_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <logicPlayers_2_3> has a constant value of 0 in block <lab4_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <logicPlayers_3_3> has a constant value of 0 in block <lab4_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <logicPlayers_4_3> has a constant value of 0 in block <lab4_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <HH/numPlyCF_7> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_6> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_5> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_4> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_3> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_2> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_1> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyCF_0> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_7> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_6> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_5> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_4> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_3> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_2> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_1> of sequential type is unconnected in block <Board232>.
+WARNING:Xst:2677 - Node <HH/numPlyLP_0> of sequential type is unconnected in block <Board232>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Board232, actual ratio is 26.
+Latch _old_tmp_digit_2_0 has been replicated 3 time(s) to handle iob=true attribute.
+FlipFlop HH/listMode has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 167
+ Flip-Flops                                            : 167
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Board232.ngr
+Top Level Output File Name         : Board232
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 43
+
+Cell Usage :
+# BELS                             : 2163
+#      GND                         : 1
+#      INV                         : 74
+#      LUT1                        : 124
+#      LUT2                        : 20
+#      LUT2_D                      : 5
+#      LUT2_L                      : 7
+#      LUT3                        : 276
+#      LUT3_D                      : 34
+#      LUT3_L                      : 42
+#      LUT4                        : 530
+#      LUT4_D                      : 52
+#      LUT4_L                      : 64
+#      MUXCY                       : 478
+#      MUXF5                       : 13
+#      VCC                         : 1
+#      XORCY                       : 442
+# FlipFlops/Latches                : 171
+#      FD                          : 65
+#      FDE                         : 4
+#      FDR                         : 32
+#      FDS                         : 66
+#      LDE                         : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 9
+#      OBUF                        : 30
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-5 
+
+ Number of Slices:                      637  out of   2448    26%  
+ Number of Slice Flip Flops:            165  out of   4896     3%  
+ Number of 4 input LUTs:               1228  out of   4896    25%  
+ Number of IOs:                          43
+ Number of bonded IOBs:                  40  out of     92    43%  
+    IOB Flip Flops:                       6
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+----------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)      | Load  |
+-------------------------------------------------------+----------------------------+-------+
+mclk                                                   | BUFGP                      | 26    |
+HH/Mrom_listMode_mux0000(old_tmp_digit_2_cmp_eq00001:O)| NONE(*)(_old_tmp_digit_2_0)| 4     |
+clk1(clk1:O)                                           | BUFG(*)(HH/listMode)       | 141   |
+-------------------------------------------------------+----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 16.059ns (Maximum Frequency: 62.269MHz)
+   Minimum input arrival time before clock: 16.902ns
+   Maximum output required time after clock: 5.406ns
+   Maximum combinational path delay: 7.967ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mclk'
+  Clock period: 4.191ns (frequency: 238.635MHz)
+  Total number of paths / destination ports: 351 / 26
+-------------------------------------------------------------------------
+Delay:               4.191ns (Levels of Logic = 26)
+  Source:            mclk_counter_1 (FF)
+  Destination:       mclk_counter_25 (FF)
+  Source Clock:      mclk rising
+  Destination Clock: mclk rising
+
+  Data Path: mclk_counter_1 to mclk_counter_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.514   0.509  mclk_counter_1 (mclk_counter_1)
+     LUT1:I0->O            1   0.612   0.000  Mcount_mclk_counter_cy<1>_rt (Mcount_mclk_counter_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  Mcount_mclk_counter_cy<1> (Mcount_mclk_counter_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_mclk_counter_cy<2> (Mcount_mclk_counter_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_mclk_counter_cy<3> (Mcount_mclk_counter_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Mcount_mclk_counter_cy<4> (Mcount_mclk_counter_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<5> (Mcount_mclk_counter_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<6> (Mcount_mclk_counter_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<7> (Mcount_mclk_counter_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<8> (Mcount_mclk_counter_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<9> (Mcount_mclk_counter_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<10> (Mcount_mclk_counter_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<11> (Mcount_mclk_counter_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<12> (Mcount_mclk_counter_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<13> (Mcount_mclk_counter_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<14> (Mcount_mclk_counter_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<15> (Mcount_mclk_counter_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<16> (Mcount_mclk_counter_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<17> (Mcount_mclk_counter_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<18> (Mcount_mclk_counter_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<19> (Mcount_mclk_counter_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<20> (Mcount_mclk_counter_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<21> (Mcount_mclk_counter_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<22> (Mcount_mclk_counter_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Mcount_mclk_counter_cy<23> (Mcount_mclk_counter_cy<23>)
+     MUXCY:CI->O           0   0.051   0.000  Mcount_mclk_counter_cy<24> (Mcount_mclk_counter_cy<24>)
+     XORCY:CI->O           1   0.699   0.000  Mcount_mclk_counter_xor<25> (Result<25>)
+     FD:D                      0.268          mclk_counter_25
+    ----------------------------------------
+    Total                      4.191ns (3.682ns logic, 0.509ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1'
+  Clock period: 16.059ns (frequency: 62.269MHz)
+  Total number of paths / destination ports: 30960767 / 236
+-------------------------------------------------------------------------
+Delay:               16.059ns (Levels of Logic = 44)
+  Source:            HH/countLP_0 (FF)
+  Destination:       HH/capWngLP (FF)
+  Source Clock:      clk1 rising
+  Destination Clock: clk1 rising
+
+  Data Path: HH/countLP_0 to HH/capWngLP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              5   0.514   0.690  HH/countLP_0 (HH/countLP_0)
+     LUT1:I0->O            1   0.612   0.000  HH/Msub__old_countLP_3_cy<0>_rt (HH/Msub__old_countLP_3_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_3_cy<0> (HH/Msub__old_countLP_3_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_3_cy<1> (HH/Msub__old_countLP_3_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_3_cy<2> (HH/Msub__old_countLP_3_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_3_cy<3> (HH/Msub__old_countLP_3_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_3_cy<4> (HH/Msub__old_countLP_3_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_3_cy<5> (HH/Msub__old_countLP_3_cy<5>)
+     XORCY:CI->O           3   0.699   0.520  HH/Msub__old_countLP_3_xor<6> (HH/_old_countLP_3<6>)
+     LUT3:I1->O            1   0.612   0.000  HH/Msub__old_countLP_5_lut<6> (HH/Msub__old_countLP_5_lut<6>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_5_cy<6> (HH/Msub__old_countLP_5_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<7> (HH/Msub__old_countLP_5_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<8> (HH/Msub__old_countLP_5_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<9> (HH/Msub__old_countLP_5_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<10> (HH/Msub__old_countLP_5_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<11> (HH/Msub__old_countLP_5_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<12> (HH/Msub__old_countLP_5_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<13> (HH/Msub__old_countLP_5_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<14> (HH/Msub__old_countLP_5_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<15> (HH/Msub__old_countLP_5_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<16> (HH/Msub__old_countLP_5_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<17> (HH/Msub__old_countLP_5_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<18> (HH/Msub__old_countLP_5_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<19> (HH/Msub__old_countLP_5_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<20> (HH/Msub__old_countLP_5_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<21> (HH/Msub__old_countLP_5_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<22> (HH/Msub__old_countLP_5_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<23> (HH/Msub__old_countLP_5_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<24> (HH/Msub__old_countLP_5_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<25> (HH/Msub__old_countLP_5_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<26> (HH/Msub__old_countLP_5_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<27> (HH/Msub__old_countLP_5_cy<27>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_5_xor<28> (HH/_old_countLP_5<28>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_7_lut<28> (HH/Msub__old_countLP_7_lut<28>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_7_cy<28> (HH/Msub__old_countLP_7_cy<28>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_7_xor<29> (HH/_old_countLP_7<29>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_9_lut<29> (HH/Msub__old_countLP_9_lut<29>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_9_cy<29> (HH/Msub__old_countLP_9_cy<29>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_9_xor<30> (HH/_old_countLP_9<30>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_11_lut<30> (HH/Msub__old_countLP_11_lut<30>)
+     MUXCY:S->O            0   0.404   0.000  HH/Msub__old_countLP_11_cy<30> (HH/Msub__old_countLP_11_cy<30>)
+     XORCY:CI->O           2   0.699   0.383  HH/Msub__old_countLP_11_xor<31> (HH/_old_countLP_11<31>)
+     LUT4:I3->O            1   0.612   0.387  HH/capWngLP_mux00001731 (HH/capWngLP_mux00001731)
+     LUT4_L:I2->LO         1   0.612   0.103  HH/capWngLP_mux00001754_SW1 (N44)
+     LUT4:I3->O            1   0.612   0.000  HH/capWngLP_mux000018081 (HH/capWngLP_mux00001808)
+     FDS:D                     0.268          HH/capWngLP
+    ----------------------------------------
+    Total                     16.059ns (12.532ns logic, 3.527ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk1'
+  Total number of paths / destination ports: 11935220 / 211
+-------------------------------------------------------------------------
+Offset:              16.902ns (Levels of Logic = 44)
+  Source:            sw<5> (PAD)
+  Destination:       HH/capWngLP (FF)
+  Destination Clock: clk1 rising
+
+  Data Path: sw<5> to HH/capWngLP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.106   0.969  sw_5_IBUF (sw_5_IBUF)
+     LUT4_D:I0->LO         1   0.612   0.103  HH/old_countLP_4_cmp_eq00004_SW0 (N98)
+     LUT4:I3->O           14   0.612   0.880  HH/old_countLP_4_cmp_eq00004_1 (HH/old_countLP_4_cmp_eq00004)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_5_lut<1> (HH/Msub__old_countLP_5_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_5_cy<1> (HH/Msub__old_countLP_5_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<2> (HH/Msub__old_countLP_5_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<3> (HH/Msub__old_countLP_5_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<4> (HH/Msub__old_countLP_5_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<5> (HH/Msub__old_countLP_5_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<6> (HH/Msub__old_countLP_5_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<7> (HH/Msub__old_countLP_5_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<8> (HH/Msub__old_countLP_5_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<9> (HH/Msub__old_countLP_5_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<10> (HH/Msub__old_countLP_5_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<11> (HH/Msub__old_countLP_5_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<12> (HH/Msub__old_countLP_5_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<13> (HH/Msub__old_countLP_5_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<14> (HH/Msub__old_countLP_5_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<15> (HH/Msub__old_countLP_5_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<16> (HH/Msub__old_countLP_5_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<17> (HH/Msub__old_countLP_5_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<18> (HH/Msub__old_countLP_5_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<19> (HH/Msub__old_countLP_5_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<20> (HH/Msub__old_countLP_5_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<21> (HH/Msub__old_countLP_5_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<22> (HH/Msub__old_countLP_5_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<23> (HH/Msub__old_countLP_5_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<24> (HH/Msub__old_countLP_5_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<25> (HH/Msub__old_countLP_5_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<26> (HH/Msub__old_countLP_5_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  HH/Msub__old_countLP_5_cy<27> (HH/Msub__old_countLP_5_cy<27>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_5_xor<28> (HH/_old_countLP_5<28>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_7_lut<28> (HH/Msub__old_countLP_7_lut<28>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_7_cy<28> (HH/Msub__old_countLP_7_cy<28>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_7_xor<29> (HH/_old_countLP_7<29>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_9_lut<29> (HH/Msub__old_countLP_9_lut<29>)
+     MUXCY:S->O            1   0.404   0.000  HH/Msub__old_countLP_9_cy<29> (HH/Msub__old_countLP_9_cy<29>)
+     XORCY:CI->O           3   0.699   0.481  HH/Msub__old_countLP_9_xor<30> (HH/_old_countLP_9<30>)
+     LUT3:I2->O            1   0.612   0.000  HH/Msub__old_countLP_11_lut<30> (HH/Msub__old_countLP_11_lut<30>)
+     MUXCY:S->O            0   0.404   0.000  HH/Msub__old_countLP_11_cy<30> (HH/Msub__old_countLP_11_cy<30>)
+     XORCY:CI->O           2   0.699   0.383  HH/Msub__old_countLP_11_xor<31> (HH/_old_countLP_11<31>)
+     LUT4:I3->O            1   0.612   0.387  HH/capWngLP_mux00001731 (HH/capWngLP_mux00001731)
+     LUT4_L:I2->LO         1   0.612   0.103  HH/capWngLP_mux00001754_SW1 (N44)
+     LUT4:I3->O            1   0.612   0.000  HH/capWngLP_mux000018081 (HH/capWngLP_mux00001808)
+     FDS:D                     0.268          HH/capWngLP
+    ----------------------------------------
+    Total                     16.902ns (12.633ns logic, 4.269ns route)
+                                       (74.7% logic, 25.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mclk'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              5.406ns (Levels of Logic = 2)
+  Source:            mclk_counter_17 (FF)
+  Destination:       an<3> (PAD)
+  Source Clock:      mclk rising
+
+  Data Path: mclk_counter_17 to an<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.514   0.754  mclk_counter_17 (mclk_counter_17)
+     LUT4:I0->O            1   0.612   0.357  an<3> (an_3_OBUF)
+     OBUF:I->O                 3.169          an_3_OBUF (an<3>)
+    ----------------------------------------
+    Total                      5.406ns (4.295ns logic, 1.111ns route)
+                                       (79.5% logic, 20.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.364ns (Levels of Logic = 2)
+  Source:            HH/listMode (FF)
+  Destination:       an<2> (PAD)
+  Source Clock:      clk1 rising
+
+  Data Path: HH/listMode to an<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.514   0.712  HH/listMode (HH/listMode)
+     LUT4:I1->O            1   0.612   0.357  an<2> (an_2_OBUF)
+     OBUF:I->O                 3.169          an_2_OBUF (an<2>)
+    ----------------------------------------
+    Total                      5.364ns (4.295ns logic, 1.069ns route)
+                                       (80.1% logic, 19.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'HH/Mrom_listMode_mux0000'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.114ns (Levels of Logic = 1)
+  Source:            _old_tmp_digit_2_0_1 (LATCH)
+  Destination:       seg<5> (PAD)
+  Source Clock:      HH/Mrom_listMode_mux0000 falling
+
+  Data Path: _old_tmp_digit_2_0_1 to seg<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.588   0.357  _old_tmp_digit_2_0_1 (_old_tmp_digit_2_0_1)
+     OBUF:I->O                 3.169          seg_5_OBUF (seg<5>)
+    ----------------------------------------
+    Total                      4.114ns (3.757ns logic, 0.357ns route)
+                                       (91.3% logic, 8.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Delay:               7.967ns (Levels of Logic = 4)
+  Source:            sw<1> (PAD)
+  Destination:       an<2> (PAD)
+
+  Data Path: sw<1> to an<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            55   1.106   1.231  sw_1_IBUF (sw_1_IBUF)
+     LUT2:I0->O           14   0.612   0.880  old_tmp_digit_2_cmp_eq00001 (HH/Mrom_listMode_mux0000)
+     LUT4:I2->O            1   0.612   0.357  an<2> (an_2_OBUF)
+     OBUF:I->O                 3.169          an_2_OBUF (an<2>)
+    ----------------------------------------
+    Total                      7.967ns (5.499ns logic, 2.468ns route)
+                                       (69.0% logic, 31.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.02 secs
+ 
+--> 
+
+
+Total memory usage is 359936 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

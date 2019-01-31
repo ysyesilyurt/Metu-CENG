@@ -1,0 +1,226 @@
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | T
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+---------------------------------
+All books since 2003:
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+---------------------------------
+All books by PAUL AUSTER with titles in ["c", "p"]
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+---------------------------------
+All books by PAUL AUSTER
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+---------------------------------
+Books with title "C++" are now unavailable
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | F
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | F
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | F
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+---------------------------------
+Scott Meyer's book is now available
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Penguin Books | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+0965913228 | Oracle | Paul Auster | Penguin Books | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Picador | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Penguin Books | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Picador | 2009 | 192 | T
+---------------------------------
+Paul Auster now works with "Publisher X"
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+0965913228 | Oracle | Paul Auster | Publisher X | 2003 | 245 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+0965913228 | Oracle | Paul Auster | Publisher X | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+0965913228 | Oracle | Paul Auster | Publisher X | 2003 | 245 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+Removing book with isbn 0965913228
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0312429003 | the brooklyn files: a novel | paul AUSTER | Publisher X | 2009 | 320 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+Removing Paul Auster's book "the brooklyn files: a novel"
+All books (isbn sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+All books (author-title sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+0321714113 | C++ | Barbara Moo | Addison-Wesley Professional | 2012 | 976 | F
+1491903996 | C++ | Scott Meyer | O'Reilly Media | 1995 | 334 | T
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+Removing all books with title "C++"
+All books (isbn sorted):
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+All books (author-title sorted):
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+---------------------------------
+All books (title-author sorted):
+978-0140178135 | Leviathan | Paul AUSTER | Publisher X | 1993 | 274 | T
+978-0140431950 | Leviathan | Thomas Hobbes | Penguin Classics | 1982 | 736 | T
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+Removing all books with title "Leviathan"
+All books (isbn sorted):
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+All books (author-title sorted):
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------
+All books (title-author sorted):
+978-0143112228 | The Invention of Solitude | Paul Auster | Publisher X | 2007 | 192 | T
+978-0312428944 | Timbuktu: A Novel | pAul AustEr | Publisher X | 2009 | 192 | T
+---------------------------------

@@ -1,0 +1,19 @@
+2|2003|Database Management Systems 3. Ed.|Raghu Ramakrishan
+4|2004|Fundamentals of Database Systems|R. Elmasri, S.B. Navathe
+1|1988|File Structures: An Analytic Approach|B. J. Salzberg
+0|1991|File Structures 2.ed|Michael J. Folk, B. Zoellick
+8|2006|Data Structures and Algorithm Analysis in C++|Mark Allen Weiss
+6|2009|Introduction to Algorithms|T. H. Cormen, C. E. Lieserson, R. L. Rivest, C. Stein
+9|2007|Discrete Mathematics and its Applications|K.H. Rosen
+7|1996|Logic and Discrete Mathematics: A Computer Science Perspective|W.K. Grassmann and J.P. Tremblay
+3|1998|Elements of the Theory of Computation|H.R.Lewis, C.H.Papadimitriou
+10|2005|Introduction to the Theory of Computation|M.Sipser
+15|1996|Programming Languages: Concepts and Constructs|R. Sethi, Addison Wesley
+11|1990|Programming Language Concepts and Paradigms|D.A. Watt
+5|1992|Modern Operating Systems|A.S. Tanenbaum
+18|1996|Computer Organization|. Hamacher, Z.G. Vranesic, S. Zaky
+14|1998|Computer Organization and Design|D.A. Patterson, J.L. Hennessy
+12|2003|Computer Systems: A Programmers Perspective|Randal E. Bryant and David R. OHallaron 
+13|1995|Artificial Intelligence: A Modern Approach|S.Russell, P.Norvig, Prentice Hall
+16|2000|Iterative Methods for Sparse Linear Systems|Yousef Saad
+17|2003|Introduction to Parallel Computing|Grama, Gupta, Kumar, and Karypis, Addison Wesley

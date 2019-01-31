@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{CENG 222}  \\[4mm]
+                                         \Large Statistical Methods for Computer Engineering \\[4mm]
+                                        \normalsize      Spring '2017-2018 \\
+                                           \Large   Take Home Exam 1 \\
+                    \normalsize Deadline: May 25, 23:59 \\
+                    \normalsize Submission: via COW
+\end{flushright}
+\HRule
+
+\section*{Student Information }
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 \\
+
+% Write your answers below the section tags
+\section*{Answer 3.8}
+Computer user will try each of the 4 possible passwords in order to recall her password. In this trying process, the user may try 0 or 1 or 2 or 3 wrong passwords and then reach to the correct one. Therefore there are 4 cases in which she finds out her password with entering wrong passwords and each of them has the same probability, hence $X$ has the pmf:
+\begin{center}
+$P(0)=P(1)=P(2)=P(3)=\frac{1}{4}$ 
+\end{center}
+So:
+\begin{center}
+$E(X)=\sum_{x=0}^{3} xP(x) = (0+1+2+3)(\frac{1}{4})=1.5$
+\end{center}
+and
+\begin{center}
+$Var(X)=\sum_{x=0}^{3} (x-\mu)^2P(x)=\sum_{x=0}^{3} (x-1.5)^2P(x)$
+$=((-1.5)^2+(-0.5)^2+(0.5)^2+(1.5)^2)(\frac{1}{4})=1.25$
+\end{center}
+
+\section*{Answer 3.15}
+\subsection*{a)}
+To compute the probability of \textbf{at least one} hardware failure happening in any lab we will subtract the possibility of not happening of any failure of the hardware from total probability (1) and then we will reach to the required probability. We have from table $P(0,0) = 0.52$ and subtracting, $1 - 0.52 = 0.48$
+\subsection*{b)}
+To determine if $X$ and $Y$ are independent we need to make sure that $P_{XY}(x,y)=P_X(x).P_Y(y)$ for each marginal/joint distribution values. If we bump into any inequality in this calculations then we can say X and Y are dependent. So we start computing with $P(X=0)$ and $P(Y=0)$, $P(0,0)=0.52$, the marginal distribution of X at 0 is $0.76$ and the marginal distribution of Y at 0 is $0.72$, $0.76 \times 0.72=0.54$, but $0.54 \neq 0.52$ therefore X and Y are not independent, they are infact dependent.
+
+\section*{Answer 3.19}
+\subsection*{a)}
+Let's compute the Expectation and Variance values of X (a profit made on \textbf{1 share} of A) and Y (a profit made on \textbf{1 share} of B):
+
+\begin{center}
+$E(X) =(-2)(0.5) + (2)(0.5) = 0 $ and 
+$Var(X) = (-2)^2 (0.5) + (2)^2 (0.5)-0^2 = 4$
+$E(Y) = (-1)(0.8) + (4)(0.2) = 0$ and
+$Var(Y)=(-1)^2(.8)+(4)^2(0.2)-0^2 = 4$
+\end{center} 
+Considering X and Y are independent, Expectation and variance values for 100 shares of A;
+\begin{center}
+$E(100X) = 100E(X) = 0$ and $Var(100X) = 100^2 Var(X) = 40.000 $
+\end{center}
+\subsection*{b)}
+Expectation and variance values for 100 shares of B;
+\begin{center}
+$E(100Y) = 100E(Y) = 0$ and $Var (100Y) = 100^2 Var(Y) = 40.000$
+\end{center}
+\subsection*{c)}
+Expectation and variance values for 50 shares of A and 50 shares of B;
+\begin{center}
+$E(50X + 50Y) = 50E(X) + 50E(Y) = 0$\\$Var(50X + 50Y) = 50^2 Var(X) + 50^2 Var(Y) = 20.000$
+\end{center}
+
+\section*{Answer 3.29}
+Since insurance company divides its customers into 2 groups as high-risk and low-risk groups, a customer of this company can be either in high-risk group with 20 percent possibility or in low-risk group with 80 percent possibility. In question it says, The high-risk customers make an average of 1 accident per year while the low-risk customers make an average of 0.1 accidents per year. We know that Eric had no accidents last year. So the probability that he is a high-risk driver can be found with Bayes rule. We can compute it as:
+
+\begin{center}
+$P(High Risk|No Accident)= \frac{P(No Accident|High Risk)\times P(High Risk)}{P(No Accident|High Risk)\times P(High Risk) + P(No Accident|Low Risk)\times P(Low Risk)}$
+\end{center}
+Where;
+\begin{center}
+$P(No Accident|High Risk)=P(Poi(1)=0)=e^{-1}$, $P(High Risk)=0.2$\\
+$P(No Accident|Low Risk)=P(Poi(0.1)=0)=e^{-0.1}$, $P(Low Risk)=0.8$
+\end{center}
+So we have:
+\begin{center}
+$\frac{e^{-1}\times 0.2}{e^{-1}\times 0.2 + e^{-0.1}\times 0.8}=0.0923$
+\end{center}
+
+
+
+
+
+
+
+\end{document}

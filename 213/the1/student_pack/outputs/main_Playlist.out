@@ -1,0 +1,40 @@
+Testing load
+-------------
+[PLAYLIST SIZE=5]{Billie Jean,dance-pop,1983}{Sad but True,,1993}{The Four Seasons,Classical,}{Nocturne in F major,,}{Polonaise in D minor,Classical,}
+[HISTORY]<INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing insert
+-------------
+[PLAYLIST SIZE=7]{Billie Jean,dance-pop,1983}{Sad but True,,1993}{The Four Seasons,Classical,}{Nocturne in F major,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Equinoxe 4,,}
+[HISTORY]<INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing delete
+-------------
+[PLAYLIST SIZE=6]{Sad but True,,1993}{The Four Seasons,Classical,}{Nocturne in F major,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Equinoxe 4,,}
+[HISTORY]<DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Move_left
+-------------
+[PLAYLIST SIZE=6]{The Four Seasons,Classical,}{Sad but True,,1993}{Nocturne in F major,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Equinoxe 4,,}
+[HISTORY]<DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Reverse
+-------------
+[PLAYLIST SIZE=6]{Equinoxe 4,,}{Rendez-Vous 2,,}{Polonaise in D minor,Classical,}{Nocturne in F major,,}{Sad but True,,1993}{The Four Seasons,Classical,}
+[HISTORY]<REVERSE:{,,}><DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Sort
+-------------
+[PLAYLIST SIZE=6]{Equinoxe 4,,}{Nocturne in F major,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Sad but True,,1993}{The Four Seasons,Classical,}
+[HISTORY]<REVERSE:{,,}><DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Merge
+-------------
+[PLAYLIST SIZE=8]{Equinoxe 4,,}{Nocturne in F major,,}{Oxygene 4,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Sad but True,,1993}{Sinnerman,,}{The Four Seasons,Classical,}
+[HISTORY]<REVERSE:{,,}><DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Shuffle
+-------------
+[PLAYLIST SIZE=8]{Sad but True,,1993}{Sinnerman,,}{Equinoxe 4,,}{Polonaise in D minor,Classical,}{Rendez-Vous 2,,}{Oxygene 4,,}{Nocturne in F major,,}{The Four Seasons,Classical,}
+[HISTORY]<REVERSE:{,,}><DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Undo1
+-------------
+[PLAYLIST SIZE=8]{The Four Seasons,Classical,}{Nocturne in F major,,}{Oxygene 4,,}{Rendez-Vous 2,,}{Polonaise in D minor,Classical,}{Equinoxe 4,,}{Sinnerman,,}{Sad but True,,1993}
+[HISTORY]<DELETE:{Billie Jean,dance-pop,1983}><INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>
+Testing Undo2
+-------------
+[PLAYLIST SIZE=9]{The Four Seasons,Classical,}{Nocturne in F major,,}{Oxygene 4,,}{Rendez-Vous 2,,}{Polonaise in D minor,Classical,}{Equinoxe 4,,}{Sinnerman,,}{Sad but True,,1993}{Billie Jean,dance-pop,1983}
+[HISTORY]<INSERT:{Equinoxe 4,,}><INSERT:{Rendez-Vous 2,,}><INSERT:{Polonaise in D minor,Classical,}><INSERT:{Nocturne in F major,,}><INSERT:{The Four Seasons,Classical,}><INSERT:{Sad but True,,1993}><INSERT:{Billie Jean,dance-pop,1983}>

@@ -1,0 +1,23 @@
+Running: /home/yavuz/Xilinxx/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/yavuz/Desktop/lab4_1/testbench_RAM_isim_beh.exe -prj /home/yavuz/Desktop/lab4_1/testbench_RAM_beh.prj work.testbench_RAM work.glbl 
+ISim M.81d (signature 0x9ca8bed6)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"/home/yavuz/Desktop/lab4_1/lab4_1.v\" into library work
+Analyzing Verilog file \"/home/yavuz/Desktop/lab4_1/testbench_ROM.v\" into library work
+Analyzing Verilog file \"/home/yavuz/Xilinxx/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 70052 KB
+Fuse CPU Usage: 50 ms
+Compiling module FUNCROM
+Compiling module FUNCRAM
+Compiling module testbench_RAM
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable /home/yavuz/Desktop/lab4_1/testbench_RAM_isim_beh.exe
+Fuse Memory Usage: 1154440 KB
+Fuse CPU Usage: 70 ms
+GCC CPU Usage: 380 ms

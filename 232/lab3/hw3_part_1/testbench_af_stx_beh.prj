@@ -1,0 +1,4 @@
+verilog isim_temp "lab3_1.v"
+verilog isim_temp "testbench_af.v"
+verilog isim_temp "testbench_ic1500.v"
+verilog isim_temp "/home/yavuz/xlinix/ISE_DS/ISE//verilog/src/glbl.v"

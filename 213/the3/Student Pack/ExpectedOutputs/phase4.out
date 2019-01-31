@@ -1,0 +1,568 @@
+
+---------------- phase 1 -----------------
+
+|-------------|
+|   K   |  I  |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+
+---------------- phase 2 -----------------
+
+a is inserted with probe count 0
+b is inserted with probe count 0
+c is inserted with probe count 0
+d is inserted with probe count 1
+e is inserted with probe count 1
+f is inserted with probe count 2
+g is inserted with probe count 1
+h is inserted with probe count 3
+i is inserted with probe count 1
+j is inserted with probe count 4
+k is inserted with probe count 1
+l is inserted with probe count 5
+m is inserted with probe count 1
+n is inserted with probe count 1
+o is inserted with probe count 0
+p is inserted with probe count 0
+q is inserted with probe count 0
+r is inserted with probe count 1
+s is inserted with probe count 4
+t is inserted with probe count 1
+u is inserted with probe count 2
+v is inserted with probe count 2
+w is inserted with probe count 1
+x is inserted with probe count 1
+y is inserted with probe count 6
+z is inserted with probe count 1
+a is inserted with probe count 1
+Table has a load factor of 0.341772
+
+|--------|
+| K |  I |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| m | 13 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| s | 19 |
+|--------|
+|   | -1 |
+|--------|
+| r | 18 |
+|--------|
+|   | -1 |
+|--------|
+| g | 7  |
+|--------|
+|   | -1 |
+|--------|
+| e | 5  |
+|--------|
+|   | -1 |
+|--------|
+| n | 14 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| h | 8  |
+|--------|
+| w | 23 |
+|--------|
+| c | 3  |
+|--------|
+| u | 21 |
+|--------|
+|   | -1 |
+|--------|
+| j | 10 |
+|--------|
+| y | 25 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| f | 6  |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| z | 26 |
+|--------|
+| q | 17 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| a | 27 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| d | 4  |
+|--------|
+|   | -1 |
+|--------|
+| b | 2  |
+|--------|
+|   | -1 |
+|--------|
+| t | 20 |
+|--------|
+| v | 22 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| o | 15 |
+|--------|
+| i | 9  |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| a | 1  |
+|--------|
+| l | 12 |
+|--------|
+| x | 24 |
+|--------|
+|   | -1 |
+|--------|
+|   | -1 |
+|--------|
+| k | 11 |
+|--------|
+|   | -1 |
+|--------|
+| p | 16 |
+|--------|
+
+---------------- phase 3 -----------------
+
+Trying to get "a", 1th occurance: 1
+Length of path for previous query: 0
+Path : End
+Trying to get "b", 1th occurance: 2
+Length of path for previous query: 1
+Path : 54->End
+Trying to get "c", 1th occurance: 3
+Length of path for previous query: 0
+Path : End
+Trying to get "d", 1th occurance: 4
+Length of path for previous query: 1
+Path : 52->End
+Trying to get "e", 1th occurance: 5
+Length of path for previous query: 1
+Path : 19->End
+Trying to get "f", 1th occurance: 6
+Length of path for previous query: 0
+Path : End
+Trying to get "g", 1th occurance: 7
+Length of path for previous query: 1
+Path : 17->End
+Trying to get "h", 1th occurance: 8
+Length of path for previous query: 1
+Path : 26->End
+Trying to get "i", 1th occurance: 9
+Length of path for previous query: 1
+Path : 65->End
+Trying to get "j", 1th occurance: 10
+Length of path for previous query: 1
+Path : 31->End
+Trying to get "k", 1th occurance: 11
+Length of path for previous query: 1
+Path : 76->End
+Trying to get "l", 1th occurance: 12
+Length of path for previous query: 1
+Path : 72->End
+Trying to get "m", 1th occurance: 13
+Length of path for previous query: 1
+Path : 2->End
+Trying to get "n", 1th occurance: 14
+Length of path for previous query: 0
+Path : End
+Trying to get "o", 1th occurance: 15
+Length of path for previous query: 0
+Path : End
+Trying to get "p", 1th occurance: 16
+Length of path for previous query: 0
+Path : End
+Trying to get "q", 1th occurance: 17
+Length of path for previous query: 0
+Path : End
+Trying to get "r", 1th occurance: 18
+Length of path for previous query: 1
+Path : 15->End
+Trying to get "s", 1th occurance: 19
+Length of path for previous query: 0
+Path : End
+Trying to get "t", 1th occurance: 20
+Length of path for previous query: 1
+Path : 56->End
+Trying to get "u", 1th occurance: 21
+Length of path for previous query: 1
+Path : 29->End
+Trying to get "v", 1th occurance: 22
+Length of path for previous query: 0
+Path : End
+Trying to get "w", 1th occurance: 23
+Length of path for previous query: 1
+Path : 27->End
+Trying to get "x", 1th occurance: 24
+Length of path for previous query: 2
+Path : 72->73->End
+Trying to get "y", 1th occurance: 25
+Length of path for previous query: 1
+Path : 32->End
+Trying to get "z", 1th occurance: 26
+Length of path for previous query: 1
+Path : 41->End
+Trying to get "a", 2th occurance: 27
+Length of path for previous query: 1
+Path : 45->End
+
+---------------- phase 4 -----------------
+
+Removing "z", 1st occurance: 1
+Trying to get "z", 1st occurance: -1
+Length of path for previous query : 2
+Path : 41->47->End
+Removing "y", 1st occurance: 1
+Trying to get "y", 1st occurance: -1
+Length of path for previous query : 3
+Path : 32->72->33->End
+Removing "x", 1st occurance: 2
+Trying to get "x", 1st occurance: -1
+Length of path for previous query : 3
+Path : 72->73->74->End
+Removing "w", 1st occurance: 1
+Trying to get "w", 1st occurance: -1
+Length of path for previous query : 2
+Path : 27->62->End
+Removing "v", 1st occurance: 0
+Trying to get "v", 1st occurance: -1
+Length of path for previous query : 1
+Path : 47->End
+Removing "u", 1st occurance: 1
+Trying to get "u", 1st occurance: -1
+Length of path for previous query : 2
+Path : 29->59->End
+Removing "t", 1st occurance: 1
+Trying to get "t", 1st occurance: -1
+Length of path for previous query : 4
+Path : 56->41->26->11->End
+Removing "s", 1st occurance: 0
+Trying to get "s", 1st occurance: -1
+Length of path for previous query : 1
+Path : 38->End
+Removing "r", 1st occurance: 1
+Trying to get "r", 1st occurance: -1
+Length of path for previous query : 2
+Path : 15->74->End
+Removing "q", 1st occurance: 0
+Trying to get "q", 1st occurance: -1
+Length of path for previous query : 1
+Path : 62->End
+Removing "p", 1st occurance: 0
+Trying to get "p", 1st occurance: -1
+Length of path for previous query : 1
+Path : 53->End
+Removing "o", 1st occurance: 0
+Trying to get "o", 1st occurance: -1
+Length of path for previous query : 1
+Path : 0->End
+Removing "n", 1st occurance: 0
+Trying to get "n", 1st occurance: -1
+Length of path for previous query : 1
+Path : 70->End
+Removing "m", 1st occurance: 1
+Trying to get "m", 1st occurance: -1
+Length of path for previous query : 2
+Path : 2->12->End
+Removing "l", 1st occurance: 1
+Trying to get "l", 1st occurance: -1
+Length of path for previous query : 2
+Path : 72->37->End
+Removing "k", 1st occurance: 1
+Trying to get "k", 1st occurance: -1
+Length of path for previous query : 3
+Path : 76->2->7->End
+Removing "j", 1st occurance: 1
+Trying to get "j", 1st occurance: -1
+Length of path for previous query : 2
+Path : 31->70->End
+Removing "i", 1st occurance: 1
+Trying to get "i", 1st occurance: -1
+Length of path for previous query : 2
+Path : 65->59->End
+Removing "h", 1st occurance: 1
+Trying to get "h", 1st occurance: -1
+Length of path for previous query : 2
+Path : 26->60->End
+Removing "g", 1st occurance: 1
+Trying to get "g", 1st occurance: -1
+Length of path for previous query : 2
+Path : 17->6->End
+Removing "f", 1st occurance: 0
+Trying to get "f", 1st occurance: -1
+Length of path for previous query : 2
+Path : 64->14->End
+Removing "e", 1st occurance: 1
+Trying to get "e", 1st occurance: -1
+Length of path for previous query : 2
+Path : 19->3->End
+Removing "d", 1st occurance: 1
+Trying to get "d", 1st occurance: -1
+Length of path for previous query : 5
+Path : 52->76->21->45->69->End
+Removing "c", 1st occurance: 0
+Trying to get "c", 1st occurance: -1
+Length of path for previous query : 1
+Path : 7->End
+Removing "b", 1st occurance: 1
+Trying to get "b", 1st occurance: -1
+Length of path for previous query : 5
+Path : 54->73->13->32->51->End
+Removing "a", 1st occurance: 0
+Trying to get "a", 1st occurance: 27
+Length of path for previous query : 1
+Path : 45->End
+Trying to get "a", 3rd occurance: -1
+Removing "a", 1st occurance: 1
+Removing "a", 1st occurance: -1
+|-------------|
+|   K   |  I  |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|
+|       |  -1 |
+|-------------|
+|       | -99 |
+|-------------|

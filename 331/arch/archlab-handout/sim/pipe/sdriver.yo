@@ -1,0 +1,214 @@
+                            | #######################################################################
+                            | # Test for copying block of size 4;
+                            | #######################################################################
+0x000:                      | 	.pos 0
+0x000: 30f4d003000000000000 | main:	irmovq Stack, %rsp  	# Set up stack pointer
+                            | 
+                            | 	# Set up arguments for copy function and then invoke it
+0x00a: 30f20400000000000000 | 	irmovq $4, %rdx		# src and dst have 4 elements
+0x014: 30f62803000000000000 | 	irmovq dest, %rsi	# dst array
+0x01e: 30f7f802000000000000 | 	irmovq src, %rdi	# src array
+0x028: 803200000000000000   | 	call ncopy		 
+0x031: 00                   | 	halt			# should halt with num nonzeros in %rax
+0x032:                      | StartFun:
+                            | #/* $begin ncopy-ys */
+                            | ##################################################################
+                            | # ncopy.ys - Copy a src block of len words to dst.
+                            | # Return the number of positive words (>0) contained in src.
+                            | #
+                            | # Include your name and ID here.
+                            | # name = Yavuz Selim Yesilyurt
+                            | # ID = 2259166
+                            | ##
+                            | # Describe how and why you modified the baseline code.
+                            | ## 
+                            | # I used "iaddq" instruction here, which I implemented in "pipe-full.hcl" file,
+                            | # in many places when I increment registers, to make increment operations faster
+                            | ##
+                            | # In function entrance I constructed a loop which advances with decrementing len 
+                            | # by 7 on each loop test for utilization of loop unrolling 7 times. Loop body
+                            | # basically retrieves 7 in order values from src and checks if val > 0 for each
+                            | # in order value and copies these values to dest in order again.
+                            | ##
+                            | # Whenever len < 7 in the loop, then loop breaks and starts making its job one by one;
+                            | # that is, first it checks if len == 0 and if it's not, it retrieves the value
+                            | # of the next item in src and checks for if val > 0. This operation is repeated until
+                            | # len = 0 and eventually directed to the "Done" label and returns.
+                            | ##
+                            | # Also, I tried to be careful against Load-Use Hazards (data dependence), whenever I  
+                            | # loaded a register with a value I tried to not to use that register immediately, if 
+                            | # possible, I inserted at least 1 instruction in between (loading and usage).
+                            | ##
+                            | ##################################################################
+                            | # Do not modify this portion
+                            | # Function prologue.
+                            | # %rdi = src, %rsi = dst, %rdx = len
+                            | 
+0x032:                      | ncopy:
+0x032: c0f2f9ffffffffffffff | 	iaddq $-7, %rdx 			# len -= 7
+0x03c: 728b01000000000000   | 	jl len_lt_7					# if (len < 0) then go to len_lt_7
+                            | 								# else fall through to loop for len >= 7
+0x045:                      | loop7: 
+0x045: 50870000000000000000 | 	mrmovq (%rdi), %r8 			# read 1st val from src
+0x04f: 50970800000000000000 | 	mrmovq 8(%rdi), %r9 		# read 2nd val from src
+0x059: 50a71000000000000000 | 	mrmovq 16(%rdi), %r10 		# read 3rd val from src
+0x063: 50b71800000000000000 | 	mrmovq 24(%rdi), %r11 		# read 4th val from src
+0x06d: 6288                 | 	andq %r8, %r8 				# check if 1st val <= 0 
+0x06f: 718200000000000000   | 	jle npos1 					# if so, go to npos1
+0x078: c0f00100000000000000 | 	iaddq $1, %rax 				# else, count++
+                            | 
+0x082:                      | npos1:
+0x082: 40860000000000000000 | 	rmmovq %r8, (%rsi) 			# deploy 1st val to dest
+0x08c: 40960800000000000000 | 	rmmovq %r9, 8(%rsi) 		# deploy 2nd val to dest
+0x096: 40a61000000000000000 | 	rmmovq %r10, 16(%rsi) 		# deploy 3rd val to dest
+0x0a0: 40b61800000000000000 | 	rmmovq %r11, 24(%rsi) 		# deploy 4th val to dest
+0x0aa: 6299                 | 	andq %r9, %r9 				# check if 2nd val <= 0 
+0x0ac: 71bf00000000000000   | 	jle npos2					# if so, go to npos2
+0x0b5: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x0bf:                      | npos2:
+0x0bf: 62aa                 | 	andq %r10, %r10 			# check if 3rd val <= 0 
+0x0c1: 71d400000000000000   | 	jle npos3					# if so, go to npos3
+0x0ca: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x0d4:                      | npos3:
+0x0d4: 50872000000000000000 | 	mrmovq 32(%rdi), %r8 		# read 5th val from src
+0x0de: 50972800000000000000 | 	mrmovq 40(%rdi), %r9 		# read 6th val from src
+0x0e8: 50a73000000000000000 | 	mrmovq 48(%rdi), %r10 		# read 7th val from src
+0x0f2: 62bb                 | 	andq %r11, %r11				# check if 4th val <= 0 
+0x0f4: 710701000000000000   | 	jle npos4					# if so, go to npos4
+0x0fd: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x107:                      | npos4:
+0x107: 40862000000000000000 | 	rmmovq %r8, 32(%rsi) 		# deploy 5th val to dest
+0x111: 40962800000000000000 | 	rmmovq %r9, 40(%rsi) 		# deploy 6th val to dest
+0x11b: 40a63000000000000000 | 	rmmovq %r10, 48(%rsi) 		# deploy 6th val to dest
+0x125: 6288                 | 	andq %r8, %r8 				# check if 5th val <= 0
+0x127: 713a01000000000000   | 	jle npos5					# if so, go to npos5
+0x130: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x13a:                      | npos5:
+0x13a: 6299                 | 	andq %r9, %r9				# check if 6th val <= 0
+0x13c: 714f01000000000000   | 	jle npos6					# if so, go to npos6
+0x145: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x14f:                      | npos6:
+0x14f: 62aa                 | 	andq %r10, %r10				# check if 7th val <= 0
+0x151: 716401000000000000   | 	jle iter					# if so, go to npos7
+0x15a: c0f00100000000000000 | 	iaddq $1, %rax				# else, count++ and fall through
+                            | 
+0x164:                      | iter:
+0x164: c0f73800000000000000 | 	iaddq $56, %rdi 			# increment src by 7 quad
+0x16e: c0f63800000000000000 | 	iaddq $56, %rsi 			# increment dest by 7 quad
+0x178: c0f2f9ffffffffffffff | 	iaddq $-7, %rdx 			# len -= 7
+0x182: 754500000000000000   | 	jge loop7 					# check if len >= 0
+                            | 
+0x18b:                      | len_lt_7:  
+0x18b: c0f20600000000000000 | 	iaddq $6, %rdx          	# return len to the right value
+                            | 
+0x195:                      | Remainder1:
+0x195: 723100000000000000   | 	jl     0x31           		# return if len == 0
+0x19e: 50870000000000000000 | 	mrmovq (%rdi), %r8	     	# read 1st val from src
+0x1a8: 50970800000000000000 | 	mrmovq 8(%rdi), %r9    		# read 2nd val from src
+0x1b2: 40860000000000000000 | 	rmmovq %r8, (%rsi)     		# deploy 1st val to dest
+0x1bc: 6288                 | 	andq   %r8, %r8       		# check if 1st val <= 0
+0x1be: 71d101000000000000   | 	jle    Remainder2           # if so, go to Remainder2
+0x1c7: c0f00100000000000000 | 	iaddq  $1, %rax         	# else, count++ and fall through
+                            | 
+0x1d1:                      | Remainder2: 
+0x1d1: c0f2ffffffffffffffff | 	iaddq  $-1, %rdx        	# len-- 
+0x1db: 723100000000000000   | 	jl     0x31             	# return if len == 0
+0x1e4: 40960800000000000000 | 	rmmovq %r9, 8(%rsi)	    	# deploy 2nd val to dest
+0x1ee: 6299                 | 	andq   %r9, %r9       		# check if 2nd val <= 0
+0x1f0: 710302000000000000   | 	jle    Remainder3           # if so, go to Remainder3 
+0x1f9: c0f00100000000000000 | 	iaddq  $1, %rax         	# else, count++ and fall through
+                            | 
+0x203:                      | Remainder3: 
+0x203: c0f2ffffffffffffffff | 	iaddq  $-1, %rdx        	# len-- 
+0x20d: 723100000000000000   | 	jl     0x31             	# return if len == 0
+0x216: 50871000000000000000 | 	mrmovq 16(%rdi), %r8	   	# read 3rd val from src
+0x220: 50971800000000000000 | 	mrmovq 24(%rdi), %r9		# read 4th val from src
+0x22a: 40861000000000000000 | 	rmmovq %r8, 16(%rsi) 	  	# deploy 3rd val to dest
+0x234: 6288                 | 	andq   %r8, %r8        		# check if 3rd val <= 0
+0x236: 714902000000000000   | 	jle    Remainder4           # if so, go to Remainder4 
+0x23f: c0f00100000000000000 | 	iaddq  $1, %rax         	# else, count++ and fall through
+                            | 
+0x249:                      | Remainder4: 
+0x249: c0f2ffffffffffffffff | 	iaddq  $-1, %rdx        	# len--
+0x253: 723100000000000000   | 	jl     0x31	      			# return if len == 0 
+0x25c: 40961800000000000000 | 	rmmovq %r9, 24(%rsi)   		# deploy 4th val to dest
+0x266: 6299                 | 	andq   %r9, %r9       		# check if 4th val <= 0
+0x268: 717b02000000000000   | 	jle    Remainder5           # if so, go to Remainder5
+0x271: c0f00100000000000000 | 	iaddq  $1, %rax 			# else, count++ and fall through
+                            | 
+0x27b:                      | Remainder5: 
+0x27b: c0f2ffffffffffffffff | 	iaddq  $-1, %rdx        	# len--
+0x285: 723100000000000000   | 	jl     0x31             	# return if len == 0 
+0x28e: 50872000000000000000 | 	mrmovq 32(%rdi), %r8   		# read 5th val from src
+0x298: 50972800000000000000 | 	mrmovq 40(%rdi), %r9		# read 6th val from src
+0x2a2: 40862000000000000000 | 	rmmovq %r8, 32(%rsi)   		# deploy 5th val to dest
+0x2ac: 6288                 | 	andq   %r8, %r8       		# check if 5th val <= 0
+0x2ae: 71c102000000000000   | 	jle    Remainder6           # if so, go to Remainder6
+0x2b7: c0f00100000000000000 | 	iaddq $1, %rax 				# else, count++ and fall through
+                            | 
+0x2c1:                      | Remainder6: 
+0x2c1: c0f2ffffffffffffffff | 	iaddq  $-1, %rdx        	# len--
+0x2cb: 723100000000000000   | 	jl     0x31             	# return if len == 0 
+0x2d4: 40962800000000000000 | 	rmmovq %r9, 40(%rsi)   		# deploy 6th val to dest
+0x2de: 6299                 | 	andq   %r9, %r9       		# check if 6th val <= 0
+0x2e0: 713100000000000000   | 	jle    0x31             	# if so, go to Done
+0x2e9: c0f00100000000000000 | 	iaddq $1, %rax 				# else, count++ and fall through 
+                            | 
+                            | ##################################################################
+                            | # Do not modify the following section of code
+                            | # Function epilogue.
+0x2f3:                      | Done:
+0x2f3: 90                   | 	ret
+                            | ##################################################################
+                            | # Keep the following label at the end of your function
+0x2f4:                      | End:
+                            | #/* $end ncopy-ys */
+0x2f4:                      | EndFun:
+                            | 
+                            | ###############################
+                            | # Source and destination blocks 
+                            | ###############################
+0x2f8:                      | 	.align 8
+0x2f8:                      | src:
+0x2f8: 0100000000000000     | 	.quad 1
+0x300: feffffffffffffff     | 	.quad -2
+0x308: 0300000000000000     | 	.quad 3
+0x310: fcffffffffffffff     | 	.quad -4
+0x318: fadebc0000000000     | 	.quad 0xbcdefa # This shouldn't get moved
+                            | 
+0x320:                      | 	.align 16
+0x320:                      | Predest:
+0x320: fadebc0000000000     | 	.quad 0xbcdefa
+0x328:                      | dest:
+0x328: abefcd0000000000     | 	.quad 0xcdefab
+0x330: abefcd0000000000     | 	.quad 0xcdefab
+0x338: abefcd0000000000     | 	.quad 0xcdefab
+0x340: abefcd0000000000     | 	.quad 0xcdefab
+0x348:                      | Postdest:
+0x348: bcfade0000000000     | 	.quad 0xdefabc
+                            | 
+0x350:                      | .align 8
+                            | # Run time stack
+0x350: 0000000000000000     | 	.quad 0
+0x358: 0000000000000000     | 	.quad 0
+0x360: 0000000000000000     | 	.quad 0
+0x368: 0000000000000000     | 	.quad 0
+0x370: 0000000000000000     | 	.quad 0
+0x378: 0000000000000000     | 	.quad 0
+0x380: 0000000000000000     | 	.quad 0
+0x388: 0000000000000000     | 	.quad 0
+0x390: 0000000000000000     | 	.quad 0
+0x398: 0000000000000000     | 	.quad 0
+0x3a0: 0000000000000000     | 	.quad 0
+0x3a8: 0000000000000000     | 	.quad 0
+0x3b0: 0000000000000000     | 	.quad 0
+0x3b8: 0000000000000000     | 	.quad 0
+0x3c0: 0000000000000000     | 	.quad 0
+0x3c8: 0000000000000000     | 	.quad 0
+                            | 
+0x3d0:                      | Stack:

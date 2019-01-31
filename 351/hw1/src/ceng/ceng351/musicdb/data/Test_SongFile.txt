@@ -1,0 +1,7 @@
+1	Late Morning Lullaby	Rock	3.3	1	1
+2	Rolling in the Deep	Pop	4.5	1	2
+3	Set Fire to the Rain	Pop	4.0	1	2
+4	Strangers in the Night	Jazz	4.3	2	3
+5	Downtown	Pop	4.0	2	3
+6	With a Little Help from My Friends	Rock	4.1	3	4
+7	Getting Better	Rock	3.9	3	4

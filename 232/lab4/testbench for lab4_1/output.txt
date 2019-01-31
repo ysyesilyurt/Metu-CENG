@@ -1,0 +1,34 @@
+
+input 0000000 in write-mode
+input 0000000 in read-mode --> 000000011
+input 0000001 in write-mode
+input 0000001 in read-mode --> 000000101
+input 0000010 in write-mode
+input 0000010 in read-mode --> 000000001
+input 0000011 in write-mode
+input 0000011 in read-mode --> 000000100
+input 0000100 in write-mode
+input 0000100 in read-mode --> 000110001
+input 0000101 in write-mode
+input 0000101 in read-mode --> 000001010
+input 0000110 in write-mode
+input 0000110 in read-mode --> 100000010
+input 0000111 in write-mode
+input 0000111 in read-mode --> 100010111
+input 0001000 in write-mode
+input 0001000 in read-mode --> 000000110
+input 0001001 in write-mode
+input 0001001 in read-mode --> 000000011
+input 0001010 in write-mode
+input 0001010 in read-mode --> 000000011
+input 0001011 in write-mode
+input 0001011 in read-mode --> 000000001
+input 0001100 in write-mode
+input 0001100 in read-mode --> 000101111
+input 0001101 in write-mode
+input 0001101 in read-mode --> 000001000
+input 0001110 in write-mode
+input 0001110 in read-mode --> 100000100
+input 0001111 in write-mode
+input 0001111 in read-mode --> 100011001
+input 0000000 in read-mode --> 100010111

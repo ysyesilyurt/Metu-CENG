@@ -1,0 +1,75 @@
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 
+xst -intstyle ise -ifn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.xst" -ofn "/home/yavuz/Desktop/lab4_1/FUNCMEMORY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 FUNCMEMORY.ngc FUNCMEMORY.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o FUNCMEMORY_map.ncd FUNCMEMORY.ngd FUNCMEMORY.pcf 
+par -w -intstyle ise -ol high -t 1 FUNCMEMORY_map.ncd FUNCMEMORY.ncd FUNCMEMORY.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml FUNCMEMORY.twx FUNCMEMORY.ncd -o FUNCMEMORY.twr FUNCMEMORY.pcf 

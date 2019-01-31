@@ -1,0 +1,120 @@
+-------------------------------------
+Initially we have the empty tree :
+
+Tree is empty.
+-------------------------------------
+Inserting key, value pair (97, a) :
+(97)
+Tree includes 1 node(s) and has height 0, and an ideally balanced tree of this size has height 0.
+-------------------------------------
+Inserting key, value pair (104, h) :
+[{97,H1}(104)]
+Tree includes 2 node(s) and has height 1, and an ideally balanced tree of this size has height 1.
+-------------------------------------
+Inserting key, value pair (102, f) :
+[(97){102,H1}(104)]
+Tree includes 3 node(s) and has height 1, and an ideally balanced tree of this size has height 1.
+-------------------------------------
+Inserting key, value pair (115, s) :
+[(97){102,H2}[{104,H1}(115)]]
+Tree includes 4 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Inserting key, value pair (100, d) :
+[[{97,H1}(100)]{102,H2}[{104,H1}(115)]]
+Tree includes 5 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Inserting key, value pair (110, n) :
+[[{97,H1}(100)]{102,H2}[(104){110,H1}(115)]]
+Tree includes 6 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Inserting key, value pair (122, z) :
+[[{97,H1}(100)]{102,H3}[(104){110,H2}[{115,H1}(122)]]]
+Tree includes 7 node(s) and has height 3, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Inserting key, value pair (107, k) :
+[[{97,H1}(100)]{102,H3}[[{104,H1}(107)]{110,H2}[{115,H1}(122)]]]
+Tree includes 8 node(s) and has height 3, and an ideally balanced tree of this size has height 3.
+-------------------------------------
+There are 6 data values whose keys fall within range (55, 111) a.k.a. (7, o) :
+a d f h k n 
+-------------------------------------
+There are 4 data values whose keys fall within range (102, 110) a.k.a. (f, n) :
+f h k n 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 91 by -32
+In other words capitalizing '['
+a d f h k n s z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 97 by -32
+In other words capitalizing 'a'
+A d f h k n s z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 102 by -32
+In other words capitalizing 'f'
+A d F h k n s z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 104 by -32
+In other words capitalizing 'h'
+A d F H k n s z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 115 by -32
+In other words capitalizing 's'
+A d F H k n S z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 122 by -32
+In other words capitalizing 'z'
+A d F H k n S Z 
+-------------------------------------
+Traversing data values in the tree after incrementing value at key 55 by -32
+In other words capitalizing '7'
+A d F H k n S Z 
+-------------------------------------
+There are 6 data values whose keys fall within range (102, 122) a.k.a. (f, z) :
+F H k n S Z 
+-------------------------------------
+There are 5 data values whose keys fall within range (100, 110) a.k.a. (d, n) :
+d F H k n 
+-------------------------------------
+Removing key 110 :
+[[{97,H1}(100)]{102,H3}[[{104,H1}(107)]{115,H2}(122)]]
+Tree includes 7 node(s) and has height 3, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Removing key 102 :
+[[{97,H1}(100)]{104,H2}[(107){115,H1}(122)]]
+Tree includes 6 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Removing key 115 :
+[[{97,H1}(100)]{104,H2}[(107){122,H1}]]
+Tree includes 5 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Removing key 104 :
+[[{97,H1}(100)]{107,H2}(122)]
+Tree includes 4 node(s) and has height 2, and an ideally balanced tree of this size has height 2.
+-------------------------------------
+Removing key 122 :
+[(97){100,H1}(107)]
+Tree includes 3 node(s) and has height 1, and an ideally balanced tree of this size has height 1.
+-------------------------------------
+Removing key 110 :
+[(97){100,H1}(107)]
+Tree includes 3 node(s) and has height 1, and an ideally balanced tree of this size has height 1.
+-------------------------------------
+Removing key 100 :
+[(97){107,H1}]
+Tree includes 2 node(s) and has height 1, and an ideally balanced tree of this size has height 1.
+-------------------------------------
+Removing key 107 :
+(97)
+Tree includes 1 node(s) and has height 0, and an ideally balanced tree of this size has height 0.
+-------------------------------------
+Removing key 32 :
+(97)
+Tree includes 1 node(s) and has height 0, and an ideally balanced tree of this size has height 0.
+-------------------------------------
+Removing key 97 :
+
+Tree is empty.
+-------------------------------------
+Removing key 102 :
+
+Tree is empty.

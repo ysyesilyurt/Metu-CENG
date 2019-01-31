@@ -1,0 +1,115 @@
+
+--------------------------------------------------------------
+*** Drop tables ***
+Dropped 5 tables.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Create tables ***
+Created 5 tables.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into User ***
+3 users are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Artist ***
+3 artists are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Album ***
+4 albums are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Song ***
+7 songs are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Listens ***
+9 listens are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List songs which have the highest rating ***
+ArtistName	SongName	Genre	Rating
+Adele	Rolling in the Deep	Pop	4.5
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Find the most recent album for a given artist  ***
+Title	ReleaseDate	AlbumRating
+Cover Stories	2017-05-05	3.8
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List songs that are listened by both users whose usernames are given ***
+ArtistName	SongName	Genre	Rating
+Adele	Set Fire to the Rain	Pop	4.0
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List artists and number of times his/her songs have been listened by the given user ***
+ArtistName	NumberofListenedSongs
+Adele	7
+Frank Sinatra	8
+The Beatles	16
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List users who have listened all songs of a given artist ***
+UserID	UserName	Email	Password
+1	Ercan Bolukbasi	ercan@ceng.metu.edu.tr	12345678
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List users and number of songs listened by this user such that none of these songs are listened by any other user ***
+UserID	UserName	NumberofSongs
+1	Ercan Bolukbasi	1
+2	Firat Cekinel	1
+3	Alperen Dalkiran	3
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List artists who have sung pop music at least once and whose average rating of all songs is greater than the given rating ***
+ArtistID	ArtistName
+2	Frank Sinatra
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Retrieve songs with the lowest rating in pop category, in case of more than one song exist, retrieve the least listened ones ***
+SongID	songName	Rating	Genre	ArtistID	AlbumID
+5	Downtown	Pop	4.0	2	3
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Multiply rating of the album by 1.5 whose releaseDate is after for a given date ***
+1 rows are changed.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Delete the song with the given song name ***
+SongID	songName	Rating	Genre	ArtistID	AlbumID
+4	Strangers in the Night	Jazz	4.3	2	3
+
+--------------------------------------------------------------

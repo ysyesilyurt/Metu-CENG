@@ -1,0 +1,45 @@
+<index>
+1996|18
+</index>
+<index>
+1991|0
+1996|7
+</index>
+<data>
+<record>1|1988|File Structures: An Analytic Approach|B. J. Salzberg</record>
+<record>11|1990|Programming Language Concepts and Paradigms|D.A. Watt</record>
+</data>
+<data>
+<record>0|1991|File Structures 2.ed|Michael J. Folk, B. Zoellick</record>
+<record>5|1992|Modern Operating Systems|A.S. Tanenbaum</record>
+<record>13|1995|Artificial Intelligence: A Modern Approach|S.Russell, P.Norvig, Prentice Hall</record>
+</data>
+<data>
+<record>7|1996|Logic and Discrete Mathematics: A Computer Science Perspective|W.K. Grassmann and J.P. Tremblay</record>
+<record>15|1996|Programming Languages: Concepts and Constructs|R. Sethi, Addison Wesley</record>
+</data>
+<index>
+2003|2
+2003|17
+2006|8
+</index>
+<data>
+<record>18|1996|Computer Organization|. Hamacher, Z.G. Vranesic, S. Zaky</record>
+<record>3|1998|Elements of the Theory of Computation|H.R.Lewis, C.H.Papadimitriou</record>
+<record>14|1998|Computer Organization and Design|D.A. Patterson, J.L. Hennessy</record>
+<record>16|2000|Iterative Methods for Sparse Linear Systems|Yousef Saad</record>
+</data>
+<data>
+<record>2|2003|Database Management Systems 3. Ed.|Raghu Ramakrishan</record>
+<record>12|2003|Computer Systems: A Programmers Perspective|Randal E. Bryant and David R. OHallaron </record>
+</data>
+<data>
+<record>17|2003|Introduction to Parallel Computing|Grama, Gupta, Kumar, and Karypis, Addison Wesley</record>
+<record>4|2004|Fundamentals of Database Systems|R. Elmasri, S.B. Navathe</record>
+<record>10|2005|Introduction to the Theory of Computation|M.Sipser</record>
+</data>
+<data>
+<record>8|2006|Data Structures and Algorithm Analysis in C++|Mark Allen Weiss</record>
+<record>9|2007|Discrete Mathematics and its Applications|K.H. Rosen</record>
+<record>6|2009|Introduction to Algorithms|T. H. Cormen, C. E. Lieserson, R. L. Rivest, C. Stein</record>
+</data>

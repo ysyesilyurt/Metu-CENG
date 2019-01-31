@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+%\usepackage{fitch}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim YEŞİLYURT \\
+Id Number : 2259166 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\hspace{5mm} 1)\\
+\begin{table}[H]
+\small
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}	
+\hline
+$p$ & $q$ & $\neg q$ & $p\rightarrow q$ & $\neg q\wedge(p \rightarrow q)$ & $\neg p$ & $ (\neg q\wedge(p \rightarrow q)) \rightarrow \neg p$\\
+\hline 
+T & T & F & T & F & F & T\\			
+T & F & T & F & F & F & T\\
+F & T & F & T & F & T & T\\
+F & F & T & T & T & T & T\\
+\hline 
+\end{tabular}
+\end{table}
+2)\\
+\begin{table}[H]
+\small
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}	
+\hline
+$p$ & $q$ & $r$ & $p \vee q$ & $\neg p$ & $\neg p \vee r$ & $(p \vee q) \wedge (\neg p \vee r) $ & $q \vee r$ & $((p \vee q) \wedge (\neg p \vee r)) \rightarrow q \vee r$\\
+\hline 
+T & T & T & T & F & T & T & T & T\\			
+T & T & F & T & F & F & F & T & T\\			
+T & F & F & T & F & F & F & F & T\\			
+F & T & T & T & T & T & T & T & T\\		
+F & T & F & T & T & T & T & T & T\\			
+F & F & T & F & T & T & F & T & T\\			
+T & F & T & T & F & T & T & T & T\\			
+F & F & F & F & T & T & F & F &T\\		
+\hline 
+\end{tabular}
+\end{table}
+
+
+\section*{Answer 2}
+\begin{equation*} 
+\begin{split}
+ (p \rightarrow q) \vee (p \rightarrow r) &\equiv (\neg p \vee q) \vee (p \rightarrow r)\ \qquad \quad \ table\ 7, Equivalence \ 1\\
+ &\equiv (\neg p \vee q) \vee (\neg p \vee r)\ \quad \quad \quad table\ 7, Equivalence\ 1\\
+ &\equiv (q \vee r) \vee (\neg p \vee \neg p) \quad \quad \quad \ table\ 6, Associative\ Law \\ &\equiv (q \vee r) \vee \neg p \ \ \ \quad \qquad \qquad \ table\ 6, Idempotent\ Law\\ &\equiv \neg(q \vee r) \rightarrow \neg p \ \ \ \quad \qquad \quad \ table\ 7, Equivalence\ 3\\ &\equiv (\neg q \wedge \neg r) \rightarrow \neg p \ \qquad \qquad \ table\ 6, De\ Morgan's\ Second\ Law\\
+\end{split}
+\end{equation*} 
+\newpage
+\section*{Answer 3}
+\begin{enumerate}
+
+	\item
+	(a) All cats are friends with at least one dog.\\
+	(b) Some cats are friends with all dogs.\\
+	\item 
+	(a) $\forall x \forall y ((Eats(x,y) z\wedge Meal(y)) \rightarrow Customer(x)) $ \\
+	(b) $\exists x \exists y (Chef(x) \wedge Meal(y) \wedge \neg Cooks(x,y))$\\
+	(c) $\exists x \forall y \exists z(((Cooks(x,y) \wedge Chef(x)) \rightarrow Meal(y)) \rightarrow (Eats(z,y) \wedge Customer(z)))$\\
+	(d) $\forall x \exists y \exists z ((Chef(z) \wedge Chef(x) \wedge (x \neq z) \wedge Meal(y) \wedge \neg Cooks(x,y) \wedge Cooks(z,y)) \rightarrow Knows(x,z))$\\
+
+\end{enumerate}
+
+\section*{Answer 4}
+$ \neg p$ and $ p \rightarrow q$ are given as premises and $ \neg q $ is given as conclusion. Since $ \neg p$ is given as true, the lefthandside of $p \rightarrow q$ is ($p$) false. For situations which $p$ is false (third and fourth rows on Table 1) $ p \rightarrow q$ returns true. But its truth value does not depend on $ q $. $q$ can be true or false. Therefore we can not deduce that $ \neg q$ is true. So this argument cannot be a deduction rule in a sound deductive system.\\
+\begin{table}[H]
+\small
+\caption{ Truth table for $p \rightarrow q$ }
+\centering
+\begin{tabular}{|c|c|c|}	
+\hline
+$p$ & $q$ & $p\rightarrow q$\\
+\hline 
+T & T & T \\			
+T & F & F \\
+F & T & T \\
+F & F & T \\
+\hline 
+\end{tabular}
+\end{table}
+
+\section*{Answer 5}
+\begin{table}[H]
+\begin{enumerate}
+\item $ p \implies q \hfill premise$
+\item $ q \implies r          \hfill    premise$
+\item $ r \implies p      \hfill    premise$\\
+\begin{tabular}{|p{10cm}|}
+\hline
+\item $ q                    \hfill    assumed$
+\item $ r              \hfill        \implies e,2,4$
+\item $ p                \hfill       \implies e,3,5$\\
+\hline
+\end{tabular}
+\item $ q \implies p              \hfill     \implies i,4-6$
+\item $ p \iff q        \hfill   \iff i,1,7$\\
+\begin{tabular}{|p{10cm}|}
+\hline
+\item $ p       \hfill          assumed$
+\item $ q          \hfill      \implies e,1,9$
+\item $ r       \hfill  \implies e,2,10$\\
+\hline
+\end{tabular}
+\item $ p \implies r        \hfill   \implies i,9-11$
+\item $ p \iff r                 \hfill     \iff i,3,12$
+\item $ (p \iff q) \land (p \iff r)          \hfill     \land i,8,13$
+\end{enumerate}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Answer 6}
+
+\begin{table}[H]
+\begin{enumerate}
+\item $ \forall x (Q(x) \implies R(x)) \hfill  premise$
+\item $ \exists x (P(x) \implies Q(x)) \hfill  premise$
+\item $ \forall x (P(x)) \hfill   premise$\\
+\begin{tabular}{|p{10cm}|}
+\hline
+\item $ P(c) \implies Q(c) \hfill   assumed $
+\item $ P(c) \hfill   \forall e,3$
+\item $ Q(c) \hfill   \implies e,4,5$
+\item $ Q(c) \implies R(c) \hfill   \forall e,1$
+\item $ R(c) \hfill   \implies e,6,7$
+\item $ P(c) \land R(c) \hfill   \land i,5,8$
+\item $ \exists x (P(x) \land R(x))  \hfill   \exists i,9$\\
+\hline
+\end{tabular}
+\item $ \exists x (P(x) \land R(x)) \hfill   \exists e,2,4-10$
+\end{enumerate}
+\end{table}
+
+\end{document}
+
+​
+
+​
+

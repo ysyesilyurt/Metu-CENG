@@ -1,0 +1,202 @@
+Release 12.4 par M.81d (lin64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+yavuz-X550VX::  Mon Apr 02 23:08:38 2018
+
+par -w -intstyle ise -ol high -t 1 ic1500_map.ncd ic1500.ncd ic1500.pcf 
+
+
+Constraints file: ic1500.pcf.
+Loading device for application Rf_Device from file '3s250e.nph' in environment /home/yavuz/xlinix/ISE_DS/ISE/.
+   "ic1500" is an NCD, version 3.2, device xc3s250e, package cp132, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2010-11-18".
+
+
+Design Summary Report:
+
+ Number of External IOBs                           8 out of 92      8%
+
+   Number of External Input IOBs                  5
+
+      Number of External Input IBUFs              5
+
+   Number of External Output IOBs                 3
+
+      Number of External Output IOBs              3
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                          2 out of 2448    1%
+      Number of SLICEMs                      0 out of 1224    0%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 1 secs 
+Finished initial Timing Analysis.  REAL time: 1 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 1 secs 
+Total CPU  time at the beginning of Placer: 0 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:3c) REAL time: 1 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:3c) REAL time: 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:3c) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+...........
+Phase 4.2  Initial Clock and IO Placement (Checksum:289b07c) REAL time: 1 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:289b07c) REAL time: 1 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:289b07c) REAL time: 1 secs 
+
+Phase 7.3  Local Placement Optimization
+.........
+Phase 7.3  Local Placement Optimization (Checksum:249f2141) REAL time: 1 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:249f2141) REAL time: 1 secs 
+
+Phase 9.8  Global Placement
+..
+Phase 9.8  Global Placement (Checksum:3785ed32) REAL time: 4 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:3785ed32) REAL time: 4 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:3a1e6b1f) REAL time: 4 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:3a1e6b1f) REAL time: 4 secs 
+
+Total REAL time to Placer completion: 4 secs 
+Total CPU  time to Placer completion: 3 secs 
+Writing design to file ic1500.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 15 unrouted;      REAL time: 5 secs 
+
+Phase  2  : 12 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 0 unrouted;      REAL time: 5 secs 
+
+Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Updating file: ic1500.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+
+Total REAL time to Router completion: 6 secs 
+Total CPU time to Router completion: 5 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X2Y10| No   |    2 |  0.003     |  0.084      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     1.638ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.145ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 6 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  357 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 1
+
+Writing design to file ic1500.ncd
+
+
+
+PAR done!

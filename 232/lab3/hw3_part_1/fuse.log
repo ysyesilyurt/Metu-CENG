@@ -1,0 +1,23 @@
+Running: /home/yavuz/xlinix/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/testbench_ic1500_isim_beh.exe -prj /home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/testbench_ic1500_beh.prj work.testbench_ic1500 work.glbl 
+ISim M.81d (signature 0x9ca8bed6)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file \"/home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/lab3_1.v\" into library work
+Analyzing Verilog file \"/home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/testbench_ic1500.v\" into library work
+Analyzing Verilog file \"/home/yavuz/xlinix/ISE_DS/ISE//verilog/src/glbl.v\" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 69976 KB
+Fuse CPU Usage: 70 ms
+Compiling module af
+Compiling module ic1500
+Compiling module testbench_ic1500
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable /home/yavuz/Desktop/20172/232/Lab work/lab3/hw3_part_1/testbench_ic1500_isim_beh.exe
+Fuse Memory Usage: 1154300 KB
+Fuse CPU Usage: 90 ms
+GCC CPU Usage: 630 ms

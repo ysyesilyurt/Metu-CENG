@@ -1,0 +1,4 @@
+Board Size: 3
+Player Count: 2
+0::Tracer::2::0
+1::Berserk::2::2

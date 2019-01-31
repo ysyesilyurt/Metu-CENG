@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{tikz} % for Hasse diagram
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\begin{document}
+	
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim YEŞİLYURT \\
+Id Number : 2259166 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\qquad Let $f_n$ be the number of ternary strings that contain 3 consecutive 0s, 1s or 2s. $f_1=0$ and $f_2 =0$ because they do not have 3 digits. Let $g_n$ stand for the number of ternary strings that doesn't contain 3 consecutive 0s, 1s or 2s.\\
+
+So for finding $f_n$, we should find $g_n$ and then subtract it from the total number of ternary strings with length n (i.e. $3^n$).\\
+
+Find $g_n$ by constructing a ternary string of length n.\\
+
+First choose first digit. Any of 0,1,2 can be chosen as first digit of the string. Let's choose 0 as first digit, however other digits can be chosen, too. The probability of the string to start with 0 is $1/3$. Since we have 3 of these beginning digits we should multiply our probability by $(1/3) * 3 = 1$. Possibilities for second digit are 0,1,2 too. But we have to analyze 2 cases in this case. We should check for "1" and "2" as second digit of the string(say case 1) and chech for "0" as second digit of the string (say case 2). \\
+
+In case 1, string starts with 01.. or 02.. which are not consecutive numbers (not 00). We can reset the count of first digit in this case (first digit is 0 in this case) at the beginning and go on with any string that does not contain 3 consecutive symbols and starts with 1 or 2. That is $2g_{n-1}$.\\
+
+In case 2, string starts with 00.. which means the first two digits are consecutive. Since we started with 00 our next digit can not be 0 because then our string will contain three consecutive zeros (000). Therefore the rest of the string must start with 1 or 2 and does not contain 3 consecutive digits, which is $2g_{n-2}$.\\
+
+Add this to the other case, multiply by our possibility to choose first digit (which we found at the first part of answer and which is 1) and get $g_n$:\\
+$g_n = 1*(2g_{n-1} + 2g_{n-2})$ for $n \geq 3$\\
+where $g(1) = 3,\ g(2) = 9$.\\
+
+Turn back to $f_n$ and subtract $g_n$ from $3^n$ to find $f_n$.\\
+$f_n = 3^n - g_n$ where $g_n = 2(g_{n-1} + g_{n-2})$ for $n\geq 3$ \\
+And initial conditions are:\\ 
+$f(1) = 0 , f(2) = 0$ and $g(1) = 3,g(2) = 9$
+
+\section*{Answer 2}
+\textbf{a)}A tile can be placed horizontally, i.e. as a $1 \times 2$ tile or vertically, i.e. as a $2 \times 1$ tile. We need 3 small tiles to tile the board of size $3 \times 2$. There are three ways to tile:\\
+\begin{tabular}{|cccc|}
+\hline 
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+\hline 
+\hline 
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+\hline 
+\hline 
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+\hline 
+\end{tabular}
+\begin{tabular}{|cc|cc|}
+  \hline
+  & & & \tabularnewline
+  & & & \tabularnewline 
+  & & & \tabularnewline
+  & & & \tabularnewline
+  \hline \hline
+  & \multicolumn{1}{c}{} &  & \tabularnewline
+  & \multicolumn{1}{c}{} &  & \tabularnewline
+  \hline
+\end{tabular}
+\begin{tabular}{|cc|cc|}
+\hline 
+ & \multicolumn{1}{c}{} &  & \tabularnewline
+ & \multicolumn{1}{c}{} &  & \tabularnewline
+\hline 
+\hline 
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+ &  &  & \tabularnewline
+\hline 
+\end{tabular}\\\\\\
+\textbf{b)} 
+We have three $3\times 2$ boards to cover $3\times n$ board, namely (from part a);\\
+- $3\times 2$ board tiled with 3 horizontal $2\times 1$ tiles (say type 1 tiling)\\
+- $3\times 2$ board tiled with 1 horizontal tile at the upside of the board and 2 vertical tile at the downside of the board $2\times 1$ tiles (say type 2 tiling)\\
+- $3\times 2$ board tiled with 2 vertical tile at the upside of the board and 1 horizontal tile at the downside of the board $2\times 1$ tiles (say type 3 tiling)\\
+
+Let $f_n$ be the count of ways to place tiles on a $3\times n$ board. Since we cover 2 columns in one tiling operation, for odd numbers of $n$, since we can not tile these boards with odd number of columns problem gives $0$ and for even numbers of $n$ problem reduces to $f_{n-2}$.\\
+ 
+For the even numbers of $n$ now consider placing the first $3\times 2$ tile to $3\times n$ board.If the first tiling is of type 1,then we can tile the following part with all types, no restrictions, so problem reduces to $f_{n-2}$, say this is case 1.\\
+
+But, since we have the condition of dropping the same 2 tilings (tilings which can be obtained from one another when mirrored along the side of length-$n$), we should check for the cases when any of the two tilings are the same;\\
+
+Let's say we place a tile of type 2 for the first tiling and then we tile the remaining part of $3\times n$ board with some tilings of any type (i.e. the remaining tiling problem reduces to $f_{n-2}$ and say this is case 2). If we were to place a tile of type 3 for the first and then we continue to tile the remaining part same as in the first case (i.e. the remaining tiling problem reduces to $f_{n-2}$ and say this is case 3) these two tilings (case 2 and case 3) would be same since each tiling can be obtained from one another when mirrored along the side of length-$n$ (figure 1), so we have to delete one of these occurences, therefore, in case-3 problem actually reduces to $f_{n-2}-1$\\
+
+So we have (for even numbers of $n$) $f_n = f_{n-2} + f_{n-2} + f_{n-2}-1$,\\
+Therefore we get for $n\geq 3$, $f_n = 3f_{n-2}-1$ for even numbers of $n$ and $0$ for odd numbers of $n$ . As initial conditions we have $f(0)=0$, $f(1)=0$, $f(2)=2$ .
+
+\newpage
+
+\textbf{c)}	We have $f_{n}=3f_{n-2}-1$ for even numbers of $n$ and for $n\geq 3$. Initial conditions were $f(0)=0$, $f(1)=0$, $f(2)=2$ and let's say$<f_{0},f_{1},f_{2}...,f_{n},....><->F(x)$\\
+
+$F(x)=\sum_{n=3}^{\infty}f_{n}x^{n} + 2x^{2}=2x^{2}+\sum_{n=3}^{\infty}(3f_{n-2}-1)x^{n}$\\
+
+$F(x)=2x^{2}+\sum_{n=3}^{\infty}3f_{n-2}x^{n}-\sum_{n=3}^{\infty}1x^{n}$\\
+
+$F(x)=2x^{2}+3x^{2}F(x)-x^{3}(1+x^{2}+x^{4}...)$\\
+
+$F(x)=2x^{2}+3x^{2}F(x)-x^{3}(\frac{1}{1-x})$\\
+
+$F(x)=\frac{2x^{2}-3x^{3}}{3x^3-3x^2-x+1}$ Do partial fractions:\\
+
+$F(x)=\frac{1}{2(1-x)}+\frac{x-1}{2(3x^2-1)}-1$ \\
+
+where; $\frac{1}{2}\frac{1}{1-x}=\frac{1}{2}(1+x+x^{2}+...)<-><\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}...,\frac{1}{2},...>$ and\\
+
+$\frac{1}{2}\frac{1}{1-3x^{2}}=\frac{1}{2}(1+3x^{2}+3^{2}x^{4}+...)<-><\frac{1}{2},0,\frac{1}{2}3,0,\frac{1}{2}3^{2},0...,\frac{(-1)^{n}+1}{2}\frac{3^{\frac{n}{2}}}{2},...>$
+and\\
+
+$\frac{1}{2}\frac{x}{1-3x^{2}}=\frac{1}{2}(1+3x^{3}+3^{2}x^{5}+...)<-><0,\frac{1}{2},0,\frac{1}{2}3,0,\frac{1}{2}3^{2},0...,\frac{(-1)^{n-1}+1}{2}\frac{3^{\frac{n-1}{2}}}{2},...>$
+and\\
+
+$1=<1,0,0,0,0,0....>$\\
+
+
+Therefore (odd coefficients are zero, so they are denoted with $f's$).\\  $F(x)<-><0,0,2,f_3,5,f_5,......,\frac{1}{2}+ \frac{(-1)^{n}+1}{2}\frac{3^{\frac{n}{2}}}{2}-\frac{(-1)^{n-1}+1}{2}\frac{3^{\frac{n-1}{2}}}{2},....>$,
+which implies;\\ 
+
+$f_{n}=\frac{1}{2}+\frac{(-1)^{n}+1}{2}\frac{3^{\frac{n}{2}}}{2}-\frac{(-1)^{n-1}+1}{2}\frac{3^{\frac{n-1}{2}}}{2}$ for even numbers of n with $n \geq 3$. With initial conditions $f(0)=0$, $f(1)=0$, $f(2)=2$.
+\newpage
+\section*{Answer 3}
+Since a binary relation R on a set S is a partial order iff it is reflexive, antisymmetric and transitive, we should check if the binary relation is reflexive, antisymmetric and transitive on each part seperately. Keep the relations' features in mind;
+\\
+- A relation is reflexive if $\forall a \in S \ \ aRa$\\
+- A relation is antisymmetric if $\forall{a,b} \in S ((aRb \land bRa) \implies a=b)$\\
+- A relation is transitive if $\forall{a,b,c} \in S ((aRb \land bRc) \implies aRc)$
+\\\\
+Using these information;
+\\
+\textbf{a)}
+\\\\
+Set inclusion ($ \subseteq $) on any set of sets is;\\
+-Reflexive, because every set is a subset of itself on any set of sets,\\
+-Antisymmetric, since if a subset of the set is the set's superset; the set's subset(also the superset) is the same set as the set on any set of sets,\\
+-Transitive, since if any subset of the set's subset is also that set's subset on any set of sets.
+\\\\
+So set inclusion ($\subseteq$) on any set of sets is partial order.
+\\\\
+\textbf{b)}
+\\\\
+Even relation $"|"$ of divisibility on integers $Z$ is both reflexive and transitive it is not partial order because;\\
+It is not antisymetric, since $-2|2$ is true and $2|-2$ is true but $2 \neq -2$. So relation $"|"$ of divisbility on integers $Z$ is not a partial order.
+\\\\
+\textbf{c)}
+\\\\
+Relation R is defined as "$aRb$ if there is a positive integer $r$ such that $b=a^r$" on $Z$. It is;\\
+-Reflexive since for $r=1$, $a=a^1$,\\
+-This relation is antisymmetric. Assume that $a$ and $b$ are arbitrarily chosen, such that $aRb$ and $bRa$. Hence $a=b^r$ and $b=a^{r_2}$.\\
+$a=a^{r*r_2} \implies r*r_2 =1$. Since $r \ \ and \ \ r_2$ are positive integers $r=1$ and $r_2 = 1$ so $a=b^1$ and $a^1=b$ so this relation is antisymmetric.\\ 
+-Transitive since if $b=a^r$ and $c=b^{\bar{r}}$, $c=a^{r^{'}}$ is true for every $r^{'}=r*\bar{r}$.\\
+\\
+So this relation on $Z$ is partial ordered.
+
+\newpage
+
+\section*{Answer 4}
+
+\textbf{a)}\\\\
+
+1-) $1+1+1+1+1$\\
+
+2-) $2+1+1+1$\\
+
+3-) $2+2+1 $\\
+
+4-) $3+1+1$\\
+
+5-) $3+2$\\
+
+6-) $4+1$\\
+
+7-) $5$\\
+
+As can be seen there are 7 partitions of 5.\\\\
+
+\textbf{b)}
+
+%Hasse diagram example
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+%%   kw   (name)   (x, y)   {text}
+    \node (md1) at (2, 4)     {5};
+    \node (md2) at (0, 2)     {3+2};
+    \node (rt2) at (4, 2)     {4+1};
+    \node (lt3) at (0, 0)     {3+1+1};
+    \node (rt3) at (4, 0)     {2+2+1};
+	\node (md4) at (2, -2)     {2+1+1+1};
+	\node (md5) at (2,-4)     {1+1+1+1+1};
+
+    \draw (md1) -- (md2);
+    \draw (md2) -- (lt3);
+    \draw (md2) -- (rt3);
+    \draw (rt2) -- (rt3);
+    \draw (lt3) -- (md4);
+    \draw (rt3) -- (md4);
+    \draw (md5) -- (md4);
+    \draw (lt3) -- (rt2);
+    \draw (rt2) -- (md1);
+\end{tikzpicture} 
+\end{figure}
+
+\end{document}

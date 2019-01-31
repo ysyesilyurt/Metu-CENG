@@ -1,0 +1,574 @@
+/lib64/ld-linux-x86-64.so.2
+LLVA-
+libc.so.6
+socket
+fflush
+strcpy
+__printf_chk
+exit
+fopen
+__isoc99_sscanf
+connect
+signal
+puts
+__stack_chk_fail
+stdin
+strtol
+fgets
+__errno_location
+read
+__fprintf_chk
+stdout
+__memmove_chk
+strcasecmp
+__ctype_b_loc
+getenv
+stderr
+alarm
+gethostbyname
+gethostname
+close
+sleep
+__cxa_finalize
+__sprintf_chk
+__strcat_chk
+__libc_start_main
+write
+GLIBC_2.3
+GLIBC_2.7
+GLIBC_2.4
+GLIBC_2.2.5
+GLIBC_2.3.4
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+%z6 
+%r6 
+%j6 
+%b6 
+%Z6 
+%R6 
+%J6 
+%B6 
+%:6 
+%26 
+%*6 
+%"6 
+=9< 
+D$X1
+Your texH
+t is 
+D$XdH3
+AUATUSH
+[]A\A]
+AUATUSH
+D$X1
+\$ H
+D$(H
+T$0H
+D$8H
+T$@H
+D$HH
+D$XdH3
+h[]A\A]
+ATUSH
+[]A\
+t':E
+=@/ 
+T$@H
+5~0 
+***truncH
+ated***
+D$h1
+=./ 
+D$hdH3
+=g. 
+AVAUATUSH
+[]A\A]A^
+AWAVAUATUSH
+D$ L
+l$@H
+D$(I
+Error: CH
+lient unI
+able to H
+create sI
+G ockefA
+Error: DH
+NS is unI
+able to H
+resolve I
+server aI
+G(ddrefA
+G,ssA
+Error: UH
+nable toI
+ connectH
+ to the I
+G servfA
+G$erA
+Error: RH
+esult stI
+ring tooH
+ large. I
+IncreaseH
+ SUBMITRI
+_MAXBUF
+ t`A
+|$PH
+D$XH
+L$<H
+D$<A
+Error: CH
+lient unI
+able to H
+read heaI
+ders froH
+m serverI
+Error: CH
+lient unI
+able to H
+write toI
+ the serI
+G(ver
+Error: CH
+lient unI
+able to H
+read firI
+st headeH
+r from sI
+G0ervefA
+[]A\A]A^A_
+Error: CH
+lient unI
+able to H
+read staI
+tus messH
+age fromI
+ server
+Error: RH
+esult stI
+ring conH
+tains anI
+ illegalH
+ or unprI
+intable H
+characteI
+W8fA
+G@r.A
+t$8L
+L$0L
+D$(H
+ATUSH
+$OKA
+ []A\
+Error: CH
+lient unI
+able to H
+create sI
+D$ ockefA
+D$$t
+Error: DH
+NS is unI
+able to H
+resolve I
+server aI
+D$ A
+D$(ddrefA
+D$,ssA
+APRL
+AWAVI
+AUATL
+[]A\A]A^A_
+%s: Error: Couldn't open %s
+Usage: %s [<input_file>]
+That's number 2.  Keep going!
+Halfway there!
+Good work!  On to the next...
+Welcome to my fiendish little bomb. You have 6 phases with
+which to blow yourself up. Have a nice day!
+Phase 1 defused. How about the next one?
+So you got that one.  Try this one.
+All your base are belong to us.
+Wow! You've defused the secret stage!
+So you think you can stop the bomb with ctrl-c, do you?
+Initialization error: Running on an illegal host [1]
+Initialization error: Running on an illegal host [2]
+ERROR: Input string is too large.
+Your instructor has been notified.
+Curses, you've found the secret phase!
+But finding it and solving it are quite different...
+Congratulations! You've defused the bomb!
+Your instructor has been notified and will verify your solution.
+Well...
+OK. :-)
+Invalid phase%s
+Initialization error:
+defused
+exploded
+%d:%s:%d:%s
+BOOM!!!
+The bomb has blown up.
+%d %d %d %d %d %d
+Error: Premature EOF on stdin
+GRADE_BOMB
+Error: Input line too long
+%d %d %s
+DrEvil
+greatwhite.ics.cs.cmu.edu
+angelshark.ics.cs.cmu.edu
+makoshark.ics.cs.cmu.edu
+whaleshark.ics.cs.cmu.edu
+cagriakpak-GE60-2OC-2OD-2OE
+cagriakpak-desktop
+inek1
+inek2
+inek3
+inek4
+inek5
+inek6
+inek7
+inek8
+inek9
+inek10
+inek11
+inek12
+inek13
+inek14
+inek15
+inek16
+inek17
+inek18
+inek19
+inek20
+inek21
+inek22
+inek23
+inek24
+inek25
+inek26
+inek27
+inek28
+inek29
+inek30
+inek31
+inek32
+inek33
+inek34
+inek35
+inek36
+inek37
+inek38
+inek39
+inek40
+inek41
+inek42
+inek43
+inek44
+inek45
+inek46
+inek47
+inek48
+inek49
+inek50
+inek51
+inek52
+inek53
+inek54
+inek55
+inek56
+inek57
+inek58
+inek59
+inek60
+inek61
+inek62
+inek63
+inek64
+inek65
+inek66
+inek67
+inek68
+inek69
+inek70
+inek71
+inek72
+inek73
+inek74
+inek75
+inek76
+inek77
+inek78
+inek79
+inek80
+inek81
+inek82
+inek83
+inek84
+inek85
+inek86
+inek87
+inek88
+inek89
+inek90
+inek91
+inek92
+inek93
+inek94
+inek95
+inek96
+inek97
+inek98
+inek99
+inek100
+Program timed out after %d seconds
+Error: HTTP request failed with error %d: %s
+GET /%s/submitr.pl/?userid=%s&userpwd=%s&lab=%s&result=%s&submit=submit HTTP/1.0
+Error: Unable to connect to server %s
+%%%02X
+%s %d %[a-zA-z ]
+erasmus.ceng.metu.edu.tr
+AUTORESULT_STRING=%s
+csapp
+;*3$"
+im6c5ILmHob80DNOJu4B
+2259166
+GCC: (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+<Welcome to my fiendish little bomb. You have 6 phases with
+-which to blow yourself up. Have a nice day!
+*Phase 1 defused. How about the next one?
+That's number 2.  Keep going!
+Halfway there!
+%So you got that one.  Try this one.
+Good work!  On to the next...
+/usr/include/x86_64-linux-gnu/bits
+/usr/lib/gcc/x86_64-linux-gnu/7/include
+/usr/include/x86_64-linux-gnu/bits/types
+/usr/include
+bomb.c
+stdio2.h
+stddef.h
+types.h
+libio.h
+FILE.h
+stdio.h
+sys_errlist.h
+support.h
+phases.h
+stdlib.h
+<built-in>
+printf
+__off_t
+_IO_read_ptr
+_chain
+size_t
+_shortbuf
+_IO_2_1_stderr_
+_IO_buf_base
+long long unsigned int
+GNU C11 7.3.0 -mtune=generic -march=x86-64 -ggdb -O1 -fstack-protector-strong
+long long int
+phase_defused
+_fileno
+_IO_read_end
+_flags
+_IO_buf_end
+_cur_column
+__printf_chk
+_old_offset
+infile
+initialize_bomb
+_IO_marker
+stdin
+_IO_FILE_plus
+_IO_write_ptr
+sys_nerr
+_sbuf
+short unsigned int
+_IO_save_base
+_lock
+_flags2
+_mode
+__builtin_puts
+stdout
+_IO_2_1_stdin_
+_IO_write_end
+_IO_lock_t
+_IO_FILE
+read_line
+fopen
+_pos
+sys_errlist
+_markers
+unsigned char
+short int
+/home/cagriakpak/Documents/Ceng331/Bomblab HW/src
+_vtable_offset
+_IO_2_1_stdout_
+exit
+bomb.c
+input
+_next
+__off64_t
+_IO_read_base
+_IO_save_end
+__fmt
+__pad1
+__pad2
+__pad3
+__pad4
+__pad5
+_unused2
+stderr
+argv
+phase_1
+phase_2
+phase_3
+phase_4
+phase_5
+phase_6
+_IO_backup_base
+argc
+main
+_IO_write_base
+crtstuff.c
+deregister_tm_clones
+__do_global_dtors_aux
+completed.7696
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+bomb.c
+phases.c
+array.3434
+support.c
+sig_handler
+driverlib.c
+rio_readlineb
+__FRAME_END__
+__init_array_end
+_DYNAMIC
+__init_array_start
+__GNU_EH_FRAME_HDR
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+__strcat_chk@@GLIBC_2.3.4
+skip
+getenv@@GLIBC_2.2.5
+phase_defused
+strcasecmp@@GLIBC_2.2.5
+reverse_string
+__errno_location@@GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+stdout@@GLIBC_2.2.5
+strcpy@@GLIBC_2.2.5
+puts@@GLIBC_2.2.5
+stdin@@GLIBC_2.2.5
+write@@GLIBC_2.2.5
+_edata
+__stack_chk_fail@@GLIBC_2.4
+check_division_equal
+num_input_strings
+phase_5
+initialize_bomb_solve
+blank_line
+submitr
+phase_3
+phase_1
+invalid_phase
+init_driver
+alarm@@GLIBC_2.2.5
+close@@GLIBC_2.2.5
+node3
+read@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+check_substraction_equal
+fgets@@GLIBC_2.2.5
+explode_bomb
+node1
+__data_start
+signal@@GLIBC_2.2.5
+gethostbyname@@GLIBC_2.2.5
+check_multiplication_equal
+node5
+__memmove_chk@@GLIBC_2.3.4
+__gmon_start__
+strtol@@GLIBC_2.2.5
+fun7
+__dso_handle
+_IO_stdin_used
+host_table
+func4
+string_length
+__libc_csu_init
+fflush@@GLIBC_2.2.5
+__isoc99_sscanf@@GLIBC_2.7
+from_char_to_int
+secret_phase
+infile
+sigalrm_handler
+init_timeout
+__bss_start
+userid
+main
+__printf_chk@@GLIBC_2.3.4
+read_line
+strings_not_equal
+phase_4
+fopen@@GLIBC_2.2.5
+phase_6
+scratch
+driver_post
+send_msg
+phase_2
+gethostname@@GLIBC_2.2.5
+exit@@GLIBC_2.2.5
+bomb_id
+connect@@GLIBC_2.2.5
+__TMC_END__
+__fprintf_chk@@GLIBC_2.3.4
+_ITM_registerTMCloneTable
+node2
+node4
+user_password
+sleep@@GLIBC_2.2.5
+node6
+__cxa_finalize@@GLIBC_2.2.5
+read_six_numbers
+initialize_bomb
+__ctype_b_loc@@GLIBC_2.3
+stderr@@GLIBC_2.2.5
+__sprintf_chk@@GLIBC_2.3.4
+socket@@GLIBC_2.2.5
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.plt.got
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.dynamic
+.data
+.bss
+.comment
+.debug_aranges
+.debug_info
+.debug_abbrev
+.debug_line
+.debug_str
+.debug_loc

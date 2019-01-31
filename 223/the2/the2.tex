@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+\usepackage{amssymb}
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim YEŞİLYURT \\
+Id Number : 2259166 \\
+
+% Write your answers below the section tags
+\section*{Answer 1}
+\hspace{5mm} a) Using membership table to prove $A \cap B \subseteq (A \cup \overline B) \cap (\overline A \cup B)$:
+\begin{table}[H]
+\small
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c}	
+\hline
+$A$ & $B$ & $ \overline A $ & $ \overline B$ & $A \cap B$ & $A \cup \overline B$ & $\overline A \cup B$ & $ (A \cup \overline B) \cap (\overline A \cup B)$\\
+\hline 
+1 & 1 & 0 & 0 & 1 & 1 & 1 & 1\\			
+1 & 0 & 0 & 1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 0 & 1 & 1 & 1\\
+\hline 
+\end{tabular}
+\end{table}
+b) Using membership table to prove $\overline A \cap \overline B \subseteq (A \cup \overline B) \cap (\overline A \cup B)$:
+\begin{table}[H]
+\small
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c}	
+\hline
+$A$ & $B$ & $ \overline A $ & $ \overline B$ & $\overline A \cap \overline B $ & $A \cup \overline B$ & $\overline A \cup B$ & $ (A \cup \overline B) \cap (\overline A \cup B)$\\
+\hline 
+1 & 1 & 0 & 0 & 0 & 1 & 1 & 1\\			
+1 & 0 & 0 & 1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+\hline 
+\end{tabular}
+\end{table}
+
+\section*{Answer 2}
+\begin{align*}
+f^{-1}((A \cap B) \times C) &= f^{-1}(A \times B) \cap f^{-1}(B \times C) \\
+f^{-1}((A \times C) \cap (B \times C)) &= f^{-1}(A \times C) \cap f^{-1}(B \times C) \\
+\end{align*} 
+
+\hspace*{5mm}\textbf{Part 1}, show that $f^{-1}((A \times C) \cap (B \times C)) \subseteq  f^{-1}(A \times C) \cap f^{-1}(B \times C)$;\\
+Assume that $x \in f^{-1}((A \times C) \cap (B \times C))$, then $f(x) \in ((A \times C) \cap (B \times C))$,\\ so $f(x) \in (A \times C)$ and $f(x) \in (B \times C)$, therefore $x \in f^{-1}(A \times C)$ and $x \in  f^{-1}(B \times C)$,\\ so $ x \in ( f^{-1}(A \times C) \cap  f^{-1}(B \times C))$\\\\
+
+\hspace*{5mm}\textbf{Part 2}, show that $ f^{-1}(A \times C) \cap f^{-1}(B \times C) \subseteq f^{-1}((A \times C) \cap (B \times C))$;\\
+Assume that $x \in f^{-1}(A \times C) \cap f^{-1}(B \times C)$, then $x \in  f^{-1}(A \times C)$ and $x \in  f^{-1}(B \times C)$,\\ so $f(x) \in (A \times C)$ and $f(x) \in (B \times C)$, which implies $ f(x) \in ((A \times C) \cap (B \times C))$, \\ therefore $x \in  f^{-1}((A \times C) \cap (B \times C))$\\\\
+
+\hspace*{5mm}Hence by part1 and part2 $f^{-1}((A \times C) \cap (B \times C)) =  f^{-1}(A \times C) \cap f^{-1}(B \times C)$\\
+\hspace*{5mm}\quad \ Therefore $f^{-1}((A \cap B) \times C) = f^{-1}(A \times B) \cap f^{-1}(B \times C)$
+
+\section*{Answer 3}
+\hspace*{5mm}a)	 From the definition of one to one functions, if a function is one to one then for all x and for all y; if $f(x) = f(y)$ then $x = y$. We can clearly see this is not the case for this function. Since the function has $x^2$ term in its interior, it maps the negative items from $R$ to their positive equivalents in $R$ (i.e $(-x)^2 = x^2$ while $x \neq -x$ , even function). So we see that there is at least one situation which contradicts with our assumption, therefore $f(x)$ can not be one-to-one. We know that $f : A \rightarrow B$ is onto if $f(A) = B$. Which means if a function f is onto then every element in its codomain is being mapped. This function is defined from $R$ to $R$ so if $f(x)$ is onto then every item on $R$ must be mapped by $f(x)$. But negative values on $R$ will not be mapped by $f(x)$ . Therefore $f(x)$ can not be onto.\\\\
+\hspace*{5mm}b)	From the definitions of one-to-one functions and onto functions on part a, $f(x)$ is one-to-one, since the function maps every distinct item from $R$ to a distinct item in $R$. But $f(x)$ is not onto, since the $0$ in $R$ will remain unmapped from $f(x)$. Therefore $f(x)$ can not be onto.
+
+
+\section*{Answer 4}
+
+\hspace{6mm}a)	
+Let A and/or B countably infinite sets such that $A=\{a_1,a_2...\}$ and
+$B=\{b_1,b_2...\}$ we can write the elements of $A\times B$ as;\\\\
+\begin{tabular}{ c| c c c c c}
+ $A \setminus B$  &$ b_1$ & $b_2$ & $b_3$ & ...  \\
+   \hline
+ $ a_1$ & $(a_1,b_1)$ & $(a_1,b_2)$ & $(a_1,b_3)$ &...\\
+ $ a_2$ & $(a_2,b_1)$ & $(a_2,b_2)$ & $(a_2,b_3)$ &...\\
+ $ a_3$ & $(a_3,b_1)$ & $(a_3,b_2)$ & $(a_3,b_3)$ &...\\
+ ... & ... & ... & ... & ...
+\end{tabular}
+\\\\
+In table, first row, above the horizontal line contains the countably infinite elements of set $B$, first column, left of vertical line contains the countably infinite elements of set $A$. We can write $A \times B$ on this table and we can count the elements of $A \times B$ diagonally (i.e. 1st element: $(a_1,b_1)$, 2nd element: $(a_2,b_1)$, 3rd element $(a_1,b_2)$, 4th element: $(a_1,b_3)$, 5th element: $(a_2,b_2)$, 6th element: $(a_3,b_1)$ and so on. ). With this way of counting we will eventually get all elements in $A \times B$, then we can index these elements with unique numbers from $\mathbb{N}$, therefore we can get the one-to-one correspondence between $A \times B$ and  $\mathbb{N}$. Therefore we can infer that $A \times B$ is countable.\\
+
+b)	Prove by contradiction, suppose that $B$ were countable, say with elements $b1, b2 , ...$ .Then since $A \subseteq B$ , we can list the elements of $A$ using the order in which they appear in this listing of $B$. Therefore $A$ is countable. But this contradicts with the hypothesis ($A$ is uncountable). Thus $B$ is not countable.\\
+
+c)	If $B$ is countable with the elements $b1, b2 , ...$ and $A \subseteq B$, then we can list the elements of $A$ using the order in which they appear in this listing of $B$. Therefore $A$ is countable.
+
+\newpage
+
+\section*{Answer 5}
+\hspace{6mm}a)	Let $f_1(x) = 7x^2$ and $f_2(x)=x^3$ ($f_1(x)$ is $\mathcal{O}(f_2(x)$) and they are increasing functions). \\ 
+Prove by the Big-Oh definition,  $ln|f_1(x)|$ is $\mathcal{O}(ln|f_2(x)|)$ if $ln|f_1(x)|\leq  c.(ln|f_2(x)|)$ for some $x>k$. Let us check this condition: If  $ln|7x^2|$ is $\mathcal{O}(ln|x^3|)$ then $ln|7x^2|\leq c.ln|x^3|$ . Exponential both sides  $e^{ln|7x^2|} \leq e^{c.ln|x^3|}$, eliminate the terms  $7x^2 \leq e^c.x^3$, note that when $x\geq k=7$ and $c \geq 1$, we have $7x^2 \leq e^c.x^3$, consequently, we can take $c=1$ and $k=7$ as witnesses to establish the relationship $ln|7x^2|$ is $\mathcal{O}(ln|x^3|)$. Therefore $ln|f_1(x)|$ is $\mathcal{O}(ln|f_2(x)|)$.\\
+
+b)	Let $f_1(x) = 7x^2$ and $f_2(x)=x^3$ ($f_1(x)$ is $\mathcal{O}(f_2(x)$) and they are increasing functions). \\
+Prove by the Big-Oh definition, $3^{f_1(x)}$ is $\mathcal{O}(3^{f_2(x)})$ if  $3^{f_1(x)} \leq c.3^{f_2(x)}$ for some $x>k$. Let us check this condition: If $3^{7x^2}$ is $\mathcal{O}(3^{x^3})$ then $3^{7x^2} \leq c.3^{x^3}$ . Take the log of both sides $7x^2.log3 \leq x^3.log3+logc$, divide log3 both sides $7x^2 \leq x^3 + log(c-3)$, note that when $x\geq k=7$ and $c \geq 4$, we have $7x^2 \leq x^3 + log(c-3)$, consequently, we can take $c=4$ and $k=7$ as witnesses to establish the relationship $3^{7x^2}$ is $\mathcal{O}(3^{x^3})$. Therefore $3^{f_1(x)}$ is $\mathcal{O}(3^{f_2(x)})$.\\
+
+\section*{Answer 6}
+\hspace{6mm}a)
+\begin{equation*}
+\begin{split}
+(3^x -1 )\ mod(3^y -1) &= 3^{(x \ mod \ y)} -1 \\
+3^x -1		 &= k.(3^y -1) + 3^{(x \ mod \ y)}-1 \ \ \ \ \ \ \ where \  k \in \mathbb{Z} \\
+3^x 			 &= k.(3^y -1) + 3^{(x \ mod \ y)} \\
+log_3(3^x)		 &= log_3(k.(3^y -1) + 3^{(x \ mod \ y)}) \\
+x			 &= log_3(k.(3^y -1) + 3^{(x \ mod \ y)})  \\
+\end{split}	 
+\end{equation*} \\ 
+\quad Now substitute $x$ in original equation:\\
+\begin{equation*}
+\begin{split}
+(3^{log_3(k.(3^y -1) + 3^{(x \ mod \ y)})}-1)\ mod(3^y -1) &= 3^{(x \ mod \ y)} -1 \\
+k.(3^y -1) + 3^{(x \ mod \ y)}-1		 				&= k.(3^y -1) + 3^{(x \ mod \ y)}-1  \\
+0											&= 0 \ \ \ \ \ \ \ (1) \\
+\end{split}	 
+\end{equation*} \\ 
+\quad Since we get (1) in the last step, $(3^x -1 )\ mod(3^y -1) = 3^{(x \ mod \ y)} -1$ is true.\\
+
+
+b) 
+\begin{equation*}
+\begin{split}
+gcd(123,277) &= gcd(277,123 \ mod\ 277) \\
+			 &= gcd(277,123) \\
+			 &= gcd(123,277 \ mod\ 123) \\
+			 &= gcd(123,31) \\
+			 &= gcd(31,123 \ mod\ 31)  \\
+			 &= gcd(31,30)  \\
+			 &= gcd(30,31 \ mod\ 30)   \\
+		 	 &= gcd(30,1)   \\
+		 	 &= gcd(1,30 \ mod\ 1)    \\
+			 &= gcd(1,0)    \\
+			 &= 1           \\	
+\end{split}	 
+\end{equation*} \\ \\
+
+
+\end{document}
+
+​
+
