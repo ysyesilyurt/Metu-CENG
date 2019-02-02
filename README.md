@@ -22,6 +22,7 @@ Many tasks done in prolog, haskell, and C++ to understand concepts in different 
 ## [CENG 280 Formal Languages and Abstract Machines](https://github.com/ysyesilyurt/Metu-CENG/tree/master/280)
 
 ## [CENG 315 Algorithms](https://github.com/ysyesilyurt/Metu-CENG/tree/master/315)
+Contains a solution for an advanced graph algorithm, written in C++
 
 ## [CENG 331 Computer Organization](https://github.com/ysyesilyurt/Metu-CENG/tree/master/331)
 ### [Bomb Lab](https://github.com/ysyesilyurt/Metu-CENG/tree/master/331/bomb)
@@ -41,17 +42,22 @@ A task which aims to teach optimization methodoligies for x86(64) architecture
 ### [SDD](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350/SDD)
 
 ## [CENG 351 Data Management and File Structures](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351)
+### [hw1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw1)
+An assignment for achieving familiarity with SQL through programming languages, implementation done in Java.
+### [hw2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw2)
+A B+Tree implementation as homework, done in Java.
 
 ## [CENG 435 Data Communications and Networking](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435)
 ### [Term Project Phase1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Term%20project/Group68_part1)
-A multihomed network topology with various nodes are implemented with UDP and TCP socket applications and some experiments done on it. 
+A multihomed network topology with various nodes are implemented with UDP and TCP socket applications and some experiments with ```netem/tc``` done on it. Implementation was done in python. Phase1 report and its README can be viewed for further details.
 
 ### [Term Project Phase2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Term%20project/Group68_part2)
-Same network topology extended and some experiments done on it.
-Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol (RDT) has been implemented.
+Same network topology extended and some experiments with ```netem/tc``` done on it.
+Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol (RDT) has been implemented on the topology with python. Phase2 report and its README can be viewed for further details.
 
 ### [Wireshark Assignments](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Wireshark%20assignments)
 
 ## [CENG 445 Software Engineering with Scripting Languages](https://github.com/ysyesilyurt/Metu-CENG/tree/master/445)
 ### [LogWatcher](https://github.com/simsekhalit/LogWatcher)
+Log Filtering tool which watches sources and filters them by user-given rules.
 
