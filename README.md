@@ -42,14 +42,14 @@ A task which aims to teach optimization methodoligies for x86(64) architecture
 ### [SDD](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350/SDD)
 
 ## [CENG 351 Data Management and File Structures](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351)
-### [hw1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw1)
+### [Hw1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw1)
 An assignment for achieving familiarity with SQL through programming languages, implementation done in Java.
-### [hw2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw2)
+### [Hw2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw2)
 A B+Tree implementation as homework, done in Java.
 
 ## [CENG 435 Data Communications and Networking](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435)
 ### [Term Project Phase1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Term%20project/Group68_part1)
-A multihomed network topology with various nodes are implemented with UDP and TCP socket applications and some experiments with ```netem/tc``` done on it. Implementation was done in python. Phase1 report and its README can be viewed for further details.
+A multihomed network topology with various nodes are implemented with UDP and TCP socket applications and some experiments with ```netem/tc``` done on it. Implementation done in python. Phase1 report and its README can be viewed for further details.
 
 ### [Term Project Phase2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435/Term%20project/Group68_part2)
 Same network topology extended and some experiments with ```netem/tc``` done on it.
