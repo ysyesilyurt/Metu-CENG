@@ -1,0 +1,68 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/author_comparator.hpp
+book.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.hpp
+cstring
+-
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.cpp
+book.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.hpp
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.hpp
+string
+-
+ostream
+-
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/bookstore.cpp
+bookstore.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/bookstore.hpp
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/bookstore.hpp
+string
+-
+iostream
+-
+bst.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/bst.hpp
+book.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.hpp
+author_comparator.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/author_comparator.hpp
+title_comparator.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/title_comparator.hpp
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/bst.hpp
+functional
+-
+cstddef
+-
+stack
+-
+list
+-
+ostream
+-
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/main.cpp
+iostream
+-
+cmath
+-
+bst.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/bst.hpp
+
+C:/Users/Yavuz Selim/CLionProjects/hw2/title_comparator.hpp
+book.hpp
+C:/Users/Yavuz Selim/CLionProjects/hw2/book.hpp
+cstring
+-
+

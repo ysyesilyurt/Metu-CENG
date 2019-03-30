@@ -1,0 +1,3 @@
+C:/Users/Yavuz Selim/CLionProjects/hw2/cmake-build-debug/CMakeFiles/hw2.dir
+C:/Users/Yavuz Selim/CLionProjects/hw2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Yavuz Selim/CLionProjects/hw2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

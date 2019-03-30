@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Yavuz Selim/CLionProjects/hw3/Article.cpp
+Article.h
+C:/Users/Yavuz Selim/CLionProjects/hw3/Article.h
+
+C:/Users/Yavuz Selim/CLionProjects/hw3/Article.h
+iostream
+-
+string
+-
+vector
+-
+utility
+-
+fstream
+-
+
+C:/Users/Yavuz Selim/CLionProjects/hw3/Machine.cpp
+Article.h
+C:/Users/Yavuz Selim/CLionProjects/hw3/Article.h
+
+C:/Users/Yavuz Selim/CLionProjects/hw3/main.cpp
+Article.h
+C:/Users/Yavuz Selim/CLionProjects/hw3/Article.h
+

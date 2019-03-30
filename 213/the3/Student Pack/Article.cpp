@@ -3,152 +3,195 @@
 /*#############################
 #               NOTE!         #
 #    Please don't forget to   #
-#     check PDF. Fuctions     #
+#     check PDF. Functions     #
 #    may have more detailed   #
 #     tasks which are not     #
 #       mentioned here.       #
 #############################*/
 
 Article::Article( int table_size,int h1_param, int h2_param )
-{    
-    /*#############################
-    #            TO-DO            #
-    # Write a default constructor #
-    #   for the Article Class     #
-    #############################*/
+{
+    n = 0;
+    Article::table_size = table_size;
+    Article::h1_param = h1_param;
+    Article::h2_param = h2_param;
+    table = new std::pair<std::string, int>[table_size];
+    for (int i = 0; i < table_size; ++i) {
+        table[i] = std::make_pair(EMPTY_KEY,EMPTY_INDEX);
+    }
 }
 
 Article::~Article()
 {
-    /*#############################
-    #             TO-DO           #
-    #  Write a deconstructor for  #
-    #     the Article Class       #
-    #############################*/
+    table_size = 0;
+    n = 0;
+    h1_param = 0;
+    h2_param = 0;
+    delete [] table;
 }
 
 int Article::get( std::string key, int nth, std::vector<int> &path ) const
 {
-    /*#############################################
-    #                    TO-DO                    #
-    #      Your get function should return        #
-    # the original index (index in the text file) #
-    #    of the nth 'key' in the hash table.      #
-    #    If there is no such a key, return -1     #
-    #    If there is, return the original index   #
-    #     In both cases, you need to push each    #
-    #          visited index while probing        #
-    #           that you calculated until         #
-    #      finding the key, to the path vector.   #
-    #############################################*/
+    int occurence = 0,flag = 0,i = 0;
+    while(true)
+    {
+        int hash = hash_function(key,i);
 
-    return 0;
+        if (flag)//check for first cell
+            path.push_back(hash);
+
+        if(table[hash].first == key)
+        {
+            occurence++;
+            if(occurence == nth)
+                return table[hash].second;
+            i++;
+            flag = 1;
+        }
+
+        else if(table[hash].second == EMPTY_INDEX)
+            return -1;
+        else if(i>=table_size-1)
+            return -1;
+
+        else
+        {
+            i++;
+            flag = 1;
+        }
+    }
 }
 
 int Article::insert( std::string key, int original_index )
 {
-    /*#########################################
-    #                 TO-DO                   #
-    #      Insert the given key, with the     #
-    # original index value (at the text file) #
-    #           to the hash table.            #
-    #  Return the total number of probes you  #
-    #      encountered while inserting.       #
-    #########################################*/
+    if(getLoadFactor()>MAX_LOAD_FACTOR)
+        expand_table();
 
-    return 0;
+    int countofProbing = 0,flag = 0,i = 0;
+    while(true)
+    {
+        int hash = hash_function(key,i);
+
+        if (flag != 0)//check for first cell
+            countofProbing++;
+
+        if(table[hash].first == EMPTY_KEY)
+        {
+            table[hash] = std::make_pair(key,original_index);
+            n++;
+            break;
+        }
+
+        else if(table[hash].first == key)
+        {
+            if(original_index < table[hash].second)
+            {
+                int neworgi_index = table[hash].second;
+                table[hash].second = original_index;
+                original_index = neworgi_index;
+            }
+        }
+        i++;
+        flag = 1;
+    }
+    return countofProbing;
 }
-
 
 int Article::remove( std::string key, int nth )
 {
-    /*#########################################
-    #                  TO-DO                  #
-    #      Remove the nth key at the hash     #
-    #                  table.                 #
-    #  Return the total number of probes you  #
-    #      encountered while inserting.       #
-    #   If there is no such a key, return -1  #
-    #     If there, put a mark to the table   #
-    #########################################*/
-    
-    return 0;
+    int occurence = 0,i = 0;
+    while(true)
+    {
+        int hash = hash_function(key,i);
+
+        if(table[hash].first == key)
+        {
+            occurence++;
+            if(occurence == nth)
+            {
+                table[hash] = std::make_pair(EMPTY_KEY,MARKED_INDEX);
+                n--;
+                return i;
+            }
+        }
+
+        else if(table[hash].second == EMPTY_INDEX)
+            return -1;
+
+        else if(i>=table_size-1)
+            return -1;
+
+        i++;
+    }
 }
 
 double Article::getLoadFactor() const
 {
-    /*#########################################
-    #                TO-DO                    #
-    #      Return the load factor of the      #
-    #                table                    #
-    #########################################*/
-    return 0;
+    return (double)n/table_size;
 }
 
 void Article::getAllWordsFromFile( std::string filepath )
 {
-    /*#########################################
-    #                  TO-DO                  #
-    #       Parse the words from the file     #
-    #      word by word and insert them to    #
-    #                hash table.              #
-    #   For your own inputs, you can use the  #
-    #  'inputify.py' script to fix them to    #
-    #            the correct format.          #
-    #########################################*/
+    std::ifstream file ;
+    std::string wrd ;
+    int orgi_index = 1;
+
+    file.open(filepath.c_str());
+
+    while(file >> wrd) {
+        insert(wrd, orgi_index);
+        orgi_index++;
+    }
+
+    file.close();
 }
 
 void Article::expand_table()
 {
-    /*#########################################
-    #                  TO-DO                  #
-    #   Implement the expand table function   #
-    #   in order to increase the table size   #
-    #   to the very first prime number after  #
-    #      the value of (2*table size).       #
-    #         Re-hash all the data.           #
-    #       Update h2_param accordingly.      #
-    #########################################*/
+    int oldtablesize = table_size;
+    table_size = nextPrimeAfter(2*table_size);
+    h2_param = firstPrimeBefore(table_size);
+    std::pair<std::string, int>* oldtable = table;
+    table = new std::pair<std::string, int>[table_size];
+    n = 0;
+    for (int i = 0; i < table_size; ++i) {
+        table[i] = std::make_pair(EMPTY_KEY,EMPTY_INDEX);
+    }
+    for (int i = 0; i < oldtablesize ; ++i) {
+        if(oldtable[i].second != EMPTY_INDEX) {
+            insert(oldtable[i].first, oldtable[i].second);
+        }
+    }
+
+    delete [] oldtable;
 }
 
 int Article::hash_function( std::string& key, int i ) const
 {
-    /*#########################################
-    #                TO-DO                    #
-    #       Implement the main hashing        #
-    #    function. Firstly, convert key to    #
-    #    integer as stated in the homework    #
-    #      text. Then implement the double    #
-    #            hashing function.            #
-    #      use convertStrToInt function to    #
-    #      convert key to a integer for       #
-    #         using it on h1 and h2           #
-    #               reminder:                 #
-    #            you should return            #
-    #    ( h1(keyToInt) + i*h2(keyToınt) )    #
-    #            modulo table_size            #
-    #########################################*/
-    return 0;
+    int convertedKey = convertStrToInt(key);
+    return ( h1(convertedKey) + i*h2(convertedKey) ) % table_size;
 }
 
 int Article::h1( int key ) const
 {
-    /*###############################
-    #              TO-DO            #
-    #      First Hash function      #
-    # Don't forget to use h1_param. #
-    ###############################*/
-
-    return 0;
+    int popcount = 0;
+    while(key!=0)
+    {
+        if(key%2) {
+            popcount++;
+            key /= 2;
+        }
+        else
+            key/=2;
+    }
+    int res = h1_param * popcount;
+    return res;
 }
 
 int Article::h2( int key ) const
 {
-    /*###############################
-    #              TO-DO            #
-    #     Second Hash function      #
-    # Don't forget to use h2_param. #
-    ###############################*/
-
-    return 0;
+    int modofKey = key % h2_param;
+    int res = h2_param - modofKey;
+    return res;
 }
+
