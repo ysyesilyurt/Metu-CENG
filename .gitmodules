@@ -1,0 +1,6 @@
+[submodule "RDT-Protocol"]
+	path = RDT-Protocol
+	url = https://github.com/ysyesilyurt/RDT-Protocol
+[submodule "LogWatcher"]
+	path = LogWatcher
+	url = https://github.com/simsekhalit/LogWatcher
