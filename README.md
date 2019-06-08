@@ -37,6 +37,17 @@ A task which aims to foster the fundamental concepts reside behind the y86-64 ar
 ### [Performance Lab](https://github.com/ysyesilyurt/Metu-CENG/tree/master/331/performance)
 A task which aims to teach optimization methodoligies for x86(64) architecture
 
+## [CENG 334 Introduction to Operating Systems](https://github.com/ysyesilyurt/OperatingSystems-2019)
+
+### [MapReduce](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/MapReduce)
+A C implementation for Map Reduce programming model which aims to practice IPC and general tools that is used for it.
+
+### [MiningSimulation](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/MiningSimulation)
+A mining simulation implementation which aims to practice threading and synchronization tools (like monitor, CV, mutex and semaphores) in linux.
+
+### [Filecopy](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/Filesystems)
+A filecopy implementation which aims to practice EXT2 filesystem structure with copying a source file into a target folder without mounting the disk.
+
 ## [CENG 350 Software Engineering](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350)
 ### [SRS](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350/SRS)
 ### [SDD](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350/SDD)
