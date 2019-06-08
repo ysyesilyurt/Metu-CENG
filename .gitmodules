@@ -4,3 +4,6 @@
 [submodule "LogWatcher"]
 	path = LogWatcher
 	url = https://github.com/simsekhalit/LogWatcher
+[submodule "OperatingSystems-2019"]
+	path = OperatingSystems-2019
+	url = https://github.com/ysyesilyurt/OperatingSystems-2019
