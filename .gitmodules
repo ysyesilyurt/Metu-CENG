@@ -1,12 +1,12 @@
 [submodule "RDT-Protocol"]
 	path = RDT-Protocol
-	url = https://github.com/ysyesilyurt/RDT-Protocol
+	url = git@github.com:ysyesilyurt/RDT-Protocol.git
 [submodule "LogWatcher"]
 	path = LogWatcher
-	url = https://github.com/simsekhalit/LogWatcher
+	url = git@github.com:simsekhalit/LogWatcher.git
 [submodule "OperatingSystems-2019"]
 	path = OperatingSystems-2019
-	url = https://github.com/ysyesilyurt/OperatingSystems-2019
+	url = git@github.com:ysyesilyurt/OperatingSystems-2019.git
 [submodule "PIC-Practices"]
 	path = PIC-Practices
 	url = git@github.com:ysyesilyurt/PIC-Practices.git
