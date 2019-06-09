@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{CENG 222}  \\[4mm]
+                                         \Large Statistical Methods for Computer Engineering \\[4mm]
+                                        \normalsize      Spring '2018-2019 \\
+                                           \Large   Homework 4 \\
+\end{flushright}
+\HRule
+
+\section*{Student Information }
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 
+
+% Write your answers below the section tags
+\section*{Answer 9.10}
+The given information describes that the from a sample of 200 items 24 defective items were found. We can calculate the sample proportion of defective items as follows: 
+\begin{align*}
+\hat{p} &= \frac{x}{n} \\
+		&= \frac{24}{200} \\
+		&= 0.12
+\end{align*}
+Also, for the 96\% confidence interval we will have a significance level of $\alpha = 0.04$ and from standard normal table we can check its value which is 2.054. \\
+
+\subsection*{a)}
+With the information we obtained above, let us construct a 96\% confidence interval for the proportion of defective items as follows: 
+\begin{align*}
+\text{96\% Confidence Interval} &= \hat{p} +_- Z_{critical}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+&= 0.12 +_- 2.054\sqrt{\frac{0.12(1-0.12)}{200}} \\
+&= 0.12 +_- 0.047 \\
+&= (0.073, 0.167)
+\end{align*}
+
+\subsection*{b)}
+First let us state our hypotheses: \\
+\begin{center}
+$H_0:p\leq 0.1$ and $H_A:p > 0.1$ \\
+\end{center}
+And as level of significance we have $\alpha = 0.04$ and $\alpha = 0.15$ values. Let us calculate the test statistic and then find the $p$ value to determine whether to accept or reject the Null hypothesis ($H_0$):
+\begin{align*}
+Z &= \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \\
+  &= \frac{0.12-0.1}{\sqrt{\frac{0.1(1-0.1)}{200}}} \\
+  &= \frac{0.02}{0.0212} \\
+  &= 0.943
+\end{align*}
+Find the $p$ value:
+\begin{align*}
+p &= P(Z > Z_0) \\
+  &= 1 - P(Z \leq 0.943) \\
+  &= 1 - 0.82716 \ \ \text{(From Std Norm Table)} \\
+  &= 0.17284
+\end{align*}
+In Conclusion, we see that the $p$ value (0.17284) is greater than the given significance levels (0.04 and 0.15), so we fail to reject the null hypothesis and conclude that there would be sufficient evidence to say that the claim is incorrect.
+
+\newpage
+\section*{Answer 9.12}
+We are given: \\
+\begin{center}
+$\bar{x} = 0.62$, $\sigma = 0.2$ and $n = 52$. 
+\end{center}
+
+\subsection*{a)}
+To construct a 95\% confidence interval for the population mean resistance first let us find our level of significance at 95\% which is $\alpha = 0.05$ and from Standard Normal table it has value of 1.96.
+So:
+\begin{align*}
+\text{95\% Confidence Interval} &= \bar{x} +_- Z_{critical}(\frac{\sigma}{\sqrt{n}}) \\
+&= 0.62 +_- 1.96(\frac{0.2}{\sqrt{52}})\\
+&= 0.62 +_- 0.05436 \\
+&= (0.56564 < \mu < 0.67436)
+\end{align*}
+
+\subsection*{b)}
+The probability that resistance is 0.62 ohms or higher can be found as follows:
+\begin{align*}
+P(X > 0.62) &= 1-P(Z \leq 0.62) \\
+			&= 1-P(Z \leq \frac{0.62-0.6}{0.2 / \sqrt{52}}) \\
+			&= 1-P(Z \leq 0.721) \\
+			&= 1-0.764545 \ \ \text{(From Std Norm Table)} \\
+			&= 0.235455
+\end{align*}
+
+\newpage
+\section*{Answer 10.3}
+From the given random number generator data with $N=100$, after arranging data into increasing order, let us form a continuous type frequency table of the data which is given below:
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Class interval & Frequency \\ \hline
+below -2.0     & 4         \\ \hline
+-2.0 to -1.5   & 4         \\ \hline
+-1.5 to -1.0   & 15        \\ \hline
+-1.0 to -0.5   & 9         \\ \hline
+-0.5 to 0      & 22        \\ \hline
+0 to 0.5       & 15        \\ \hline
+0.5 to 1.0     & 12        \\ \hline
+1.0 to 1.5     & 11        \\ \hline
+1.5 to 2.0     & 7         \\ \hline
+2.0 and above  & 1         \\ \hline
+Total          & 100       \\ \hline
+\end{tabular}
+\end{table}
+\subsection*{a)}
+Using the table of normal distribution; the table of expected, observed frequencies and other required columns comes out to be:
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+Class interval & $obs_i$ & $exp_i$ & $\chi^2$ \\ \hline
+below -2.0     & 4      & 3.32   & 0.14                                   \\ \hline
+-2.0 to -1.5   & 4      & 5.32   & 0.33                                   \\ \hline
+-1.5 to -1.0   & 15     & 10.02  & 2.48                                   \\ \hline
+-1.0 to -0.5   & 9      & 15.14  & 2.49                                   \\ \hline
+-0.5 to 0      & 22     & 18.38  & 0.71                                   \\ \hline
+0 to 0.5       & 15     & 17.92  & 0.48                                   \\ \hline
+0.5 to 1.0     & 12     & 14.03  & 0.29                                   \\ \hline
+1.0 to 1.5     & 11     & 8.82   & 0.54                                   \\ \hline
+1.5 to 2.0     & 7      & 4.46   & 1.45                                   \\ \hline
+2.0 and above  & 1      & 2.59   & 0.97                                   \\ \hline
+Total          & 100    & 100    & 9.88332                                \\ \hline
+\end{tabular}
+\end{table}
+Now to test the hypothesis at 5\% significance level whether the given data follows a normal distribution, we need to calculate the test statistic, which can be calculated as follows:
+\begin{align*}
+\chi^2 &= \Sigma\frac{(obs_i - exp_i)^2}{exp_i} \\
+	   &= 9.88
+\end{align*}
+And degrees of freedom in this case is:
+\begin{align*}
+v &= n-1 \\
+  &= 10-1 \\
+  &= 9
+\end{align*}
+The $p$ value for the above value of test statistic at 9 degrees of freedom can be found from table A6 and founded to be between 0.2 and 0.8, which is more than the significance level 0.05. We conclude that there is no evidence against the data follows a normal distribution.
+
+\subsection*{b)}
+The pdf of Uniform distribution is given by:
+\begin{center}
+$f(x) = \frac{1}{b-a} \ \ a \leq x \leq b$ \\
+\end{center}
+
+In this problem we have our $a=-3$, $b=3$. We need to calculate the table of expected, observed frequencies and other required columns again for Uniform distribution, which comes out to be: 
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+Class interval & $obs_i$ & $exp_i$ & $\chi^2$ \\ \hline
+below -2.0     & 4      & 16.67  & 9.63                                   \\ \hline
+-2.0 to -1.5   & 4      & 8.33   & 2.25                                   \\ \hline
+-1.5 to -1.0   & 15     & 8.33   & 5.33                                   \\ \hline
+-1.0 to -0.5   & 9      & 8.33   & 0.05                                   \\ \hline
+-0.5 to 0      & 22     & 8.33   & 22.41                                  \\ \hline
+0 to 0.5       & 15     & 8.33   & 5.33                                   \\ \hline
+0.5 to 1.0     & 12     & 8.33   & 1.61                                   \\ \hline
+1.0 to 1.5     & 11     & 8.33   & 0.85                                   \\ \hline
+1.5 to 2.0     & 7      & 8.33   & 0.21                                   \\ \hline
+2.0 and above  & 1      & 16.67  & 14.73                                  \\ \hline
+Total          & 100    & 100    & 62.42                                  \\ \hline
+\end{tabular}
+\end{table}
+
+Now to test the hypothesis at 5\% significance level whether the given data follows a Uniform distribution, we need to calculate the test statistic, which can be calculated as follows:
+\begin{align*}
+\chi^2 &= \Sigma\frac{(obs_i - exp_i)^2}{exp_i} \\
+	   &= 62.42
+\end{align*}
+And degrees of freedom in this case is:
+\begin{align*}
+v &= n-1 \\
+  &= 10-1 \\
+  &= 9
+\end{align*}
+The $p$ value for the above value of test statistic at 9 degrees of freedom can be found from table A6 and founded to be $<0.001$, which is much lower than the significance level 0.05. We conclude that there is strong evidence against the data follows a Uniform distribution.
+
+\subsection*{c)}
+According to the central limit theorem, theoretically it is possible that a data follows Normal and Uniform distributions simultaneously for a large sample.
+
+\section*{Answer 10.9}
+Let us first state our Null and Alternative hypotheses:
+
+\begin{center}
+$H_0:$ all three section's performance is equal \\
+$H_A:$ all three section's performance is not equal \\
+\end{center}
+We have our level of significance as $\alpha = 0.05$. Now let us again create a table of expected, observed frequencies and other required columns and perform a Chi-Square test. Note that this time we have 3 samples and we will draw the table in a slightly different fashion. Each column shows a section and each row shows a grade. There are three numbers in each entry which corresponds to:
+\begin{center}
+Observed \\
+Observed - Expected \\
+$\chi^2$
+\end{center}
+
+\begin{table}[h]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Grade & S01                                                        & S02                                                        & S03                                                        & Total                                                      \\ \hline
+A     & \begin{tabular}[c]{@{}c@{}}40\\ 5.71\\ 0.95\end{tabular}  & \begin{tabular}[c]{@{}c@{}}20\\ -8.57\\ 2.57\end{tabular} & \begin{tabular}[c]{@{}c@{}}20\\ 2.86\\ 0.48\end{tabular}  & \begin{tabular}[c]{@{}c@{}}80\\ 0\\ 4\end{tabular}      \\ \hline
+B     & \begin{tabular}[c]{@{}c@{}}50\\ 2.86\\ 0.17\end{tabular}  & \begin{tabular}[c]{@{}c@{}}40\\ 0.71\\ 0.01\end{tabular}  & \begin{tabular}[c]{@{}c@{}}20\\ -3.57\\ 0.54\end{tabular} & \begin{tabular}[c]{@{}c@{}}110\\ 0\\ 0.73\end{tabular}  \\ \hline
+C     & \begin{tabular}[c]{@{}c@{}}20\\ -5.71\\ 1.27\end{tabular} & \begin{tabular}[c]{@{}c@{}}25\\ 3.57\\ 0.6\end{tabular}   & \begin{tabular}[c]{@{}c@{}}15\\ 2.14\\ 0.36\end{tabular}  & \begin{tabular}[c]{@{}c@{}}60\\ 0\\ 2.22\end{tabular}   \\ \hline
+D     & \begin{tabular}[c]{@{}c@{}}2\\ -1.86\\ 0.89\end{tabular}  & \begin{tabular}[c]{@{}c@{}}5\\ 1.79\\ 0.99\end{tabular}   & \begin{tabular}[c]{@{}c@{}}2\\ 0.07\\ 0\end{tabular}      & \begin{tabular}[c]{@{}c@{}}9\\ 0\\ 1.89\end{tabular}    \\ \hline
+F     & \begin{tabular}[c]{@{}c@{}}8\\ -1\\ 0.11\end{tabular}     & \begin{tabular}[c]{@{}c@{}}10\\ 2.5\\ 0.83\end{tabular}   & \begin{tabular}[c]{@{}c@{}}3\\ -1.5\\ 0.5\end{tabular}    & \begin{tabular}[c]{@{}c@{}}21\\ 0\\ 1.44\end{tabular}   \\ \hline
+Total & \begin{tabular}[c]{@{}c@{}}120\\ 0\\ 3.4\end{tabular}     & \begin{tabular}[c]{@{}c@{}}100\\ 0\\ 5.01\end{tabular}    & \begin{tabular}[c]{@{}c@{}}60\\ 0\\ 1.88\end{tabular}     & \begin{tabular}[c]{@{}c@{}}280\\ 0\\ 10.28\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+As can be seen from the last row, last column of our table, $\chi^2$ of the total is equal to 10.28 and we have a $v = 8$ degrees of freedom. \\
+
+The $p$ value for the above value of test statistic at 8 degrees of freedom can be found from table A6 and founded to be between 0.8 and 0.2, which is greater than the significance level 0.05. \\
+
+So in conclusion, Since, the $p$ value greater than the given significance level 0.05, so we fail to reject the null hypothesis and conclude that the three sections performance is equal.
+
+\end{document}

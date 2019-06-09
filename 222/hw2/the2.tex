@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{CENG 222}  \\[4mm]
+                                         \Large Statistical Methods for Computer Engineering \\[4mm]
+                                        \normalsize      Spring '2018-2019 \\
+                                           \Large   Homework 2 \\
+\end{flushright}
+\HRule
+
+\section*{Student Information }
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 
+
+% Write your answers below the section tags
+\section*{Answer 3.10}
+The probability that there are more accidents on Friday than on Thursday can be easily found with examining the cases individually where such event can happen and then add them up. Such event can happen only when: 
+\begin{center}
+On Friday 2 accident happens and On Thursday 1 accident happens \\
+On Friday 2 accident happens and On Thursday 0 accident happens \\
+On Friday 1 accident happens and On Thursday 0 accident happens 
+\end{center}
+Hence we can calculate them as follows (Let the random variable $X$ be number of accidents on Thursday and $Y$ be the number of accidents on Friday):
+\begin{align*}
+P(X=1) \times P(Y=2) &= 0.2 \times 0.2 = 0.04 \\
+P(X=0) \times P(Y=2) &= 0.2 \times 0.6 = 0.12 \\
+P(X=0) \times P(Y=1) &= 0.2 \times 0.6 = 0.12 \\
+\text{Adding them up we get} &= 0.28
+\end{align*}
+
+\section*{Answer 3.15}
+\subsection*{a)}
+To compute the probability of \textbf{at least one} hardware failure happening in any lab we will subtract the possibility of not happening of any failure of the hardware from total probability (1) and then we will reach to the required probability. We have from table $P(0,0) = 0.52$ and subtracting, $1 - 0.52 = 0.48$
+\subsection*{b)}
+To determine if $X$ and $Y$ are independent we need to make sure that $P_{XY}(x,y)=P_X(x).P_Y(y)$ for each marginal/joint distribution values. If we bump into any inequality in this calculations then we can say X and Y are dependent. So we start computing with $P(X=0)$ and $P(Y=0)$, $P(0,0)=0.52$, the marginal distribution of X at 0 is $0.76$ and the marginal distribution of Y at 0 is $0.72$, $0.76 \times 0.72=0.54$, but $0.54 \neq 0.52$ therefore X and Y are not independent, they are infact dependent.
+
+\section*{Answer 3.19}
+\subsection*{a)}
+Let's compute the Expectation and Variance values of X (a profit made on \textbf{1 share} of A) and Y (a profit made on \textbf{1 share} of B):
+
+\begin{center}
+$E(X) =(-2)(0.5) + (2)(0.5) = 0 $ and 
+$Var(X) = (-2)^2 (0.5) + (2)^2 (0.5)-0^2 = 4$
+$E(Y) = (-1)(0.8) + (4)(0.2) = 0$ and
+$Var(Y)=(-1)^2(.8)+(4)^2(0.2)-0^2 = 4$
+\end{center} 
+Considering X and Y are independent, Expectation and variance values for 100 shares of A;
+\begin{center}
+$E(100X) = 100E(X) = 0$ and $Var(100X) = 100^2 Var(X) = 40.000 $
+\end{center}
+\subsection*{b)}
+Expectation and variance values for 100 shares of B;
+\begin{center}
+$E(100Y) = 100E(Y) = 0$ and $Var (100Y) = 100^2 Var(Y) = 40.000$
+\end{center}
+\subsection*{c)}
+Expectation and variance values for 50 shares of A and 50 shares of B;
+\begin{center}
+$E(50X + 50Y) = 50E(X) + 50E(Y) = 0$\\$Var(50X + 50Y) = 50^2 Var(X) + 50^2 Var(Y) = 20.000$
+\end{center}
+
+\section*{Answer 3.26}
+
+\subsection*{a)}
+We need to find the probability $P(X \geq 5)$, where $X$ is the number of damaged files,
+out of 20 files that is being checked. This is the number of successes in 20 Bernoulli trials, therefore, X has Binomial distribution with parameters $n = 20$ and $p = 0.2$. From Table A2,
+\begin{center}
+$P(X \geq 5) = 1 - F(4) = 1 - 0.630 = 0.370$
+\end{center}
+
+\subsection*{b)}
+Let $X$ be the number of files tested until 3 undamaged files are found. It is a number of trials needed to see 3 successes, hence $X$ has Negative Binomial distribution with $k = 3$ and $p = 0.8$. We need to find: 
+\begin{center}
+$P(X > 5) = 1 - F(5)$
+\end{center}
+However, there is no table of Negative Binomial distribution in the Appendix on the book. We can convert $X$ into a new random variable $Y$ with Binomial Distribution and solve it as such. We will convert $X$ into $Y$ as the following: 
+\begin{align*}
+P(X > 5) &= P(\text{more than 5 trials needed to get 3 successes}) \\
+&= P(\text{5 trials are not sufficient}) \\
+&= P(\text{there are fewer than 3 successes in 5 trials}) \\
+&= P(Y < 3)
+\end{align*}
+where $Y$ is the number of successes (undamaged files) in 5 trials, which is a Binomial variable with parameters $n = 5$ and $p = 0.8$. From Table A2,
+\begin{center}
+$P(X > 5) = P(Y < 3) = P(Y \leq 2) = F(2) = 0.058$
+\end{center}
+
+\end{document}

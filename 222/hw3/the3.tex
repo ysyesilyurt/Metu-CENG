@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{CENG 222}  \\[4mm]
+                                         \Large Statistical Methods for Computer Engineering \\[4mm]
+                                        \normalsize      Spring '2018-2019 \\
+                                           \Large   Homework 3 \\
+\end{flushright}
+\HRule
+
+\section*{Student Information }
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 
+
+% Write your answers below the section tags
+\section*{Answer a}
+I have conducted a Monte Carlo study using Matlab, after which I have used this study for estimating the probability that the total weight of all vehicles that pass over the bridge in the village in a day is more than 220 tons, for estimating expected weight and calculating the standard deviation of it. \\
+
+To conduct such a study I have first used Normal approximation with $\alpha = 0.01$ and $\epsilon = 0.02$, namely (since no estimator for $p$ has been given I have directly used the following):
+
+\begin{align*}
+N &\geq 0.25(\frac{z_{\alpha/2}}{\epsilon})^2 \\
+  &= 0.25(\frac{2.575}{0.02})^2 \\
+  &\approx 4144
+\end{align*}
+
+I have created some variables for holding the values of distribution parameters and I have also created a vector named $TotalWeight$ for keeping the total weight of vehicles that use the bridge for each Monte Carlo run and initialized it to 0 for all $N$.\\
+
+Next, to find number of vehicles for each type, I have generated samples ($NMotors$, $NCars$ and $NTrucks$) for all vehicles with their corresponding Poisson parameters using sampling from Poisson. \\
+
+Then, to find weights of each vehicle according to its type, I have used the samples that correspond to numbers for each type of vehicles together with their corresponding Gamma parameters. With this way I was able to generate the sample weights for all vehicles ($WMotors$, $WCars$ and $WTrucks$) and after summing them up at the end I have calculated the total weight for 1 Monte Carlo run and filled the corresponding place in my $TotalWeight$ vector. I have repeated this study $N=4144$ times and filled the $TotalWeight$ vector accordingly. \\
+
+For the answer of \textit{part a}; after construction of $TotalWeight$ vector with desired Monte Carlo runs, I have calculated the \textit{mean} of the proportion of runs with the total weight more than 220 tons. With this way I have estimated the probability that the total weight of all the vehicles that pass over the bridge in a day is more than 220 tons; in other words, I have found our estimator for the desired probability. \\
+
+I have simulated my solution in Octave Online a number of times and I was able to determine that my estimated probability is always in between 0.35 and 0.38 (But in general 0.36). I share a sample output (which I will refer in other parts of the answer) in below:
+
+\begin{center}
+Estimated probability = 0.364865 \\
+Expected weight = 208441.367130 \\
+Standard deviation = 38401.600168 
+\end{center}
+
+\section*{Answer b}
+For estimation of the total weight of all the vehicles that pass over the bridge in a day $X$, I have simply got the \textit{mean} of $TotalWeight$ and found the Expected weight. Expected weight for a sample simulation can be seen from the sample output shared in part a.
+
+\section*{Answer c}
+For estimation of $Std(X)$, I have simply got the \textit{std} of $TotalWeight$ and found the Standard deviation of $X$. Standard deviation for a sample simulation can be seen from the sample output shared in part a.\\
+
+Since initially we have created a Monte Carlo study with size $N$ that attains our desired accuracy ($\alpha = 0.01$ and $\epsilon = 0.02$), We have guaranteed a Monte Carlo study of size $N$ with an error not exceeding $\epsilon$ with high probability $(1-\alpha)$ and created an estimator $X$ with that accuracy.
+
+\end{document}

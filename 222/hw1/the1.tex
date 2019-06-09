@@ -27,10 +27,8 @@
 
                                          \LARGE \textbf{CENG 222}  \\[4mm]
                                          \Large Statistical Methods for Computer Engineering \\[4mm]
-                                        \normalsize      Spring '2017-2018 \\
-                                           \Large   Take Home Exam 1 \\
-                    \normalsize Deadline: May 25, 23:59 \\
-                    \normalsize Submission: via COW
+                                        \normalsize      Spring '2018-2019 \\
+                                           \Large   Homework 1 \\
 \end{flushright}
 \HRule
 
@@ -38,75 +36,62 @@
 %Write your full name and id number between the colon and newline
 %Put one empty space character after colon and before newline
 Full Name : Yavuz Selim Yesilyurt \\
-Id Number : 2259166 \\
+Id Number : 2259166 
 
 % Write your answers below the section tags
-\section*{Answer 3.8}
-Computer user will try each of the 4 possible passwords in order to recall her password. In this trying process, the user may try 0 or 1 or 2 or 3 wrong passwords and then reach to the correct one. Therefore there are 4 cases in which she finds out her password with entering wrong passwords and each of them has the same probability, hence $X$ has the pmf:
-\begin{center}
-$P(0)=P(1)=P(2)=P(3)=\frac{1}{4}$ 
-\end{center}
-So:
-\begin{center}
-$E(X)=\sum_{x=0}^{3} xP(x) = (0+1+2+3)(\frac{1}{4})=1.5$
-\end{center}
-and
-\begin{center}
-$Var(X)=\sum_{x=0}^{3} (x-\mu)^2P(x)=\sum_{x=0}^{3} (x-1.5)^2P(x)$
-$=((-1.5)^2+(-0.5)^2+(0.5)^2+(1.5)^2)(\frac{1}{4})=1.25$
-\end{center}
+\section*{Answer 2.15}
+Let $A$ is the event that there is an error in the first block and let $B$ is the event that there is an error in the second block and $C$ is the event that the computer program returns error. Given that $P\{A\}= 0.2$ and $P\{B\} = 0.3$ and the events $A$ and $B$ are independent. The probability that the computer program will return error is $P\{A \cup B\}$ and it can be found adding all the cases that can bring an error and subtracting their intersection, namely we need to add probability that first block contains an error whereas second one does not, probability that second block contains an error whereas first one does not and we need to subtract the probability that both of them contains error: 
 
-\section*{Answer 3.15}
-\subsection*{a)}
-To compute the probability of \textbf{at least one} hardware failure happening in any lab we will subtract the possibility of not happening of any failure of the hardware from total probability (1) and then we will reach to the required probability. We have from table $P(0,0) = 0.52$ and subtracting, $1 - 0.52 = 0.48$
-\subsection*{b)}
-To determine if $X$ and $Y$ are independent we need to make sure that $P_{XY}(x,y)=P_X(x).P_Y(y)$ for each marginal/joint distribution values. If we bump into any inequality in this calculations then we can say X and Y are dependent. So we start computing with $P(X=0)$ and $P(Y=0)$, $P(0,0)=0.52$, the marginal distribution of X at 0 is $0.76$ and the marginal distribution of Y at 0 is $0.72$, $0.76 \times 0.72=0.54$, but $0.54 \neq 0.52$ therefore X and Y are not independent, they are infact dependent.
+\begin{align*}
+P\{A \cup B\} &= P\{A\} + P\{B\} - P\{A \cap B\} \\
+&= 0.2 + 0.3 - 0.2 \times 0.3 \\
+&= 0.44
+\end{align*}
 
-\section*{Answer 3.19}
-\subsection*{a)}
-Let's compute the Expectation and Variance values of X (a profit made on \textbf{1 share} of A) and Y (a profit made on \textbf{1 share} of B):
+Then by definition of conditional probability:
 
+\begin{align*}
+P\{A \cap B \ | \ A \cup B\} &= \frac{P\{(A \cap B) \cap (A \cup B) \}}{P\{A \cup B\}}  \\
+&= \frac{P\{A \cap B \}}{P\{A \cup B\}}  \\
+&= \frac{0.06}{0.44} \\
+&= 0.1364
+\end{align*}
+
+\section*{Answer 2.20}
+Let $U$ denotes the event that an athlete uses steroids and let $P$ denotes the test gives a positive result. Then the given probabilities can be rewritten as:
 \begin{center}
-$E(X) =(-2)(0.5) + (2)(0.5) = 0 $ and 
-$Var(X) = (-2)^2 (0.5) + (2)^2 (0.5)-0^2 = 4$
-$E(Y) = (-1)(0.8) + (4)(0.2) = 0$ and
-$Var(Y)=(-1)^2(.8)+(4)^2(0.2)-0^2 = 4$
+$P\{P\ |\ U\} = 0.9$ and $P\{P\ |\ \bar{U}\} = 0.02$ and $P\{U\} = 0.05$
+\end{center}
+We are required to find $P\{U\ | \ \bar{P}\}$. From the Bayes's rule, we have:
+\begin{center}
+$P\{U\ | \ \bar{P}\} = \frac{P\{\bar{P}\ |\ U\}\times P\{U\}}{P\{\bar{P}\}}$
+\end{center}
+We know that, from the law of total probability, $P\{\bar{P}\}$ can be rewritten as:
+\begin{center}
+$P\{\bar{P}\ |\ U\}\times P\{U\} \times P\{\bar{P}\ |\ \bar{U}\}\times P\{\bar{U}\}$
 \end{center} 
-Considering X and Y are independent, Expectation and variance values for 100 shares of A;
-\begin{center}
-$E(100X) = 100E(X) = 0$ and $Var(100X) = 100^2 Var(X) = 40.000 $
-\end{center}
-\subsection*{b)}
-Expectation and variance values for 100 shares of B;
-\begin{center}
-$E(100Y) = 100E(Y) = 0$ and $Var (100Y) = 100^2 Var(Y) = 40.000$
-\end{center}
-\subsection*{c)}
-Expectation and variance values for 50 shares of A and 50 shares of B;
-\begin{center}
-$E(50X + 50Y) = 50E(X) + 50E(Y) = 0$\\$Var(50X + 50Y) = 50^2 Var(X) + 50^2 Var(Y) = 20.000$
-\end{center}
+So: 
+\begin{align*}
+P\{U\ | \ \bar{P}\} &= \frac{P\{\bar{P}\ |\ U\}\times P\{U\}}{P\{\bar{P}\}}  \\\\
+&= \frac{P\{\bar{P}\ |\ U\}\times P\{U\}}{P\{\bar{P}\ |\ U\}\times P\{U\} \times P\{\bar{P}\ |\ \bar{U}\}\times P\{\bar{U}\}}  \\\\
+&= \frac{0.1 \times 0.05}{0.1 \times 0.05 + 0.98 \times 0.95} \\\\
+&= 0.00534
+\end{align*}
 
-\section*{Answer 3.29}
-Since insurance company divides its customers into 2 groups as high-risk and low-risk groups, a customer of this company can be either in high-risk group with 20 percent possibility or in low-risk group with 80 percent possibility. In question it says, The high-risk customers make an average of 1 accident per year while the low-risk customers make an average of 0.1 accidents per year. We know that Eric had no accidents last year. So the probability that he is a high-risk driver can be found with Bayes rule. We can compute it as:
+\section*{Answer 2.29}
 
-\begin{center}
-$P(High Risk|No Accident)= \frac{P(No Accident|High Risk)\times P(High Risk)}{P(No Accident|High Risk)\times P(High Risk) + P(No Accident|Low Risk)\times P(Low Risk)}$
-\end{center}
-Where;
-\begin{center}
-$P(No Accident|High Risk)=P(Poi(1)=0)=e^{-1}$, $P(High Risk)=0.2$\\
-$P(No Accident|Low Risk)=P(Poi(0.1)=0)=e^{-0.1}$, $P(Low Risk)=0.8$
-\end{center}
-So we have:
-\begin{center}
-$\frac{e^{-1}\times 0.2}{e^{-1}\times 0.2 + e^{-0.1}\times 0.8}=0.0923$
-\end{center}
+Let $A$ be the event that the database contain the given keyword. Then $P\{A\}=\frac{5}{9}$ and event that the database does not contain the given keyword is $P\{\bar{A}\}=\frac{4}{9}$ \\
 
+Probability that the keyword will be found in at least 2 of the first 4 searched databases can be found by examining all the favorable outcomes, adding them up and then dividing them to total number of outcomes, namely: \\
 
-
-
-
-
+ = finding in exactly 2 of the first 4 searched databases + finding in exactly 3 of the first 4 searched databases + finding in exactly 4 of the first 4 searched databases $\div$ choosing 4 databases to search for word out of 9 databases \\
+ 
+Namely:
+ 
+\begin{align*}
+&= \frac{C(5,2)\times C(4,2) + C(5,3) \times C(4,1) + C(5,4)}{C(9,4)} \\
+&= \frac{105}{126} \\\\
+&= 0.833 
+\end{align*}
 
 \end{document}

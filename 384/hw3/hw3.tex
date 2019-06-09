@@ -1,0 +1,436 @@
+\documentclass[10pt,a4paper, margin=1in]{article}
+\usepackage{fullpage}
+\usepackage{amsfonts, amsmath, pifont}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{float}
+\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=10mm,
+ right=10mm,
+ top=10mm,
+ bottom=10mm,
+ }
+ \author{
+  Yesilyurt, Yavuz Selim\\
+  \texttt{e2259166@ceng.metu.edu.tr}
+  \and
+   Simsek, Halit\\
+  \texttt{e2099760@ceng.metu.edu.tr}
+}
+\title{CENG 384 - Signals and Systems for Computer Engineers \\
+Spring 2018-2019 \\
+Written Assignment 3}
+
+\begin{filecontents}{q1_a1.dat}
+  k  ak
+ -4  2
+ -3  1
+ -2  0
+ -1  1  
+  0  2
+  1  1
+  2  0
+  3  1
+\end{filecontents}
+
+\begin{filecontents}{q1_a2.dat}
+  k  ak
+ -4  0
+ -3  2
+ -2  0
+ -1  2
+  0  0
+  1  2
+  2  0
+  3  2
+\end{filecontents}
+ 
+\begin{filecontents}{q1_b1.dat}
+  k  ak
+ -4  3
+ -3  2
+ -2  1
+ -1  2
+  0  3
+  1  2
+  2  1
+  3  2
+\end{filecontents}
+ 
+\begin{filecontents}{q1_b2.dat}
+  k  ak
+ -4  0
+ -3  2
+ -2  0
+ -1  1  
+  0  0
+  1  2
+  2  0
+  3  1
+\end{filecontents}
+
+\begin{filecontents}{q2.dat}
+  n  xn
+ -4  2
+ -3  2
+ -2  0
+ -1  0  
+  0  2
+  1  2
+  2  0
+  3  0
+\end{filecontents}
+
+\begin{document}
+\maketitle
+
+\noindent\rule{19cm}{1.2pt}
+
+\begin{enumerate}
+
+\item
+	\begin{enumerate}
+		\item
+			To find Fourier series coefficients of $x[n]$ we will use following formula for 1 period:
+			\begin{center}
+			$a_k = \frac{1}{N}\sum_{n=<N>} x[n]e^{-jkw_0n}$ \\
+			\end{center}
+			And to be able to find them using this formula we need $N$ and $w_0=\frac{2\pi}{N}$. Checking the graph of $x[n]$ we see that $N=4$ and $w_0=\frac{\pi}{2}$. To find the Fourier Series coefficients let us use the period from 0 to 3:
+			\begin{align*}
+			a_k &= \frac{1}{4}\sum_{n=0}^{3} x[n]e^{-jk\frac{\pi}{2}n} \\
+				&= \frac{1}{4}(x[0] + x[1]e^{-jk\frac{\pi}{2}} + x[2]e^{-2jk\frac{\pi}{2}} + x[3]e^{-3jk\frac{\pi}{2}}) \\
+				&= 0 + \frac{1}{4}(cos(k\frac{\pi}{2}) - jsin(k\frac{\pi}{2})) + \frac{1}{2}(cos(k\pi) - jsin(k\pi)) + \frac{1}{4}(cos(3k\frac{\pi}{2}) - jsin(3k\frac{\pi}{2}))
+			\end{align*}
+			From above we can find coefficients:
+			\begin{align*}
+			a_0 &= \frac{1}{4} + \frac{1}{2} + \frac{1}{4} = 1 \\
+			a_1 &= -\frac{j}{4} - \frac{1}{2} + \frac{j}{4} = -\frac{1}{2} \\
+			a_2 &= -\frac{1}{4} + \frac{1}{2} -\frac{1}{4} = 0 \\
+			a_3 &= \frac{j}{4} - \frac{1}{2} -\frac{j}{4} = -\frac{1}{2}			
+			\end{align*}
+			From periodicity we can simply say: $a_n = a_{n+4} = a_{n-4}$, so other coefficients can be found via this fact. \\\\
+			So the magnitude spectrum of the coefficients: \\
+\begin{figure}[H]
+    \centering
+    \ldots
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$k$},
+          ylabel={$|a_k|$},
+          xtick={ -4, -3, ..., 3},
+          ytick={0,1,2,3},
+          yticklabels={0 , $\frac{1}{2}$, 1, $\frac{3}{2}$},
+          ymin=0, ymax=3,
+          xmin=-4, xmax=3,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={k}, y={ak}] {q1_a1.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \ldots
+    \caption{$k$ vs. $|a_k|$.}
+    \label{fig:q1_a1}
+\end{figure}
+			So the phase spectrum of the coefficients: 
+\begin{figure}[H]
+    \centering
+    \ldots
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$k$},
+          ylabel={$\angle a_k$},
+          xtick={ -4, -3, ..., 3},
+          ytick={-3, -2, ..., 3},
+          yticklabels={$-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, 0, $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$},
+          ymin=-3, ymax=3,
+          xmin=-4, xmax=3,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={k}, y={ak}] {q1_a2.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \ldots
+    \caption{$k$ vs. $\angle a_k$.}
+    \label{fig:q1_a2}
+\end{figure}
+		\item
+		\begin{enumerate}
+			\item
+				We need to add a negative impulse (i.e $-\delta(n)$) at every $n+1$ th point to ensure periodicity of $y[n]$. So we would end up something such as:
+				\begin{center}
+				$y[n] = x[n] - \sum_{k=-\infty}^{\infty} \delta(n+1 - 4k)$ \\
+				\end{center}
+			\item
+				To find Fourier series coefficients of $y[n]$ we will use following formula for 1 period:
+			\begin{center}
+			$a_k = \frac{1}{N}\sum_{n=<N>} x[n]e^{-jkw_0n}$ \\
+			\end{center}
+			
+			And to be able to find them using this formula we need $N$ and $w_0=\frac{2\pi}{N}$. Checking the graph of $y[n]$ we see that $N=4$ and $w_0=\frac{\pi}{2}$. To find the Fourier Series coefficients let us again use the period from 0 to 3:
+			\begin{align*}
+			a_k &= \frac{1}{4}\sum_{n=0}^{3} x[n]e^{-jk\frac{\pi}{2}n} \\
+				&= \frac{1}{4}(x[0] + x[1]e^{-jk\frac{\pi}{2}} + x[2]e^{-2jk\frac{\pi}{2}} + x[3]) \\
+				&= 0 + \frac{1}{4}(cos(k\frac{\pi}{2}) - jsin(k\frac{\pi}{2})) + \frac{1}{2}(cos(k\pi) - jsin(k\pi)) + 0
+			\end{align*}
+			From above we can find coefficients:
+			\begin{align*}
+			a_0 &= \frac{1}{4} + \frac{1}{2} = \frac{3}{4} \\
+			a_1 &= -\frac{j}{4} - \frac{1}{2} = -\frac{1}{4}(j+2) \\
+			a_2 &= -\frac{1}{4} + \frac{1}{2} = \frac{1}{4} \\
+			a_3 &= \frac{j}{4} - \frac{1}{2} = \frac{1}{4}(j-2) 		
+			\end{align*}
+			From periodicity we can simply say: $a_n = a_{n+4} = a_{n-4}$, so other coefficients can be found via this fact. \\\\
+			So the magnitude spectrum of the coefficients: 
+\begin{figure}[H]
+    \centering
+    \ldots
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$k$},
+          ylabel={$|a_k|$},
+          xtick={ -4, -3, ..., 3},
+          ytick={0,1,2,3},
+          yticklabels={0, $\frac{1}{4}$, $\sqrt{\frac{5}{16}}$, $\frac{3}{4}$},
+          ymin=0, ymax=3,
+          xmin=-4, xmax=3,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={k}, y={ak}] {q1_b1.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \ldots
+    \caption{$k$ vs. $|a_k|$.}
+    \label{fig:q1_b1}
+\end{figure}
+			So the phase spectrum of the coefficients: 
+\begin{figure}[H]
+    \centering
+    \ldots
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$k$},
+          ylabel={$\angle a_k$},
+          xtick={ -4, -3, ..., 3},
+          ytick={-2, -1, ..., 2},
+		  yticklabels={$-1.14\pi$, $-0.85\pi$, 0, $0.85\pi$, $1.14\pi$},          
+          ymin=-2, ymax=2,
+          xmin=-4, xmax=3,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={k}, y={ak}] {q1_b2.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \ldots
+    \caption{$k$ vs. $\angle a_k$.}
+    \label{fig:q1_b2}
+\end{figure}
+		\end{enumerate}
+	\end{enumerate}	   
+\item 
+	First let us classify and order the given conditions for $x[n]$.
+	\begin{enumerate}
+		\item Says that $N=4$ and $w_0=\frac{\pi}{2}$
+		\item Says that the sum of $x[n]$ for 2 periods is equal to 8. Then we would have:
+			\begin{center}
+			$x[0] + x[1] + x[2] + x[3] = 4$ \\
+		 	\end{center}
+		 \item Says that $a_{-3}=a^{*}_{15}$ which also means $a_1=a^{*}_3$, also it says that $|a_1-a_{11}|=1$ which also means $|a_1-a_3|=1$
+		 \item Says that one of the coefficients is zero.
+		 \item For this condition, if we would expand the $e$ terms inside the sum we would have the following:
+		 	\begin{align*}
+		 	e^{\frac{-j\pi k}{2}} &= cos(\frac{\pi k}{2}) -jsin(\frac{\pi k}{2}) \ \ (1)\\
+		 	e^{\frac{-j\pi 3k}{2}} &= cos(\frac{\pi 3k}{2}) -jsin(\frac{\pi 3k}{2}) \ \ (2)
+		 	\end{align*}
+		 	Now subtract $2\pi$ from both $cos$ and $sin$ terms in equation (2) and add (1) and (2), result will be as follows:
+		 	\begin{center}
+		 	$2cos(\frac{\pi k}{2})$\\
+		 	\end{center}
+		 	Therefore this condition actually says $\sum_{k=0}^{3} x[k](2cos(\frac{\pi k}{2}))$, Furthermore calculation of this sum results in:
+		 	\begin{center}
+		 	$2x[0]-2x[2]=4$ namely $x[0]-x[2]=2$ \\
+			\end{center}		 	 
+	\end{enumerate}
+	So first let us find Fourier series coefficients for $x[n]$ using $a_k = \frac{1}{N}\sum_{n=<N>} x[n]e^{-jkw_0n}$ formula:
+	\begin{align*}
+		a_k &= \frac{1}{4}(x[0]+x[1]e^{-jk\frac{\pi}{2}} + x[2]e^{-jk\pi} + x[3]e^{-3jk\frac{\pi}{2}}) \\ 
+		a_0 &= \frac{1}{4}(x[0] + x[1] + x[2] + x[3]) \\ 
+		a_1 &= \frac{1}{4}(x[0] + x[1](cos(\frac{\pi}{2}) - jsin(\frac{\pi}{2})) + x[2](cos(\pi) - jsin(\pi)) + x[3](cos(\frac{3\pi}{2}) - jsin(\frac{3\pi}{2})) \\ 
+		a_2 &= \frac{1}{4}(x[0] + x[1](cos(\pi) - jsin(\pi)) + x[2](cos(2\pi) - jsin(2\pi)) + x[3](cos(3\pi) - jsin(3\pi)) \\ 
+		a_3 &= \frac{1}{4}(x[0] + x[1](cos(\frac{3\pi}{2}) - jsin(\frac{3\pi}{2})) + x[2](cos(3\pi) - jsin(3\pi)) + x[3](cos(\frac{9\pi}{2}) - jsin(\frac{9\pi}{2}))
+	\end{align*}
+	Each of them yield as:
+	\begin{align*}
+		a_0 &= \frac{1}{4}(x[0] + x[1] + x[2] + x[3]) \\ 
+		a_1 &= \frac{1}{4}(x[0] - jx[1] - x[2] + jx[3]) \\ 
+		a_2 &= \frac{1}{4}(x[0] - x[1] + x[2] - x[3]) \\ 
+		a_3 &= \frac{1}{4}(x[0] + jx[1] - x[2] - jx[3])
+	\end{align*}
+	From condition $a$ we see that $a_0 = \frac{1}{4}4 = 1$.\\ 
+	From condition $c$ we know that if $a_1=a^{*}_3$ then they are conjugates of each other and they would be in a form such as:
+		\begin{align*}
+			a_1 &= a + bj \\
+			a_3 &= a - bj
+		\end{align*}
+		and since $|a_1-a_3|=|2b|=1$ then $y\neq 0$ also $a_1\neq 0$ and $a_3\neq 0$. Since we have condition $d$ which says that one of the coefficients is zero, we deduce that $a_2=0$.\\
+	For $a_1$ and $a_3$, let us subtract $a_3$ from $a_1$ and compare with condition $c$:
+		\begin{align*}
+			|a_1-a_3|&=1 \\
+			\frac{1}{4}|2jx[3] - 2jx[1]| &= 1 \\
+			|jx[3] - jx[1]| &= 2 \\
+			x[3] - x[1] = 2 \ \text{or} \ x[1] - x[3] &= 2 \ \ \text{So we need to choose one of them}
+		\end{align*}
+		To be able to use in $a_3$ expansion let us choose $x[1] - x[3] = 2$, multiply this equation by $j$, $jx[1] - jx[3] = 2j$ and also, from condition $e$ we had $x[0]-x[2]=2$, add these up and we would end up with $a_3$ expansion, namely:
+		\begin{center}
+			We had $a_3 = \frac{1}{4}(x[0] + jx[1] - x[2] - jx[3])$ \\
+			Now we know that $jx[1] - jx[3] = 2j$ and $x[0]-x[2]=2$ \\
+			So $a_3 = \frac{1}{2} + \frac{1}{2}j$ \\
+			and since $a_1$ was the conjugate of $a_3$ so $a_1 = \frac{1}{2} - \frac{1}{2}j$ \\
+		\end{center}
+		Now to determine the signal $x[n]$ we need to find its values for 1 period, using condition $b$, $e$ and value of $a_2$ we can find $x[0]$ and $x[2]$ as follows:
+		\begin{align*}
+		x[0] + x[1] + x[2] + x[3] &= 4 \ \ \text{from cond b}\\
+		x[0] - x[1] + x[2] - x[3] &= 0 = a_2\\
+		x[0] + x[2] &= 2 \\
+		x[0] - x[2] &= 2 \ \ \text{from cond e} \\
+		\text{So} \ \ x[0] = 2 \ \ &\text{and} \ \ x[2] = 0
+		\end{align*}
+		Using $a_0$ and $a_1$ we can also determine $x[1]$ and $x[3]$ as follows:
+		\begin{align*}
+		\frac{1}{4}(x[0] + x[1] + x[2] + x[3]) &= 1 = a_0\\
+		2 + x[1] + 0 + x[3] &= 4\\
+		x[1] + x[3] &= 2 \ \ (1)
+		\end{align*}
+		Also for $a_1$:
+		\begin{align*}
+		\frac{1}{4}(x[0] - jx[1] + x[2] + jx[3]) &= \frac{1}{2}-\frac{1}{2}j = a_1\\
+		2 - jx[1] - 0 + jx[3] &= 2-2j\\
+		j(-x[1] + x[3]) &= -2j\\
+		x[3] - x[1] &= -2 \ \ (2)
+		\end{align*}
+		Equating (1) and (2) we get:
+		\begin{align*}
+		x[1] + x[3] &= 2 \ \ (1) \\
+		x[3] - x[1] &= -2 \ \ (2) \\
+		\text{So} \ \ x[1] = 2 \ \ &\text{and} \ \ x[3] = 0
+		\end{align*}
+		So in the and we have an $x[n]$ with $N=4$, $w_0=\frac{\pi}{2}$ and $x[0]=2$, $x[1]=2$, $x[2]=0$ and $x[3]=0$. Its graph is:
+\begin{figure}[H]
+    \centering
+    \ldots
+    \begin{tikzpicture}[scale=1.0] 
+      \begin{axis}[
+          axis lines=middle,
+          xlabel={$n$},
+          ylabel={$x[n]$},
+          xtick={ -4, -3, ..., 3},
+          ytick={-3, -2, ..., 3},
+          ymin=-3, ymax=3,
+          xmin=-4, xmax=3,
+          every axis x label/.style={at={(ticklabel* cs:1.05)}, anchor=west,},
+          every axis y label/.style={at={(ticklabel* cs:1.05)}, anchor=south,},
+          grid,
+        ]
+        \addplot [ycomb, black, thick, mark=*] table [x={n}, y={xn}] {q2.dat};
+      \end{axis}
+    \end{tikzpicture}
+    \ldots
+    \caption{$n$ vs. $x[n]$.}
+    \label{fig:q2}
+\end{figure}
+
+\item 
+	We are needed to find $h(t)$ where $x(t) = h(t)*(x(t)+r(t))$. If we would take the Fourier Transform of this equation, we will end up with:
+	\begin{align*}
+	X(jw) &= H(jw) \times (X(jw)+R(jw)) \\	
+	X(jw) &= H(jw) \times X(jw) + H(jw) \times R(jw) \\
+	X(jw) &= H(jw) \times X(jw) \ \ \text{(since} \ R(jw)=0\text{)}\\ 
+	H(jw) &= 1
+	\end{align*}
+	Since we know $H(jw)$, we will now use $h(t) = \frac{1}{2\pi}\int_{-\infty}^{\infty} H(jw)e^{jwt}dw$ to find $h(t)$:
+	\begin{align*}
+	h(t) &= \frac{1}{2\pi}\int_{-\infty}^{\infty} H(jw)e^{jwt}dw \\
+ 		 &= \frac{1}{2\pi}\int_{-\frac{K2\pi}{T}}^{\frac{K2\pi}{T}} 1e^{jwt}dw \\
+		 &= \frac{1}{2\pi}|^{\frac{K2\pi}{T}}_{-\frac{K2\pi}{T}}\frac{e^{jwt}}{jt} \\
+		 &= \frac{1}{2\pi}(\frac{e^{\frac{jK2\pi t}{T}}}{jt} - \frac{e^{-\frac{jK2\pi t}{T}}}{jt}) \\
+		 &= \frac{1}{2\pi jt}(cos(\frac{K2\pi t}{T})+jsin(\frac{K2\pi t}{T}) - cos(\frac{K2\pi t}{T})+jsin(\frac{K2\pi t}{T})) \\
+		 &= \frac{sin(\frac{K2\pi t}{T})}{\pi t} 
+	\end{align*}
+\item 
+	\begin{enumerate}
+		\item
+			First let us find the system equation from block diagram:
+	\begin{align*}
+		y^{'}(t)&=-5y(t)+4x(t) + \int x(t)-6y(t) dt\\
+		\text{namely:} \ \ y^{''}(t)&=-5y^{'}(t)+4x^{'}(t) + x(t)-6y(t) 
+	\end{align*}
+	We will find frequency response $H(jw)$ by giving input $x(t) = e^{jwt}$, so we would have $y(t)=H(jw)\times e^{jwt}$ as the output. So plugging in the values to the system:
+	\begin{align*}
+	(jw)^2 e^{jwt} H(jw) &= -5H(jw)jw e^{jwt} + 4jw e^{jwt} + e^{jwt} - 6H(jw)e^{jwt} \\
+	H(jw)e^{jwt}(j^2w^2 + 5jw + 6) &= 4jwe^{jwt} + e^{jwt} \\
+	H(jw) &= \frac{4jw+1}{j^2w^2+5jw+6} 
+	\end{align*}
+	\item
+		We know that $H(jw) \xrightarrow{\mathfrak{F}^{-1}} h(t)$, so all we need to do is to take inverse Fourier transform of $H(jw)$. It can be done as follows:
+		\begin{align*}
+		H(jw) &= \frac{4jw+1}{j^2w^2+5jw+6} \\
+		      &= \frac{4jw+1}{(jw+3)(jw+2)} \\
+		\frac{4jw+1}{(jw+3)(jw+2)} &= \frac{A}{jw+3} + \frac{B}{jw+2} \\ 
+		4jw + 1 &= Ajw + 2A + Bjw + 3B 
+		\end{align*}
+		Equating both sides according to their Re and Im parts:
+		\begin{align*}
+		A + B &= 4 \\
+		2A + 3B &= 1 \\
+		\text{we get:} \ B=-7 &\text{ and } A=11
+		\end{align*}
+		\begin{center}
+		So $H(jw)=\frac{11}{jw+3} - \frac{7}{jw+2}$	\\
+		\end{center}
+		
+		Now take the $\mathfrak{F}^{-1}$ of $H(jw)$ (using $\mathfrak{F}$ table):
+		\begin{center}
+			$H(jw)=\frac{11}{3+jw} - \frac{7}{2+jw} \xrightarrow{\mathfrak{F}^{-1}} h(t)=11e^{-3t}u(t)-7e^{-2t}u(t)$ \\ 
+		\end{center}		
+	\item
+		To be able to find $y(t)$ for $x(t)=\frac{1}{4}e^{-\frac{t}{4}}u(t)$ using $H(jw)$, we need to first take $\mathfrak{F}$ of $x(t)$ and get $X(jw)$, then using multiplication (instead of convolution) find $Y(jw)$ and then again take $\mathfrak{F}^{-1}$ of $Y(jw)$ and find $y(t)$. This can be done as follows:
+		\begin{align*}
+		\text{From} \ \mathfrak{F} \ \text{table we know that:} \ e^{-|a|t}u(t) &\xrightarrow{\mathfrak{F}} \frac{1}{|a|+jw} \\		
+		\text{So} \ \ \frac{1}{4}e^{-\frac{t}{4}}u(t) &\xrightarrow{\mathfrak{F}} \frac{1}{4}\times \frac{1}{\frac{1}{4}+jw} = X(jw) \\
+		\end{align*}
+		Now find $Y(jw)$ using multiplication with $H(jw)$:
+		\begin{align*}
+		 Y(jw) &= H(jw)\times X(jw) \\
+		      &= \frac{4jw+1}{(jw+3)(jw+2)} \times \frac{1}{1+4jw}\\
+		      &= \frac{1}{(jw+3)(jw+2)} 
+		\end{align*}
+		Now take the $\mathfrak{F}^{-1}$ of $Y(jw)$ (again using $\mathfrak{F}$ table):
+		\begin{align*}
+		Y(jw) &= \frac{1}{jw+3} - \frac{1}{jw+2}\\
+		\frac{1}{3+jw} - \frac{1}{2+jw} &\xrightarrow{\mathfrak{F}^{-1}} y(t)=e^{-3t}u(t)-e^{-2t}u(t) = (e^{-2t}-e^{-3t})u(t)
+		\end{align*}
+	\end{enumerate}
+\end{enumerate}
+\end{document}
