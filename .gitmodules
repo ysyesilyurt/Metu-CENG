@@ -7,3 +7,6 @@
 [submodule "OperatingSystems-2019"]
 	path = OperatingSystems-2019
 	url = https://github.com/ysyesilyurt/OperatingSystems-2019
+[submodule "PIC-Practices"]
+	path = PIC-Practices
+	url = git@github.com:ysyesilyurt/PIC-Practices.git
