@@ -38,15 +38,27 @@ A task which aims to foster the fundamental concepts reside behind the y86-64 ar
 A task which aims to teach optimization methodoligies for x86(64) architecture
 
 ## [CENG 334 Introduction to Operating Systems](https://github.com/ysyesilyurt/OperatingSystems-2019)
-
 ### [MapReduce](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/MapReduce)
-A C implementation for Map Reduce programming model which aims to practice IPC and general tools that is used for it.
+A C implementation for Map Reduce programming model which aims to practice `IPC` and general tools that is used for it.
 
 ### [MiningSimulation](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/MiningSimulation)
-A mining simulation implementation which aims to practice threading and synchronization tools (like monitor, CV, mutex and semaphores) in linux.
+A mining simulation implementation which aims to practice `threading` and synchronization tools (like `monitor`, `CV`, `mutex` and `semaphore`) in linux.
 
 ### [Filecopy](https://github.com/ysyesilyurt/OperatingSystems-2019/tree/master/Filesystems)
-A filecopy implementation which aims to practice EXT2 filesystem structure with copying a source file into a target folder without mounting the disk.
+A filecopy implementation which aims to practice `EXT2` filesystem structure with copying a source file into a target folder without mounting the disk.
+
+## [CENG 336 Introduction to Embedded Systems Development](https://github.com/ysyesilyurt/PIC-Practices)
+### [PIC-IO](https://github.com/ysyesilyurt/PIC-Practices/tree/master/hw1_PIC-IO)
+A simple led task which aims to practice fundamental I/O functionalities of `ports` in PIC with buttons/leds, written in assembly.
+
+### [SpaceImpact](https://github.com/ysyesilyurt/SpaceImpact/tree/bfa3260b1f733a0d1c1d657eb5ec8f5445b9655e)
+An Implementation for space impact game which aims to practice `Interrupt` and `Timer` functionalities of PIC, written in assembly. 
+
+### [ElectroVote](https://github.com/ysyesilyurt/PIC-Practices/tree/master/ElectroVote)
+A simple voting simulation which aims to practice `Interrupt`, `Timer` and `ADC` module functionalities of PIC, written in C. In this task, `LCD` has also been used, an implementation for its driver has been provided.
+
+### [RTOS](https://github.com/ysyesilyurt/RTOS/tree/a1910d6830673b263d2b6eb48ff7d9d7349495cc)
+A maze-runner-robot simulation/RTOS project which aims to practice necessities of Real-Time tasks, written in C with PicOS18 Kernel. `Alarm`, `Multitasking` and `Event` functionalities of RTOS has been utilized. 
 
 ## [CENG 350 Software Engineering](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350)
 ### [SRS](https://github.com/ysyesilyurt/Metu-CENG/tree/master/350/SRS)
