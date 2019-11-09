@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1> Log Watcher </h1>
+		<div align="right">
+		{% if request.user.is_authenticated %}
+			User: {{ request.user }} 
+			<a href="/accounts/logout?next=/">Logout</a>
+		{% endif %}
+		</div>
+		<div>
+		{% block body %}
+        {% endblock %}
+		</div>
+        <br>
+	    <a href="">Main page</a>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rules of {{lw}}</title>
+</head>
+<body>
+<h1> Rules of {{lw}} </h1>
+{% if op %}
+<b>{{op}}</b>
+{% endif %}
+<form action="{{formaction}}" method=POST>
+    {% csrf_token %}
+    <tr><td><b>Rule:</b> </td>
+		<td> <input type="text" size=10 name="rule"/></td></tr>
+	<tr><td><b>Path:</b></td>
+        		<td><select name="path">
+				<option value="NONE">Select A Path</option>
+				{% for r in rules %}
+                    {% if r.path %}
+					    {%if r.rule != OR %}
+                            {% if  r.rule != AND %}
+                                <option> {{ r.path }}</option>
+                            {% endif %}
+                        {% endif %}
+                    {% else %}
+                        <b>()</b>
+                    {% endif %}
+				{% endfor %}
+			</select>
+     <input type="submit" name="submit" value="SetMatch"/>
+</form>
+<form action="{{formaction}}" method=POST>
+    {% csrf_token %}
+    <tr><td><b>Rule:</b> </td>
+		<td> <input type="text" size=10 name="rule"/></td></tr>
+    <tr><td><b>Connector:</b> </td>
+		<td><select name="connector">
+				<option value="NONE">Select A Connector</option>
+					<option> OR </option>
+                    <option> AND </option>
+			</select>
+	<tr><td><b>Path:</b></td>
+        		<td><select name="path">
+				<option value="NONE">Select A Path</option>
+				{% for r in rules %}
+                    {% if r.path %}
+					    {%if r.rule != OR %}
+                            {% if  r.rule != AND %}
+                                <option> {{ r.path }}</option>
+                            {% endif %}
+                        {% endif %}
+                    {% else %}
+                        <b>()</b>
+                    {% endif %}
+				{% endfor %}
+			</select>
+     <input type="submit" name="submit" value="CombineMatch"/>
+</form>
+<form action="{{formaction}}" method=POST>
+    {% csrf_token %}
+	<tr><td><b>Path:</b></td>
+        		<td><select name="path">
+				<option value="NONE">Select A Path</option>
+				{% for r in rules %}
+                    {% if r.path %}
+					    {%if r.rule != OR %}
+                            {% if  r.rule != AND %}
+                                <option> {{ r.path }}</option>
+                            {% endif %}
+                        {% endif %}
+                    {% else %}
+                        <b>()</b>
+                    {% endif %}
+				{% endfor %}
+			</select>
+     <input type="submit" name="submit" value="DelMatch"/>
+</form>
+<table style="width:50%" border="1" cellspacing="0">
+    <tr><th>Path</th><th>Rule</th>
+    {% for rulee in rules %}
+    <tr><td>{{ rulee.path }}</td><td>{{ rulee.rule }}</td>
+    {% endfor %}
+</table>
+</body>
+<br>
+<a href="http://localhost:8000/">Main page</a>
+</html>

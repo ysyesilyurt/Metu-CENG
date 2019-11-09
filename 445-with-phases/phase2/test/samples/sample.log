@@ -1,0 +1,8 @@
+Nov 24 03:58:11 x systemd[1]: Unmounted /run/user/1000/gvfs.
+Nov 24 00:10:00 x gnome-shell[1758]: NOTE: Not using GLX TFP!
+Nov 24 01:03:49 x systemd[1]: Started Run anacron jobs.
+Nov 24 01:03:49 x anacron[24514]: Anacron 2.3 started on 2018-11-24
+Nov 24 01:20:20 x chromium-browser.desktop[2082]: [2082:2095:1124/012020.580880:ERROR:socket_stream.cc(219)] Closing stream with result -2
+Nov 24 02:24:04 x kernel: [28024.657716] nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+Nov 24 03:52:47 x NetworkManager[967]: <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+Nov 24 03:58:00 x kernel: [33661.596279] rfkill: input handler enabled

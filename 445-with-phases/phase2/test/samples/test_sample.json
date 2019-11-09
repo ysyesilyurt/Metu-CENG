@@ -1,0 +1,32 @@
+{
+    "logFile": "TEST_LOG_FILE",
+    "rules": {
+        "value": "()",
+        "left": {
+            "value": "(0)",
+            "left": {
+                "value": "(0, 0)",
+                "left": null,
+                "right": null
+            },
+            "right": {
+                "value": "(0, 1)",
+                "left": null,
+                "right": null
+            }
+        },
+        "right": {
+            "value": "(1)",
+            "left": {
+                "value": "(1, 0)",
+                "left": null,
+                "right": null
+            },
+            "right": {
+                "value": "(1, 1)",
+                "left": null,
+                "right": null
+            }
+        }
+    }
+}

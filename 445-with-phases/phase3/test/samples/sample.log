@@ -1,0 +1,75 @@
+<15>1 2018-11-12T22:29:46.003Z 211.125.25.144 NetworkManager - ID83 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<80>1 2018-11-12T15:01:28.003Z ali freedesktop - ID12 - Found usable connection: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<51>1 2018-11-12T23:33:18.003Z veli storehelpers.go - ID22 - cannot refresh: snap has no updates available: 'core', 'gnome-3-26-1604', 'gnome-calculator', 'gnome-characters', 'gnome-logs', 'gnome-system-monitor', 'gtk-common-themes','spotify'
+<95>1 2018-11-12T04:13:17.003Z ali uefi - ID71 - Starting Firmware update daemon...
+<95>1 2018-11-12T06:36:39.003Z onur Bluetooth - ID55 - BNEP (Ethernet Emulation) ver 1.3
+<60>1 2018-11-12T17:14:42.003Z yavuz apt - ID7 - Started Daily apt download activities.
+<85>1 2018-11-12T01:24:41.003Z 56.15.133.45 anacron - ID91 - Anacron 2.3 started on 2018-11-24
+<16>1 2018-11-12T20:53:04.003Z halit Bluetooth - ID61 - BNEP filters: protocol multicast
+<147>1 2018-11-12T19:46:33.003Z 162.135.25.1 Anacron - ID63 - Started Run anacron jobs.
+<35>1 2018-11-12T20:27:41.003Z mike Bluetooth - ID71 - BNEP (Ethernet Emulation) ver 1.3
+<114>1 2018-11-12T08:44:60.003Z veli uefi - ID20 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<79>1 2018-11-12T01:46:06.003Z veli apt - ID57 - Started Daily apt download activities.
+<173>1 2018-11-12T17:56:51.003Z yavuz GtkFailed - ID71 - to load module 'atk-bridge'
+<43>1 2018-11-12T12:49:30.003Z 56.15.133.45 uefi - ID12 - disabling plugin because: failed to coldplug amt: ME refused connection
+<35>1 2018-11-12T19:22:23.003Z mike NetworkManager - ID64 - Started Network NetworkManager Script Dispatcher Service.
+<41>1 2018-11-12T09:57:39.003Z john NetworkManager - ID76 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<0>1 2018-11-12T01:25:08.003Z 211.125.25.144 NetworkManager - ID54 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<165>1 2018-11-12T00:29:40.003Z veli Dispatcher - ID88 - Starting Network NetworkManager Script Dispatcher Service...
+<101>1 2018-11-12T10:33:12.003Z halit Bluetooth - ID59 - BNEP (Ethernet Emulation) ver 1.3
+<184>1 2018-11-12T08:27:15.003Z 162.135.25.1 NetworkManager - ID75 - handshake failed; returned -1, SSL error code 1, net_error -107
+<4>1 2018-11-12T11:56:23.003Z onur uefi - ID82 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<103>1 2018-11-12T02:16:18.003Z onur nautilus - ID89 - reference to undefined property 'MetaWindowXwayland'
+<79>1 2018-11-12T15:19:52.003Z halit NetworkManager - ID30 - NetworkManager state is now CONNECTED_GLOBAL
+<127>1 2018-11-12T18:15:24.003Z 142.35.24.45 Dispatcher - ID53 - req:1 'connectivity-change': start running ordered scripts...
+<128>1 2018-11-12T14:56:11.003Z mike NetworkManager - ID97 - NetworkManager state is now CONNECTED_SITE
+<123>1 2018-11-12T22:44:27.003Z veli NetworkManager - ID3 - NetworkManager state is now CONNECTED_SITE
+<180>1 2018-11-12T13:35:22.003Z halit chromium - ID23 - Closing stream with result -2
+<189>1 2018-11-12T12:05:06.003Z john apt - ID43 - Starting Daily apt upgrade and clean activities...
+<4>1 2018-11-12T07:47:26.003Z 142.35.24.45 kernel - ID28 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<106>1 2018-11-12T18:07:05.003Z 48.122.25.156 gnomeNOTE - ID2 - Not using GLX TFP!
+<108>1 2018-11-12T23:05:49.003Z veli Dispatcher - ID73 - req:1 'connectivity-change': start running ordered scripts...
+<21>1 2018-11-12T19:27:54.003Z 56.15.133.45 uefi - ID88 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<159>1 2018-11-12T03:30:32.003Z 142.35.24.45 plymouthd - ID91 - Received SIGRTMIN+21 from PID 343 (plymouthd).
+<31>1 2018-11-12T05:06:02.003Z john uefi - ID61 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<104>1 2018-11-12T16:29:34.003Z 45.12.123.1 systemd - ID34 - Started Run anacron jobs.
+<121>1 2018-11-12T16:34:11.003Z 48.122.25.156 NetworkManager - ID74 - NetworkManager state is now CONNECTED_SITE
+<59>1 2018-11-12T04:20:01.003Z 56.15.133.45 autorefresh.go - ID64 - all snaps are up-to-date
+<15>1 2018-11-12T06:00:19.003Z john NetworkManager - ID13 - connectivity: (wlan0) timed out
+<181>1 2018-11-12T16:23:21.003Z halit freedesktop - ID75 - WARNING: App 'spice-vdagent.desktop' exited with code 1
+<145>1 2018-11-12T20:60:43.003Z john uefi - ID39 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<184>1 2018-11-12T19:35:48.003Z yavuz systemd - ID64 - Started Run anacron jobs.
+<167>1 2018-11-12T01:36:60.003Z halit systemd - ID77 - Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.9' (uid=0 pid=1027 comm='/usr/sbin/NetworkNetworkManager --no-daemon ')
+<61>1 2018-11-12T21:31:47.003Z 56.15.133.45 NetworkManager - ID54 - NetworkManager state is now CONNECTED_GLOBAL
+<145>1 2018-11-12T06:44:53.003Z 48.122.25.156 Dispatcher - ID45 - req:1 'connectivity-change': start running ordered scripts...
+<15>1 2018-11-12T13:54:44.003Z 211.125.25.144 apt - ID17 - Starting Stop ureadahead data collection...
+<163>1 2018-11-12T22:10:28.003Z 48.122.25.156 systemd - ID68 - E: Sub-process nm-online returned an error code (1)
+<29>1 2018-11-12T12:22:04.003Z 211.125.25.144 Dispatcher - ID68 - Started Network NetworkManager Script Dispatcher Service.
+<139>1 2018-11-12T19:07:01.003Z alicia uefi - ID54 - disabling plugin because: failed to startup dell: Firmware updating not supported
+<71>1 2018-11-12T17:02:56.003Z 56.15.133.45 NetworkManager - ID17 - handshake failed; returned -1, SSL error code 1, net_error -107
+<166>1 2018-11-12T02:56:09.003Z veli freedesktop - ID21 - Successfully activated service 'org.freedesktop.hostname1'
+<16>1 2018-11-12T20:04:13.003Z ali NetworkManager - ID61 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<160>1 2018-11-12T04:27:34.003Z mike GtkFailed - ID33 - to load module 'atk-bridge'
+<110>1 2018-11-12T07:30:44.003Z halit freedesktop - ID79 - Successfully activated service 'org.freedesktop.hostname1'
+<186>1 2018-11-12T11:23:60.003Z 142.35.24.45 GtkFailed - ID5 - to load module 'atk-bridge'
+<188>1 2018-11-12T20:29:18.003Z halit Dispatcher - ID84 - req:1 'connectivity-change': start running ordered scripts...
+<184>1 2018-11-12T23:55:04.003Z 144.125.254.156 apt - ID52 - Starting Stop ureadahead data collection...
+<128>1 2018-11-12T17:52:15.003Z john Dispatcher - ID93 - req:1 'connectivity-change': start running ordered scripts...
+<160>1 2018-11-12T08:19:13.003Z alicia NetworkManager - ID68 - NetworkManager state is now CONNECTED_SITE
+<161>1 2018-11-12T23:17:07.003Z 142.35.24.45 Bluetooth - ID1 - BNEP filters: protocol multicast
+<111>1 2018-11-12T10:38:39.003Z 211.125.25.144 chromium - ID88 - Closing stream with result -2
+<41>1 2018-11-12T01:38:15.003Z mike kernel - ID79 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<77>1 2018-11-12T06:25:54.003Z ali chromium - ID53 - Closing stream with result -2
+<1>1 2018-11-12T10:44:07.003Z 48.122.25.156 NetworkNetworkManager - ID56 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<71>1 2018-11-12T03:36:06.003Z 144.125.254.156 freedesktop - ID50 - The default IPv4 route is: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<166>1 2018-11-12T05:09:27.003Z 56.15.133.45 freedesktop - ID15 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<40>1 2018-11-12T02:32:17.003Z john freedesktop - ID38 - Successfully activated service 'org.freedesktop.hostname1'
+<161>1 2018-11-12T16:52:03.003Z yavuz uefi - ID37 - Starting Firmware update daemon...
+<78>1 2018-11-12T02:06:42.003Z 144.125.254.156 apt - ID42 - Starting Stop ureadahead data collection...
+<7>1 2018-11-12T02:58:54.003Z mike Dispatcher - ID46 - Starting Network NetworkManager Script Dispatcher Service...
+<180>1 2018-11-12T12:51:53.003Z veli uefi - ID15 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<27>1 2018-11-12T11:30:12.003Z yavuz NetworkManager - ID75 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<143>1 2018-11-12T14:15:33.003Z 48.122.25.156 NetworkManager - ID64 - NetworkManager state is now CONNECTED_GLOBAL
+<160>1 2018-11-12T12:47:58.003Z veli NetworkManager - ID13 - NetworkManager state is now CONNECTED_GLOBAL
+<50>1 2018-11-12T15:18:46.003Z 56.15.133.45 apt - ID1 - Starting Stop ureadahead data collection...
+<106>1 2018-11-12T22:54:23.003Z 56.15.133.45 gnomeNOTE - ID49 - Not using GLX TFP!

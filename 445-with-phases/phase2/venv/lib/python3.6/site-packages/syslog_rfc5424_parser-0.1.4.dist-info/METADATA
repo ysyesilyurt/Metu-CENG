@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: syslog-rfc5424-parser
+Version: 0.1.4
+Summary: Parser for RFC5424-compatible Syslog messages
+Home-page: https://github.com/easypost/syslog-rfc5424-parser
+Author: James Brown
+Author-email: jbrown@easypost.com
+License: ISC
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Requires-Dist: pyparsing (<3.0,>=2.0)
+Requires-Dist: enum34
+
+UNKNOWN
+
+

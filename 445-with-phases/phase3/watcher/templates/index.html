@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+{% if create %}
+<b>{{create}}</b>
+{% endif %}
+<p>
+<a href="/create">Create a new Watcher</a>
+</p>
+<h2> Active Watchers </h2>
+<table style="width:50%" border="1" cellspacing="0">
+    <tr><th>ID</th><th>Watcher</th><th>Rules</th><th>Filtered Logs</th></tr>
+    {% for watcher in watchers %}
+    <tr><td>{{ watcher.wid }}</td><td>{{ watcher.name }}</td><td>{{ watcher.rules }}</td><td>{{ watcher.logs }}</td>
+    <td> <a href="/logs/{{watcher.wid}}">Logs</a>
+        <a href="/rules/{{watcher.wid}}">Rules</a></td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

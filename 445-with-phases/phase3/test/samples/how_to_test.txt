@@ -1,0 +1,67 @@
+# Sample integration test for Phase-2
+
+# Scenario: Three clients will be created, one of them will create a LogWatch object with id = 0
+#           Then these three clients will construct a rule tree on this LogWatch object
+#           Then two log senders will send their logs to the LogWatch Manager
+#           After sending process filtered logs will be printed on a client and will be checked with sample_result.log
+#           Then an unregistered client will register to LogWatch 0 and perform two delMatch operations
+#           Upon saving, again, two log senders will perform a log sending process
+#           Then filtered logs from second sending process will be printed with "printNotifications" command
+#           and will be checked with sample_result2.log
+
+## Run watcher.py
+## Run client.py on three different sessions
+
+# Following rules needs to be applied in order on specified client:
+
+Client-1
+    create
+    setMatch 0 ("SEVERITY", "GT", "crit", False, False) ()
+    combineMatch 0 ("IP", "EQ", "halit", False, False) AND ()
+
+Client-2
+    combineMatch 0 ("IP", "EQ", "yavuz", False, False) OR (1,)
+    combineMatch 0 ("FIELD:0: ", "EQ", "disabling", False, False) OR (0,)
+    combineMatch 0 ("FACILITY", "GT", "ntp", False, False) AND (0,0)
+
+Client-3
+    combineMatch 0 ("RE:.*su root.* (?P<event>.*ed).*on (?P<event_location>.+):event_location", "EQ", "/dev/pts/8", False, False) OR (0,1)
+    combineMatch 0 ("IP", "EQ", "142.35.24.45", False, False) OR (1,0)
+    combineMatch 0 ("IP", "EQ", "48.122.25.156", False, False) OR (1,1)
+    save 0
+
+# Check rules with "sample_rules.txt":
+
+Client-x
+    printRules 0
+
+## Run two senders with two different log sources:
+    ../log_sender.py samples/sample.log
+    ../log_sender.py samples/sample2.log
+
+# During sending process on any of the clients "list" command can be executed to see situation of the LogWatch object
+
+# After sending process, check filtered logs with "sample_result.log":
+
+Client-x
+    printLogs 0
+
+# After checking with "sample_result.log" one of the clients (not Client-1) will
+# delete two rules and will register itself to see new filtered logs as the notifications:
+
+Client-2
+    register 0
+    delMatch 0 (1,0,1)
+    delMatch 0 (1,1,1)
+    save 0
+
+## Again, run two senders with two different log sources
+    ../log_sender.py samples/sample.log
+    ../log_sender.py samples/sample2.log
+
+# After sending process, check filtered logs as notifications on Client-2 with "sample_result2.log"
+# (Since all filtered logs on second sending process will be seen as the notifications by Client-2)
+
+Client-2
+    printNotifications 0
+

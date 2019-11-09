@@ -1,0 +1,50 @@
+<165>1 2018-11-12T10:05:16.003Z john Bluetooth - ID35 - BNEP filters: protocol multicast
+<51>1 2018-11-12T05:02:12.003Z ali kernel - ID81 - rfkill: input handler enabled
+<143>1 2018-11-12T17:07:56.003Z mike plymouthd - ID81 - Received SIGRTMIN+21 from PID 343 (plymouthd).
+<178>1 2018-11-12T21:30:54.003Z mike NetworkManager - ID55 - NetworkManager state is now CONNECTED_GLOBAL
+<174>1 2018-11-12T13:58:55.003Z 45.12.123.1 RegDiiView - ID28 - <window.Window object at 0x7f1559367910 (terminatorlib+window+Window at 0x565507f5aa50)> is not in registered window list
+<71>1 2018-11-12T17:17:13.003Z 221.135.25.15 Dispatcher - ID0 - Starting Network NetworkManager Script Dispatcher Service...
+<136>1 2018-11-12T12:23:24.003Z 45.12.123.1 kernel - ID66 - rfkill: input handler enabled
+<33>1 2018-11-12T21:59:05.003Z john NetworkManager - ID30 - connectivity: (wlan0) timed out
+<97>1 2018-11-12T04:20:48.003Z ali freedesktop - ID8 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<156>1 2018-11-12T06:25:47.003Z yavuz Anacron - ID97 - Started Run anacron jobs.
+<39>1 2018-11-12T01:48:52.003Z 144.125.254.156 systemd - ID36 - Starting Cleanup of Temporary Directories...
+<46>1 2018-11-12T23:21:59.003Z halit systemd - ID58 - E: Sub-process nm-online returned an error code (1)
+<1>1 2018-11-12T07:33:08.003Z 56.15.133.45 freedesktop - ID48 - Found usable connection: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<10>1 2018-11-12T21:49:37.003Z 144.125.254.156 systemd - ID47 - E: Sub-process nm-online returned an error code (1)
+<102>1 2018-11-12T15:59:56.003Z mike NetworkNetworkManager - ID52 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<141>1 2018-11-12T04:28:20.003Z onur Dispatcher - ID21 - req:1 'connectivity-change': new request (1 scripts)
+<63>1 2018-11-12T02:33:21.003Z 211.125.25.144 freedesktop - ID21 - Error looking up permission: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.impl.portal.PermissionStore was not provided by any .service files
+<171>1 2018-11-12T17:60:42.003Z 48.122.25.156 GtkFailed - ID89 - to load module 'atk-bridge'
+<167>1 2018-11-12T03:01:20.003Z 45.12.123.1 uefi - ID15 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<88>1 2018-11-12T18:30:55.003Z 56.15.133.45 freedesktop - ID73 - Error looking up permission: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.impl.portal.PermissionStore was not provided by any .service files
+<148>1 2018-11-12T11:40:13.003Z onur chromium[2082:2095:1124/012020.580880:ERROR:socket_stream.cc(219)] - ID51 - Closing stream with result -2
+<14>1 2018-11-12T08:60:04.003Z 162.135.25.1 NetworkManager - ID42 - NetworkManager state is now CONNECTED_SITE
+<22>1 2018-11-12T18:40:35.003Z ali freedesktop - ID90 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<54>1 2018-11-12T01:22:50.003Z 48.122.25.156 systemd - ID47 - Started Run anacron jobs.
+<177>1 2018-11-12T10:13:24.003Z 162.135.25.1 systemd - ID44 -  Unmounted /run/user/1000/gvfs.
+<178>1 2018-11-12T16:16:34.003Z 211.125.25.144 NetworkManager - ID14 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<83>1 2018-11-12T21:22:00.003Z 56.15.133.45 systemd - ID46 -  Unmounted /run/user/1000/gvfs.
+<134>1 2018-11-12T04:44:06.003Z 144.125.254.156 systemd - ID78 - Started Run anacron jobs.
+<94>1 2018-11-12T04:59:40.003Z 162.135.25.1 uefi - ID15 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<15>1 2018-11-12T04:33:52.003Z 45.12.123.1 Bluetooth - ID54 - BNEP socket layer initialized
+<91>1 2018-11-12T22:31:35.003Z john plymouthd - ID94 - Received SIGRTMIN+21 from PID 343 (plymouthd).
+<171>1 2018-11-12T14:42:45.003Z john systemd - ID72 - E: Sub-process nm-online returned an error code (1)
+<46>1 2018-11-12T08:47:50.003Z 144.125.254.156 systemd - ID87 - Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.107' (uid=1000 pid=2321 comm='/usr/bin/gnome-software --gapplication-service ')
+<106>1 2018-11-12T15:46:41.003Z yavuz RegDiiView - ID95 - <window.Window object at 0x7f1559367910 (terminatorlib+window+Window at 0x565507f5aa50)> is not in registered window list
+<3>1 2018-11-12T07:16:28.003Z 142.35.24.45 Bluetooth - ID32 - BNEP socket layer initialized
+<136>1 2018-11-12T07:24:57.003Z onur systemd - ID1 - Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.107' (uid=1000 pid=2321 comm='/usr/bin/gnome-software --gapplication-service ')
+<106>1 2018-11-12T14:30:47.003Z 45.12.123.1 apt - ID30 - Started Daily apt upgrade and clean activities.
+<126>1 2018-11-12T21:27:60.003Z 162.135.25.1 Bluetooth - ID1 - BNEP socket layer initialized
+<72>1 2018-11-12T13:39:40.003Z 162.135.25.1 freedesktop - ID25 - Successfully activated service 'org.freedesktop.hostname1'
+<39>1 2018-11-12T11:03:49.003Z ali freedesktop - ID89 - Error looking up permission: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.impl.portal.PermissionStore was not provided by any .service files
+<29>1 2018-11-12T10:51:46.003Z 162.135.25.1 openConnection - ID91 - connect: No such file or directory
+<178>1 2018-11-12T05:52:30.003Z 45.12.123.1 freedesktop - ID1 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<36>1 2018-11-12T03:22:36.003Z 162.135.25.1 systemd - ID68 - Started Run anacron jobs.
+<133>1 2018-11-12T14:00:49.003Z onur uefi - ID87 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<11>1 2018-11-12T20:50:39.003Z 142.35.24.45 Anacron - ID52 - Anacron 2.3 started on 2018-12-11
+<149>1 2018-11-12T04:50:28.003Z 221.135.25.15 systemd - ID29 -  Unmounted /run/user/1000/gvfs.
+<189>1 2018-11-12T19:14:42.003Z halit apt - ID31 - Started Stop ureadahead data collection.
+<90>1 2018-11-12T21:39:08.003Z 142.35.24.45 GtkFailed - ID67 - to load module 'gail'
+<53>1 2018-11-12T20:31:09.003Z 211.125.25.144 storehelpers.go - ID99 - cannot refresh: snap has no updates available: 'core', 'gnome-3-26-1604', 'gnome-calculator', 'gnome-characters', 'gnome-logs', 'gnome-system-monitor', 'gtk-common-themes','spotify'
+<134>1 2018-11-12T20:41:01.003Z veli NetworkManager - ID96 - Started Network NetworkManager Script Dispatcher Service.

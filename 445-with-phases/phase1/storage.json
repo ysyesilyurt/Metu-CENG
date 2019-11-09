@@ -1,0 +1,32 @@
+{
+  "log_source_path": "/var/log/syslog",
+  "rule_tree": {
+    "value": "AND",
+    "left": {
+      "value": "OR",
+      "left": {
+        "value": "OR",
+        "left": {
+          "value": 8,
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "value": 9,
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "value": 5,
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "value": 6,
+      "left": null,
+      "right": null
+    }
+  }
+}

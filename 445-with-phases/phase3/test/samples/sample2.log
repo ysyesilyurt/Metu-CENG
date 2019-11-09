@@ -1,0 +1,76 @@
+<110>1 2018-11-12T10:38:19.003Z halit RegDiiView - ID86 - <window.Window object at 0x7f1559367910 (terminatorlib+window+Window at 0x565507f5aa50)> is not in registered window list
+<161>1 2018-11-12T06:27:16.003Z 56.15.133.45 gnomeNOTE - ID44 - Not using GLX TFP!
+<85>1 2018-11-12T22:36:27.003Z 56.15.133.45 systemd - ID88 - Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.107' (uid=1000 pid=2321 comm='/usr/bin/gnome-software --gapplication-service ')
+<92>1 2018-11-12T20:58:45.003Z veli uefi - ID25 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<53>1 2018-11-12T02:26:56.003Z 144.125.254.156 Anacron - ID73 - Anacron 2.3 started on 2018-12-11
+<188>1 2018-11-12T00:50:33.003Z 56.15.133.45 nautilus - ID79 - reference to undefined property 'MetaWindowXwayland'
+<33>1 2018-11-12T00:28:37.003Z john Dispatcher - ID60 - Starting Network NetworkManager Script Dispatcher Service...
+<119>1 2018-11-12T23:17:60.003Z 48.122.25.156 freedesktop - ID29 - WARNING: App 'spice-vdagent.desktop' exited with code 1
+<37>1 2018-11-12T13:34:38.003Z 162.135.25.1 freedesktop - ID84 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<151>1 2018-11-12T21:44:43.003Z halit anacron - ID95 - Anacron 2.3 started on 2018-11-24
+<4>1 2018-11-12T10:26:47.003Z yavuz NetworkManager - ID27 - NetworkManager state is now CONNECTED_SITE
+<31>1 2018-11-12T15:45:38.003Z onur uefi - ID77 - disabling plugin because: failed to startup dell: Firmware updating not supported
+<23>1 2018-11-12T07:24:60.003Z 162.135.25.1 freedesktop - ID24 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<136>1 2018-11-12T14:44:36.003Z ali uefi - ID25 - Starting Firmware update daemon...
+<69>1 2018-11-12T06:15:09.003Z 56.15.133.45 NetworkNetworkManager - ID64 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<164>1 2018-11-12T13:20:55.003Z john uefi - ID18 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<149>1 2018-11-12T20:30:16.003Z 56.15.133.45 kernel - ID47 - Startup finished in 4.687s (firmware) + 1.747s (loader) + 4.902s (kernel) + 44.590s (userspace) = 55.927s.
+<32>1 2018-11-12T02:30:38.003Z alicia systemd - ID77 - Starting Cleanup of Temporary Directories...
+<79>1 2018-11-12T20:53:45.003Z 144.125.254.156 apt - ID4 - Starting Daily apt upgrade and clean activities...
+<123>1 2018-11-12T04:44:06.003Z 162.135.25.1 kernel - ID84 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<162>1 2018-11-12T14:37:12.003Z halit NetworkManager - ID1 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<48>1 2018-11-12T13:18:58.003Z 45.12.123.1 freedesktop - ID43 - Successfully activated service 'org.freedesktop.hostname1'
+<105>1 2018-11-12T22:00:51.003Z 211.125.25.144 NetworkManager - ID56 - NetworkManager state is now CONNECTED_GLOBAL
+<60>1 2018-11-12T02:52:39.003Z 221.135.25.15 freedesktop - ID30 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<81>1 2018-11-12T11:28:48.003Z alicia NetworkManager - ID55 - NetworkManager state is now CONNECTED_SITE
+<121>1 2018-11-12T03:45:10.003Z veli GtkFailed - ID49 - to load module 'canberra-gtk-module'
+<58>1 2018-11-12T05:02:50.003Z 221.135.25.15 uefi - ID76 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<19>1 2018-11-12T13:26:00.003Z 211.125.25.144 systemd - ID63 - E: Sub-process nm-online returned an error code (1)
+<165>1 2018-11-12T19:19:52.003Z halit plymouthd - ID4 - Received SIGRTMIN+21 from PID 343 (plymouthd).
+<34>1 2018-11-12T07:07:18.003Z onur kernel - ID45 - rfkill: input handler enabled
+<72>1 2018-11-12T10:30:34.003Z 45.12.123.1 gnomeNOTE - ID24 - Not using GLX TFP!
+<104>1 2018-11-12T14:36:56.003Z 144.125.254.156 Bluetooth - ID19 - BNEP (Ethernet Emulation) ver 1.3
+<12>1 2018-11-12T06:13:59.003Z 221.135.25.15 uefi - ID24 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<25>1 2018-11-12T21:19:48.003Z 142.35.24.45 GtkFailed - ID49 - to load module 'canberra-gtk-module'
+<155>1 2018-11-12T17:24:13.003Z ali NetworkManager - ID5 - connectivity: (wlan0) timed out
+<118>1 2018-11-12T17:19:06.003Z mike storehelpers.go - ID54 - cannot refresh: snap has no updates available: 'core', 'gnome-3-26-1604', 'gnome-calculator', 'gnome-characters', 'gnome-logs', 'gnome-system-monitor', 'gtk-common-themes','spotify'
+<66>1 2018-11-12T04:49:26.003Z alicia kernel - ID97 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<161>1 2018-11-12T22:00:14.003Z john GtkFailed - ID3 - to load module 'atk-bridge'
+<93>1 2018-11-12T22:09:48.003Z 162.135.25.1 NetworkManager - ID7 - NetworkManager state is now CONNECTED_GLOBAL
+<145>1 2018-11-12T00:30:56.003Z 142.35.24.45 kernel - ID50 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<2>1 2018-11-12T22:32:49.003Z 221.135.25.15 openConnection - ID0 - connect: No such file or directory
+<20>1 2018-11-12T17:56:49.003Z 221.135.25.15 gnomeNOTE - ID64 - Not using GLX TFP!
+<191>1 2018-11-12T07:45:40.003Z 56.15.133.45 Gtk - ID58 - Could not load a pixbuf from icon theme.#012This may indicate that pixbuf loaders or the mime database could not be found.
+<28>1 2018-11-12T20:56:07.003Z 45.12.123.1 GtkFailed - ID53 - to load module 'atk-bridge'
+<173>1 2018-11-12T06:60:03.003Z 162.135.25.1 freedesktop - ID28 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<22>1 2018-11-12T10:07:57.003Z 162.135.25.1 kernel - ID20 - rfkill: input handler enabled
+<137>1 2018-11-12T18:23:48.003Z onur systemd - ID13 -  Unmounted /run/user/1000/gvfs.
+<147>1 2018-11-12T05:38:39.003Z john freedesktop - ID73 - The default IPv4 route is: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<100>1 2018-11-12T08:08:03.003Z 56.15.133.45 Anacron - ID63 - Anacron 2.3 started on 2018-12-11
+<49>1 2018-11-12T16:35:40.003Z mike openConnection - ID44 - connect: No such file or directory
+<102>1 2018-11-12T12:44:42.003Z ali freedesktop - ID36 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<96>1 2018-11-12T20:25:12.003Z 48.122.25.156 RegDiiView - ID30 - <window.Window object at 0x7f1559367910 (terminatorlib+window+Window at 0x565507f5aa50)> is not in registered window list
+<25>1 2018-11-12T02:34:01.003Z mike systemd - ID18 -  Unmounted /run/user/1000/gvfs.
+<42>1 2018-11-12T14:35:35.003Z john systemd - ID58 - Starting Cleanup of Temporary Directories...
+<61>1 2018-11-12T11:16:47.003Z alicia Bluetooth - ID38 - BNEP filters: protocol multicast
+<174>1 2018-11-12T11:32:02.003Z ali nautilus - ID91 - reference to undefined property 'MetaWindowXwayland'
+<177>1 2018-11-12T04:23:14.003Z 142.35.24.45 GtkFailed - ID80 - to load module 'canberra-gtk-module'
+<41>1 2018-11-12T20:45:21.003Z 221.135.25.15 apt - ID77 - Starting Daily apt upgrade and clean activities...
+<76>1 2018-11-12T19:10:47.003Z onur systemd - ID77 - Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.9' (uid=0 pid=1027 comm='/usr/sbin/NetworkNetworkManager --no-daemon ')
+<1>1 2018-11-12T19:34:44.003Z yavuz systemd - ID41 - Started Run anacron jobs.
+<70>1 2018-11-12T15:45:27.003Z veli uefi - ID4 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<100>1 2018-11-12T03:15:26.003Z halit uefi - ID39 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<176>1 2018-11-12T11:10:09.003Z veli systemd - ID60 - Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.107' (uid=1000 pid=2321 comm='/usr/bin/gnome-software --gapplication-service ')
+<82>1 2018-11-12T09:52:48.003Z 221.135.25.15 kernel - ID42 - Startup finished in 4.687s (firmware) + 1.747s (loader) + 4.902s (kernel) + 44.590s (userspace) = 55.927s.
+<28>1 2018-11-12T17:02:05.003Z veli Bluetooth - ID95 - BNEP (Ethernet Emulation) ver 1.3
+<129>1 2018-11-12T22:39:42.003Z alicia freedesktop - ID86 - Error looking up permission: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.impl.portal.PermissionStore was not provided by any .service files
+<49>1 2018-11-12T18:34:02.003Z 45.12.123.1 Bluetooth - ID69 - BNEP (Ethernet Emulation) ver 1.3
+<8>1 2018-11-12T17:28:39.003Z yavuz storehelpers.go - ID87 - cannot refresh: snap has no updates available: 'core', 'gnome-3-26-1604', 'gnome-calculator', 'gnome-characters', 'gnome-logs', 'gnome-system-monitor', 'gtk-common-themes','spotify'
+<31>1 2018-11-12T22:41:16.003Z john uefi - ID0 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<159>1 2018-11-12T19:27:42.003Z alicia freedesktop - ID15 - Error looking up permission: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.impl.portal.PermissionStore was not provided by any .service files
+<23>1 2018-11-12T00:16:04.003Z 142.35.24.45 systemd - ID12 - E: Sub-process nm-online returned an error code (1)
+<30>1 2018-11-12T01:40:03.003Z mike Dispatcher - ID52 - Starting Network NetworkManager Script Dispatcher Service...
+<24>1 2018-11-12T07:26:04.003Z 144.125.254.156 NetworkNetworkManager - ID39 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<167>1 2018-11-12T05:43:14.003Z halit freedesktop - ID1 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<171>1 2018-11-12T01:59:19.003Z alicia uefi - ID51 - using plugins: upower, csr, altos, steelseries, thunderbolt, ebitdo, dfu, colorhug, nitrokey, udev, unifying, uefi
+<34>1 2003-10-11T22:14:15.003Z yavuz su - ID47 - BOM'su root' failed for lonvick on /dev/pts/8

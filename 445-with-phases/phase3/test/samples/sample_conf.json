@@ -1,0 +1,112 @@
+{
+    "logFile": "./sample.log",
+    "rules": {
+        "value": "OR",
+        "left": {
+            "value": "OR",
+            "left": {
+                "value": "OR",
+                "left": {
+                    "value": "OR",
+                    "left": {
+                        "value": [
+                            "WHOLE",
+                            "EQ",
+                            "NOTE: Not using GLX TFP!",
+                            false,
+                            true
+                        ],
+                        "left": null,
+                        "right": null
+                    },
+                    "right": {
+                        "value": [
+                            "WHOLE",
+                            "RE",
+                            ".*rfkill.*",
+                            false,
+                            true
+                        ],
+                        "left": null,
+                        "right": null
+                    }
+                },
+                "right": {
+                    "value": "AND",
+                    "left": {
+                        "value": [
+                            "WHOLE",
+                            "RE",
+                            ".*dhcp.*",
+                            false,
+                            true
+                        ],
+                        "left": null,
+                        "right": null
+                    },
+                    "right": {
+                        "value": [
+                            "WHOLE",
+                            "RE",
+                            ".*address.*",
+                            false,
+                            true
+                        ],
+                        "left": null,
+                        "right": null
+                    }
+                }
+            },
+            "right": {
+                "value": "AND",
+                "left": {
+                    "value": [
+                        "WHOLE",
+                        "RE",
+                        ".*ERROR.*",
+                        false,
+                        true
+                    ],
+                    "left": null,
+                    "right": null
+                },
+                "right": {
+                    "value": [
+                        "WHOLE",
+                        "RE",
+                        ".*STREAM.*",
+                        false,
+                        true
+                    ],
+                    "left": null,
+                    "right": null
+                }
+            }
+        },
+        "right": {
+            "value": "OR",
+            "left": {
+                "value": [
+                    "WHOLE",
+                    "RE",
+                    ".*Anacron.*",
+                    false,
+                    false
+                ],
+                "left": null,
+                "right": null
+            },
+            "right": {
+                "value": [
+                    "WHOLE",
+                    "RE",
+                    ".*anacron.*",
+                    false,
+                    false
+                ],
+                "left": null,
+                "right": null
+            }
+        }
+    }
+}

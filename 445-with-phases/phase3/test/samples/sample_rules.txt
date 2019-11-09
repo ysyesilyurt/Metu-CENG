@@ -1,0 +1,15 @@
+()	AND
+(0,)	OR
+(1,)	OR
+(0, 0)	OR
+(0, 1)	OR
+(1, 0)	OR
+(1, 1)	OR
+(0, 0, 0)	('SEVERITY', 'GT', 'crit', False, False)
+(0, 0, 1)	('FACILITY', 'GT', 'ntp', False, False)
+(0, 1, 0)	('FIELD:0: ', 'EQ', 'disabling', False, False)
+(0, 1, 1)	('RE:.*su root.* (?P<event>.*ed).*on (?P<event_location>.+):event_location', 'EQ', '/dev/pts/8', False, False)
+(1, 0, 0)	('IP', 'EQ', 'halit', False, False)
+(1, 0, 1)	('IP', 'EQ', '142.35.24.45', False, False)
+(1, 1, 0)	('IP', 'EQ', 'yavuz', False, False)
+(1, 1, 1)	('IP', 'EQ', '48.122.25.156', False, False)

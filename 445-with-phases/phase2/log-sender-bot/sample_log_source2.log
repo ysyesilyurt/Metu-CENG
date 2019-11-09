@@ -1,0 +1,50 @@
+<16>1 2018-11-12T20:04:13.003Z ali NetworkManager - ID61 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<160>1 2018-11-12T04:27:34.003Z mike GtkFailed - ID33 - to load module 'atk-bridge'
+<110>1 2018-11-12T07:30:44.003Z halit freedesktop - ID79 - Successfully activated service 'org.freedesktop.hostname1'
+<186>1 2018-11-12T11:23:60.003Z 142.35.24.45 GtkFailed - ID5 - to load module 'atk-bridge'
+<188>1 2018-11-12T20:29:18.003Z halit Dispatcher - ID84 - req:1 'connectivity-change': start running ordered scripts...
+<184>1 2018-11-12T23:55:04.003Z 144.125.254.156 apt - ID52 - Starting Stop ureadahead data collection...
+<128>1 2018-11-12T17:52:15.003Z john Dispatcher - ID93 - req:1 'connectivity-change': start running ordered scripts...
+<160>1 2018-11-12T08:19:13.003Z alicia NetworkManager - ID68 - NetworkManager state is now CONNECTED_SITE
+<161>1 2018-11-12T23:17:07.003Z 142.35.24.45 Bluetooth - ID1 - BNEP filters: protocol multicast
+<111>1 2018-11-12T10:38:39.003Z 211.125.25.144 chromium - ID88 - Closing stream with result -2
+<41>1 2018-11-12T01:38:15.003Z mike kernel - ID79 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<77>1 2018-11-12T06:25:54.003Z ali chromium - ID53 - Closing stream with result -2
+<1>1 2018-11-12T10:44:07.003Z 48.122.25.156 NetworkNetworkManager - ID56 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<71>1 2018-11-12T03:36:06.003Z 144.125.254.156 freedesktop - ID50 - The default IPv4 route is: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<166>1 2018-11-12T05:09:27.003Z 56.15.133.45 freedesktop - ID15 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<40>1 2018-11-12T02:32:17.003Z john freedesktop - ID38 - Successfully activated service 'org.freedesktop.hostname1'
+<161>1 2018-11-12T16:52:03.003Z yavuz uefi - ID37 - Starting Firmware update daemon...
+<78>1 2018-11-12T02:06:42.003Z 144.125.254.156 apt - ID42 - Starting Stop ureadahead data collection...
+<7>1 2018-11-12T02:58:54.003Z mike Dispatcher - ID46 - Starting Network NetworkManager Script Dispatcher Service...
+<180>1 2018-11-12T12:51:53.003Z veli uefi - ID15 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<27>1 2018-11-12T11:30:12.003Z yavuz NetworkManager - ID75 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<143>1 2018-11-12T14:15:33.003Z 48.122.25.156 NetworkManager - ID64 - NetworkManager state is now CONNECTED_GLOBAL
+<160>1 2018-11-12T12:47:58.003Z veli NetworkManager - ID13 - NetworkManager state is now CONNECTED_GLOBAL
+<50>1 2018-11-12T15:18:46.003Z 56.15.133.45 apt - ID1 - Starting Stop ureadahead data collection...
+<106>1 2018-11-12T22:54:23.003Z 56.15.133.45 gnomeNOTE - ID49 - Not using GLX TFP!
+<110>1 2018-11-12T10:38:19.003Z halit RegDiiView - ID86 - <window.Window object at 0x7f1559367910 (terminatorlib+window+Window at 0x565507f5aa50)> is not in registered window list
+<161>1 2018-11-12T06:27:16.003Z 56.15.133.45 gnomeNOTE - ID44 - Not using GLX TFP!
+<85>1 2018-11-12T22:36:27.003Z 56.15.133.45 systemd - ID88 - Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.107' (uid=1000 pid=2321 comm='/usr/bin/gnome-software --gapplication-service ')
+<92>1 2018-11-12T20:58:45.003Z veli uefi - ID25 - disabling plugin because: failed to coldplug synapticsmst: MST firmware updating not supported by OEM
+<53>1 2018-11-12T02:26:56.003Z 144.125.254.156 Anacron - ID73 - Anacron 2.3 started on 2018-12-11
+<188>1 2018-11-12T00:50:33.003Z 56.15.133.45 nautilus - ID79 - reference to undefined property 'MetaWindowXwayland'
+<33>1 2018-11-12T00:28:37.003Z john Dispatcher - ID60 - Starting Network NetworkManager Script Dispatcher Service...
+<119>1 2018-11-12T23:17:60.003Z 48.122.25.156 freedesktop - ID29 - WARNING: App 'spice-vdagent.desktop' exited with code 1
+<37>1 2018-11-12T13:34:38.003Z 162.135.25.1 freedesktop - ID84 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<151>1 2018-11-12T21:44:43.003Z halit anacron - ID95 - Anacron 2.3 started on 2018-11-24
+<4>1 2018-11-12T10:26:47.003Z yavuz NetworkManager - ID27 - NetworkManager state is now CONNECTED_SITE
+<31>1 2018-11-12T15:45:38.003Z onur uefi - ID77 - disabling plugin because: failed to startup dell: Firmware updating not supported
+<23>1 2018-11-12T07:24:60.003Z 162.135.25.1 freedesktop - ID24 - Successfully activated service 'org.freedesktop.nm_dispatcher'
+<136>1 2018-11-12T14:44:36.003Z ali uefi - ID25 - Starting Firmware update daemon...
+<69>1 2018-11-12T06:15:09.003Z 56.15.133.45 NetworkNetworkManager - ID64 - <info>  [1543020767.7895] dhcp4 (eth0):   address 10.0.0.2
+<164>1 2018-11-12T13:20:55.003Z john uefi - ID18 - disabling plugin because: failed to coldplug thunderbolt_power: missing kernel support for intel-wmi-thunderbolt
+<149>1 2018-11-12T20:30:16.003Z 56.15.133.45 kernel - ID47 - Startup finished in 4.687s (firmware) + 1.747s (loader) + 4.902s (kernel) + 44.590s (userspace) = 55.927s.
+<32>1 2018-11-12T02:30:38.003Z alicia systemd - ID77 - Starting Cleanup of Temporary Directories...
+<79>1 2018-11-12T20:53:45.003Z 144.125.254.156 apt - ID4 - Starting Daily apt upgrade and clean activities...
+<123>1 2018-11-12T04:44:06.003Z 162.135.25.1 kernel - ID84 - nvidia-modeset: WARNING: GPU:0: Correcting number of heads for current head configuration (0x00)
+<162>1 2018-11-12T14:37:12.003Z halit NetworkManager - ID1 - Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+<48>1 2018-11-12T13:18:58.003Z 45.12.123.1 freedesktop - ID43 - Successfully activated service 'org.freedesktop.hostname1'
+<105>1 2018-11-12T22:00:51.003Z 211.125.25.144 NetworkManager - ID56 - NetworkManager state is now CONNECTED_GLOBAL
+<60>1 2018-11-12T02:52:39.003Z 221.135.25.15 freedesktop - ID30 - Not a paid data plan: /org/freedesktop/NetworkNetworkManager/ActiveConnection/1
+<81>1 2018-11-12T11:28:48.003Z alicia NetworkManager - ID55 - NetworkManager state is now CONNECTED_SITE
