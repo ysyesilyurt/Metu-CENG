@@ -84,5 +84,5 @@ Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol 
 
 ## [CENG 445 Software Engineering with Scripting Languages](https://github.com/simsekhalit/LogWatcher)
 ### [LogWatcher](https://github.com/simsekhalit/LogWatcher)
-Log Filtering tool which watches sources and filters them by user-given rules.
+Log Filtering tool which watches sources and filters them by user-given rules. Check [445-with-phases](https://github.com/ysyesilyurt/Metu-CENG/tree/master/445-with-phases) for separate phases of the project.
 
