@@ -1,12 +1,12 @@
 [submodule "435"]
-	path = 435
+	path = RDT-Protocol
 	url = git@github.com:ysyesilyurt/RDT-Protocol.git
 [submodule "445"]
-	path = 445
+	path = LogWatcher
 	url = git@github.com:simsekhalit/LogWatcher.git
 [submodule "334"]
-	path = 334
+	path = OperatingSystems-2019
 	url = git@github.com:ysyesilyurt/OperatingSystems-2019.git
 [submodule "336"]
-	path = 336
+	path = PIC-Practices
 	url = git@github.com:ysyesilyurt/PIC-Practices.git
