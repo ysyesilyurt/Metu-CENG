@@ -10,3 +10,9 @@
 [submodule "336"]
 	path = 336
 	url = git@github.com:ysyesilyurt/PIC-Practices.git
+[submodule "477"]
+	path = 477
+	url = git@github.com:ysyesilyurt/ComputerGraphics.git
+[submodule "443"]
+	path = 443
+	url = git@github.com:ysyesilyurt/Objecty.git

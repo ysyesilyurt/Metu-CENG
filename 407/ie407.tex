@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\usepackage[hmargin=3cm,vmargin=6.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+
+\begin{document}
+
+\noindent
+\HRule \\[3mm]
+\begin{flushright}
+
+                                         \LARGE \textbf{IE407}  \\[4mm]
+                                         \Large Fundamentals of Operational Research\\[4mm]
+                                        \normalsize      Fall '2019-2020 \\
+                                           \Large   Term Project \\
+\end{flushright}
+\HRule
+
+\section*{Group Information}
+Group Number : 17 \\\\
+Full Name : Yavuz Selim Yesilyurt \\
+Id Number : 2259166 \\
+Full Name : Alper Kocaman \\
+Id Number : 2169589 \\
+Full Name : Erce Eren \\
+Id Number : 2099000 \\ 
+
+
+\section*{Our Model and Related Information}
+\subsection*{All employees with their types} 
+
+1- Senior Manager \\
+2- Project Manager \\
+3- Project Manager \\
+4- Professional \\
+5- Professional \\
+6- Professional \\
+7- Sales Person \\
+8- Sales Person \\
+9- Technician \\
+10- Technician \\
+11- Technician \\
+12- Administrative Assistant \\
+13- Administrative Assistant 
+
+\subsection*{Decision Variables} 
+  \begin{equation}
+    X_{ep}=
+    \begin{cases}
+      1, & \text{if Employee}\ e \text{ is assigned to Program}\ p \\
+      0, & \text{otherwise}
+    \end{cases}
+  \end{equation}
+
+\subsection*{Objective Function} 
+
+\begin{align*}
+    Min \sum_{p = 1}^{15} \sum_{e = 1}^{13} X_{ep} \times C_p
+\end{align*}
+Where $C_p$ is the cost of taking program $p$.
+
+\subsection*{Constraints} 
+\begin{itemize}
+\item Day(Time) Constraint
+\begin{align*}
+    \sum_{p = 1}^{15} X_{ep} \times D_p \leq 17 \ \ \ \text{For each } e \in \{1,2, ...,13\}
+\end{align*}
+Where $D_p$ is the day spent while taking program $p$.
+\item Conflicting Programs Constraints
+\begin{align*}
+X_{e1} + X_{e3} &\leq 1 \ \ \ \text{For each } e \in \{1,2,...,13\}\\
+X_{e9} + X_{e15} &\leq 1 \ \ \ \text{For each } e \in \{1,2,...,13\}\\
+X_{e11} + X_{e12} &\leq 1 \ \ \ \text{For each } e \in \{1,2,...,13\}
+\end{align*}
+\item Being present on the Office Constraints
+\begin{itemize}
+\item For Professionals
+\begin{align*}
+&\sum_{i = 4}^{6} X_{i1} + \sum_{i = 4}^{6} X_{i3} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i9} + \sum_{i = 4}^{6} X_{i15} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i11} + \sum_{i = 4}^{6} X_{i12} \leq 2 \text{,} \\
+&\sum_{i = 4}^{6} X_{i2} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i4} \leq 2  \text{,} \ \
+\sum_{i = 4}^{6} X_{i5} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i6} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i7} \leq 2 \text{,} \\
+&\sum_{i = 4}^{6} X_{i8} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i10} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i13} \leq 2 \text{,} \ \
+\sum_{i = 4}^{6} X_{i14} \leq 2
+\end{align*}
+\item For Technicians
+\begin{align*}
+&\sum_{i = 9}^{11} X_{i1} + \sum_{i = 9}^{11} X_{i3} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i9} + \sum_{i = 9}^{11} X_{i15} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i11} + \sum_{i = 9}^{11} X_{i12} \leq 2 \text{,} \\
+&\sum_{i = 9}^{11} X_{i2} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i4} \leq 2  \text{,} \ \
+\sum_{i = 9}^{11} X_{i5} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i6} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i7} \leq 2 \text{,} \\
+&\sum_{i = 9}^{11} X_{i8} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i10} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i13} \leq 2 \text{,} \ \
+\sum_{i = 9}^{11} X_{i14} \leq 2
+\end{align*}
+\end{itemize}
+\item Employees' Skill Coverage Constraint (The programs that employee $e$ take, needs to cover all the skills $s$ that employee needs to have)
+\begin{align*}
+    \sum_{p = 1}^{15} \sum_{e = 1}^{13} X_{ep} \times Y_{ps} \geq \sum_{e = 1}^{13} Z_{es} \ \ \text{For each skill } s \in \{1, ..., 41\}
+\end{align*}
+Where $Y_{ps}$ indicates whether Program $p$ covers skill $s$ or not; and $Z_{es}$ indicates whether Employee $e$ needs to have skill $s$ or not.
+
+\end{itemize}
+
+\end{document}
