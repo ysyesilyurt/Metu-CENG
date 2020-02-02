@@ -1,4 +1,13 @@
 # Metu-CENG 2016-Present
+Clone with submodules (since some courses have their own repositories I've bound them as submodules of this root repository):
+`git clone --recursive git@github.com:ysyesilyurt/Metu-CENG.git`
+
+Alternatively, if you didn't used `--recursive` option while cloning, you can type:
+```
+cd Metu-CENG
+git submodule init
+git submodule update
+```
 
 ## [CENG 111 Introduction to Computer Engineering](https://github.com/ysyesilyurt/Metu-CENG/tree/master/111)
 Some intro to ceng/cs stuff written in python
