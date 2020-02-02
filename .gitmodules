@@ -1,12 +1,18 @@
-[submodule "RDT-Protocol"]
-	path = RDT-Protocol
+[submodule "435"]
+	path = 435
 	url = git@github.com:ysyesilyurt/RDT-Protocol.git
-[submodule "LogWatcher"]
-	path = LogWatcher
+[submodule "445"]
+	path = 445
 	url = git@github.com:simsekhalit/LogWatcher.git
-[submodule "OperatingSystems-2019"]
-	path = OperatingSystems-2019
+[submodule "334"]
+	path = 334
 	url = git@github.com:ysyesilyurt/OperatingSystems-2019.git
-[submodule "PIC-Practices"]
-	path = PIC-Practices
+[submodule "336"]
+	path = 336
 	url = git@github.com:ysyesilyurt/PIC-Practices.git
+[submodule "477"]
+	path = 477
+	url = git@github.com:ysyesilyurt/ComputerGraphics.git
+[submodule "443"]
+	path = 443
+	url = git@github.com:ysyesilyurt/Objecty.git

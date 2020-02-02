@@ -1,4 +1,13 @@
 # Metu-CENG 2016-Present
+Clone with submodules (since some courses have their own repositories I've bound them as submodules of this root repository):
+`git clone --recursive git@github.com:ysyesilyurt/Metu-CENG.git`
+
+Alternatively, if you didn't used `--recursive` option while cloning, you can type:
+```
+cd Metu-CENG
+git submodule init
+git submodule update
+```
 
 ## [CENG 111 Introduction to Computer Engineering](https://github.com/ysyesilyurt/Metu-CENG/tree/master/111)
 Some intro to ceng/cs stuff written in python
@@ -72,6 +81,9 @@ A B+Tree implementation as homework, done in Java.
 
 ## [CENG 384 Signals and Systems for Computer Engineers](https://github.com/ysyesilyurt/Metu-CENG/tree/master/384)
 
+## [IE 407 Fundamentals of Operational Research](https://github.com/ysyesilyurt/Metu-CENG/tree/master/407)
+Contains an Integer Programming Operational Research case and its solution in OpenSolver with a report.
+
 ## [CENG 435 Data Communications and Networking](https://github.com/ysyesilyurt/RDT-Protocol/)
 ### [Term Project Phase1](https://github.com/ysyesilyurt/RDT-Protocol/tree/master/phase1)
 A multihomed network topology with various nodes are implemented with UDP and TCP socket applications and some experiments with ```netem/tc``` done on it. Implementation done in python. Phase1 report and its README can be viewed for further details.
@@ -82,7 +94,13 @@ Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol 
 
 ### [Wireshark Assignments](https://github.com/ysyesilyurt/Metu-CENG/tree/master/435-wsa)
 
+## [CENG 443 Object Oriented Programming Languages and Systems](https://github.com/ysyesilyurt/Objecty)
+Contains implementations for several assignments in Java to comprehend OOP principles as well as many cool stuff in Java such as Java-8 Streams and Lambdas.
+
 ## [CENG 445 Software Engineering with Scripting Languages](https://github.com/simsekhalit/LogWatcher)
 ### [LogWatcher](https://github.com/simsekhalit/LogWatcher)
 Log Filtering tool which watches sources and filters them by user-given rules. Check [445-with-phases](https://github.com/ysyesilyurt/Metu-CENG/tree/master/445-with-phases) for separate phases of the project.
+
+## [CENG 477 Introduction to Computer Graphics](https://github.com/ysyesilyurt/ComputerGraphics)
+Contains implementations for Ray Tracing and FRP rendering algorithms; also an interactive fly-through rendering implementation is done with OpenGL and programmable shaders in C++ and GLSL. 
 
