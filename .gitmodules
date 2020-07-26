@@ -28,3 +28,9 @@
 [submodule "489/hw3"]
 	path = 489/hw3
 	url = git@github.com:ysyesilyurt/escalate-the-priviliges.git
+[submodule "49x/main"]
+	path = 49x/main
+	url = git@github.com:VipAssistant/VipAssistant.git
+[submodule "49x/backend"]
+	path = 49x/backend
+	url = git@github.com:VipAssistant/VipAssistant-Backend.git
