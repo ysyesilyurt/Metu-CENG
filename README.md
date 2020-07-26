@@ -1,8 +1,8 @@
-# Metu-CENG 2016-Present
+# Metu-CENG 2016-2020
 Clone with submodules (since some courses have their own repositories I've bound them as submodules of this root repository):
 `git clone --recursive git@github.com:ysyesilyurt/Metu-CENG.git`
 
-Alternatively, if you didn't used `--recursive` option while cloning, you can type:
+Alternatively, if you didn't use `--recursive` option while cloning, you can type:
 ```
 cd Metu-CENG
 git submodule init
@@ -79,6 +79,12 @@ An assignment for achieving familiarity with SQL through programming languages, 
 ### [Hw2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw2)
 A B+Tree implementation as homework, done in Java.
 
+## [CENG 352 Database Management Systems](https://github.com/ysyesilyurt/Metu-CENG/tree/master/352)
+### [Mini Projects](https://github.com/ysyesilyurt/Metu-CENG/tree/master/352/mini-projects)
+Contains implementations for 3 Mini Projects assigned during the course based on `PostgreSQL Databases`. Mainly about complex `SQL queries`, `Indexes`, `Triggers` and `Transaction` stuff done using [psycopg](https://www.psycopg.org/docs/).
+### [Written](https://github.com/ysyesilyurt/Metu-CENG/tree/master/352/written)
+Contains written solutions for 3 Written Homeworks assigned during the course. Keywords: `SQL queries`, `BCNF/Normalization`, `Functional Dependency`, `Assertion/Trigger`, `Indexing`, `Query Processing`, `Query Optimization`, `Transaction`, `Scheduler`, `Aries/Recovery`.
+
 ## [CENG 384 Signals and Systems for Computer Engineers](https://github.com/ysyesilyurt/Metu-CENG/tree/master/384)
 
 ## [IE 407 Fundamentals of Operational Research](https://github.com/ysyesilyurt/Metu-CENG/tree/master/407)
@@ -97,10 +103,27 @@ Specifically, a unique multihomed and pipelined Reliable Data Transfer Protocol 
 ## [CENG 443 Object Oriented Programming Languages and Systems](https://github.com/ysyesilyurt/Objecty)
 Contains implementations for several assignments in Java to comprehend OOP principles as well as many cool stuff in Java such as Java-8 Streams and Lambdas.
 
-## [CENG 445 Software Engineering with Scripting Languages](https://github.com/simsekhalit/LogWatcher)
+## [CENG 445 Software Engineering with Scripting Languages](https://github.com/simsekhalit/LogWatcher/tree/b655ab8b23567d0ff2b3fec2b9398122f19ccbfe)
 ### [LogWatcher](https://github.com/simsekhalit/LogWatcher)
 Log Filtering tool which watches sources and filters them by user-given rules. Check [445-with-phases](https://github.com/ysyesilyurt/Metu-CENG/tree/master/445-with-phases) for separate phases of the project.
+
+## [CENG 453 Software Construction](https://github.com/ysyesilyurt/CoronaKiller/tree/c05a8eed7c6baef36540c7dedef103aa77a3cc4b)
+### [CoronaKiller](https://github.com/ysyesilyurt/CoronaKiller)
+A complex (!), online and multiplayer 2D virus shooting game which lets you find your way up to the harsh levels and finally defeat the CoronaVirus King 🦠. A Containerized `Spring Boot` on the backend and a `JavaFX` application that is managed within another `Spring Boot` application context on the frontend has been implemented. Visit submodule for some detailed visuals, documentation, testing etc.  
 
 ## [CENG 477 Introduction to Computer Graphics](https://github.com/ysyesilyurt/ComputerGraphics)
 Contains implementations for Ray Tracing and FRP rendering algorithms; also an interactive fly-through rendering implementation is done with OpenGL and programmable shaders in C++ and GLSL. 
 
+## [CENG 489 Introduction to Computer Security](https://github.com/ysyesilyurt/Metu-CENG/tree/master/489)
+### [Smashing-RSA](https://github.com/ysyesilyurt/Smashing-RSA/tree/75bb2f59905b8747f5e729efbac4ac06bbe5685d)
+An attack to break (i.e. smash) RSA using different techniques such as `common modulus attack` and `power analysis` by `ptrace`
+
+### [virus.py](https://github.com/ysyesilyurt/virus.py/tree/af5a303f6bb479769904b0c816929bea74e943bd)
+A notorious virus to `hack` *covidiots* to stop them spreading [Covid-19](https://www.wikiwand.com/en/Coronavirus_disease_2019).
+
+### [Privilege Escalation](https://github.com/ysyesilyurt/escalate-the-priviliges/tree/3ec7e71efd8a42d93bf1372d7156722f0b074045)
+An attack to exploit a program running in the remote machine and escalate to root a shell?! 😈. Keywords: `privilege escalation`, `setuid`, `root access`, `stack-overflow` 
+
+## [CENG 49x Computer Engineering Design](https://github.com/ysyesilyurt/Metu-CENG/tree/master/49x)
+### [VipAssistant](https://github.com/VipAssistant)
+My senior year project repositories that is migrated from GitLab. Visit [here](https://github.com/VipAssistant/VipAssistant) for further information about VipAssistant© :blush: 
