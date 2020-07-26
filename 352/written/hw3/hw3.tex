@@ -1,0 +1,273 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{float}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+%\usepackage{a4wide}
+\usepackage{epsfig}
+\usepackage{fancybox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{latexsym}
+\usepackage{alltt}
+\usepackage{amssymb}
+\usepackage{amsmath,amsthm}
+\usepackage{bm}
+\usepackage{wasysym}
+
+%\usepackage{fullpage}
+%\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[hmargin=2cm,vmargin=3.0cm]{geometry}
+%\topmargin=0cm
+%\topmargin=-1.8cm
+%\addtolength{\textheight}{6.5cm}
+%\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-3cm}
+%\setlength{\oddsidemargin}{0.0cm}
+%\setlength{\evensidemargin}{0.0cm}
+
+%misc libraries goes here
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{automata,positioning}
+
+\usepackage{multicol}
+\usepackage{enumitem}
+
+\usepackage[most]{tcolorbox}
+
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
+
+
+\lstdefinestyle{customtex}{
+    %backgroundcolor=\color{lbcolor},
+    tabsize=2,
+    language=TeX,
+    numbers=none,
+    basicstyle=\footnotesize\ttfamily,
+    numberstyle=\footnotesize,
+    aboveskip={0.0\baselineskip},
+    belowskip={0.0\baselineskip},
+    %
+    columns=flexible,
+    keepspaces=true,
+    fontadjust=true,
+    upquote=true,
+    %
+    breaklines=true,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    %
+    %identifierstyle=\color[rgb]{0,0.2,0.8},
+    identifierstyle=\color[rgb]{0,0,0.5},
+    %identifierstyle=\color[rgb]{0.133,0.545,0.133},
+    %keywordstyle=\color[rgb]{0.8,0,0},
+    %keywordstyle=\color[rgb]{0.133,0.545,0.133},
+    keywordstyle=\color[rgb]{0,0,0.5},
+    %commentstyle=\color[rgb]{0.133,0.545,0.133},
+    commentstyle=\color[rgb]{0.545,0.545,0.545},
+    %stringstyle=\color[rgb]{0.827,0.627,0.133},
+    stringstyle=\color[rgb]{0.133,0.545,0.133},
+    %
+    literate={â}{{\^{a}}}1 {Â}{{\^{A}}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1 {ğ}{{\u{g}}}1 {Ğ}{{\u{G}}}1 {ı}{{\i}}1 {İ}{{\.{I}}}1   {ö}{{\"o}}1 {Ö}{{\"O}}1 {ş}{{\c{s}}}1 {Ş}{{\c{S}}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1 {~}{$\sim$}{1}
+}
+
+\lstdefinestyle{output}{
+    %backgroundcolor=\color{lbcolor},
+    tabsize=2,
+    numbers=none,
+    basicstyle=\footnotesize\ttfamily,
+    numberstyle=\footnotesize,
+    aboveskip={0.0\baselineskip},
+    belowskip={0.0\baselineskip},
+    %
+    columns=flexible,
+    keepspaces=true,
+    fontadjust=true,
+    upquote=true,
+    %
+    breaklines=true,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    %
+    %identifierstyle=\color[rgb]{0.44,0.12,0.1},
+    identifierstyle=\color[rgb]{0,0,0},
+    keywordstyle=\color[rgb]{0,0,0},
+    commentstyle=\color[rgb]{0,0,0},
+    stringstyle=\color[rgb]{0,0,0},
+    %
+    literate={â}{{\^{a}}}1 {Â}{{\^{A}}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1 {ğ}{{\u{g}}}1 {Ğ}{{\u{G}}}1 {ı}{{\i}}1 {İ}{{\.{I}}}1   {ö}{{\"o}}1 {Ö}{{\"O}}1 {ş}{{\c{s}}}1 {Ş}{{\c{S}}}1 {ü}{{\"u}}1 {Ü}{{\"U}}1
+}
+
+\lstset{style=customtex}
+
+
+\tikzset{%
+    terminal/.style={draw, rectangle,
+    				 align=center, 
+					 minimum height=1cm, 
+					 minimum width=2cm,
+					 fill=black!10,
+					 anchor=mid},
+    nonterminal/.style={draw, rectangle,
+    					align=left,
+					    minimum height=1cm, 
+						minimum width=2cm, 
+						anchor=mid},% and so on
+}
+
+%% Style for terminals
+%\tikzstyle{terminal}=[draw, rectangle, 
+%					  minimum height=1cm, 
+%					  minimum width=2cm, 
+%					  fill=black!20,
+%					  anchor=south west]
+%% Style for nonterminals
+%\tikzstyle{nonterminal}=[draw, rectangle, 
+%						 minimum height=1 cm, 
+%						 minimum width=2 cm, 
+%						 anchor=north east]
+
+
+\newcommand{\HRule}{\rule{\linewidth}{1mm}}
+\newcommand{\kutu}[2]{\framebox[#1mm]{\rule[-2mm]{0mm}{#2mm}}}
+\newcommand{\gap}{ \\[1mm] }
+
+\newcommand{\Q}{\raisebox{1.7pt}{$\scriptstyle\bigcirc$}}
+\newcommand{\minus}{\scalebox{0.35}[1.0]{$-$}}
+
+\setlength{\fboxsep}{10pt}
+
+\tcbsetforeverylayer{enhanced jigsaw, breakable, arc=0mm, boxrule=1pt, boxsep=5pt, after=\vspace{1em}, colback=white, colframe=black}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\setlength\parindent{0pt}
+
+%\renewcommand\arraystretch{1.2}
+
+\newenvironment{Tab}[1]
+  {\def\arraystretch{1}\tabular{#1}}
+  {\endtabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{CENG 352 - Database Management Systems \\ Written Assignment 3}
+\author{Yavuz Selim YESILYURT \\ 2259166} % write your name and id
+\date{31.05.2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\HRule\\
+Middle East Technical University \hfill Department of Computer Engineering
+{\let\newpage\relax\maketitle}
+\HRule\\
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Write your answers below the section tags
+\section{Q1}
+
+\paragraph{a)} We are asked if conflict serializability is guaranteed or not. To be able to determine this we have a number of options such as creating a precedence graph and checking if there is a cycle in it or not. But in the given schedules for transactions $T1$ and $T2$ we see that a locking/unlocking mechanism has been applied to schedule their working in parallel. So in that case we will look on to the types of schedulers (actually only to the pessimistic scheduler since we only have exclusive locks for the units here) and try to evaluate their conflict serializability by the locking style that is being used. Now we see that, in the schedule of these transactions, all lock requests precede all their corresponding unlock requests, which means this schedule obey $2PL$ rule and which also means conflict serializability is guaranteed here.
+
+\paragraph{b)} We can easily say that deadlock it possible here, because when you look to the schedules, you will see that first transaction grabs resource A's lock and requests resource B's lock without unlocking A's lock after 2 actions; second transaction on the contrary grabs resource B's lock and requests resource A's lock without unlocking B's lock after 1 action. This will potentially lead to deadlock situation for these to transactions. If we were to apply $wait-die$ deadlock prevention scheme and assume $T1$ starts first, $T2$ would be rolled back since in the $wait-die$ deadlock prevention scheme the older one transactions holds the lock, the greater its priority is, which will lead to $T1$'s having a greater priority than $T2$.
+
+\paragraph{c)} In part a, we deduced that this schedules obey the $2PL$ rule, but this not necessarily means they avoid cascading aborts. For this schedule to avoid cascading aborts it also needs to be $strict$. We see that, all locks held by both transactions are released when the they are completed, namely they release all the held locks at the time of their COMMITs. Therefore we can say that this schedule is not only $2PL$ but also it is $Strict 2PL$. So in that case we can say that this schedule avoids cascading rollbacks.
+
+\paragraph{d)} Now in the newly modified schedule, we see that lock and unlock actions' locations have been changed. Which may possibly lead to this schedule's no more obeying $2PL$ rule. But we can see that, still, in the schedule of these transactions, all lock requests precede all their corresponding unlock requests, which means this schedule still obey the $2PL$ rule and which also means conflict serializability is guaranteed here.
+
+\paragraph{e)} In here we can't say deadlock is possible anymore since in this time $T1$ grabs the lock of resource A and then after some actions again tries to grab the lock of resource B and actually will get the lock, because  $T2$ now does not grab the lock of resource B at first, instead it requests lock of resource $A$ which it will be rejected for, since $T1$ would be having that lock already. So everything is going to work smoothly, first $T1$ will finish and then $T2$ will finish.
+
+\paragraph{f)} In this newly modified schedule, we need to check that if it still obeys $2PL$ "$Strictly$". For this we check the unlocks times of the the transactions. We see that they do not release their locks at the time of their COMMITs, namely they release some of their locks (resource A's) before they finish their all actions which spoils the $Strict 2PL$ rule. So in that case we can't say that this schedule avoids cascading rollbacks. If we assume $T2$ starts first, such a scenario would result in a cascading rollback of the actions since $T1$ reads an uncommitted data at the time of \textit{R1(A)} and if $T2$ aborts $T1$ needs to abort, too: \\
+\begin{center}
+X2(A) X2(B) R2(B) R2(A) W2(A) U2(A) X1(A) \textbf{R1(A)} W1(A) W2(B) U2(B) X1(B) U1(A) R1(B) W1(B) U1(B)
+\end{center}
+and if we assume $T1$ starts first, such a scenario would result in a cascading rollback of the actions since $T2$ reads an uncommitted data at the time of \textit{R2(B)} and if $T1$ aborts $T2$ needs to abort, too: \\
+\begin{center}
+X1(A) R1(A) W1(A) X1(B) U1(A) X2(A) R1(B) W1(B) U1(B) X2(B) \textbf{R2(B)} R2(A) W2(A) U2(A) W2(B) U2(B)    
+\end{center}
+\newpage
+\section{Q2}
+
+\paragraph{a)} 
+
+\begin{itemize}
+    \item We have $TS(T1)=1$, $TS(T2)=2$, $TS(T3)=3$. \\
+    \includegraphics[scale=0.5]{1.png} \\
+    $w1(A)$ gets rejected since $RTS$ of $A$ has a value of 3 which is greater than $TS(T1)$ which is 1. Therefore this action results in Rollback of $T1$. Then $c1$ operation gets rejected because transaction $T1$ has already been aborted. The other operations are accepted and executed (except $w2(B)$, it results in Ignore Write because it triggers the Thomas Write Rule due to commit bit’s being True and $WTS$’s being greater than $TS(T2)$) without any problems.
+    \newpage
+    \item We have $TS(T1)=2$, $TS(T2)=3$, $TS(T3)=1$. \\
+    \includegraphics[scale=0.5]{2.png} \\
+    $w3(B)$ gets rejected since $RTS$ of $B$ has a value of 3 which is greater than $TS(T3)$ which is 1. Therefore this action results in Rollback of $T3$. Then $w3(C)$ and $c(3)$ operations get rejected because transaction $T3$ has already been aborted. The other operations are accepted and executed without any problems.
+\end{itemize}
+
+\paragraph{b)} $Commit$ bit is crucial for timestamp-based scheduler to have (or ensure) \textbf{Recoverable} Schedules. We use it to check if the transaction that last wrote to a resource $X$ has committed or not. We do this by adding an additional if check to both writing and reading procedures of transactions in TS-based Scheduler. Transaction checks if the commit bit of resource to write/read is $false$ or not and if it is, transaction gets delayed until commit bit gets $true$. If do not use the commit bit in TS-based scheduler, we would not have schedules that are both recoverable and avoid cascading aborts.
+
+\newpage
+\section{Q3}
+
+\paragraph{a)} So just before the system crash we have the following content in our: \\
+\begin{itemize}
+    \item Write-Ahead-Log ($WAL$) Table: \\
+        \includegraphics[scale=0.6]{31.png} \\
+    \item Active Transaction ($XACT$) Table: \\
+        \includegraphics[scale=0.5]{32.png} \\
+    \item Dirty Page ($DPT$) Table: \\
+        \includegraphics[scale=0.5]{33.png} \\
+\end{itemize}
+In the pages of our memory we have:
+\begin{itemize}
+    \item P1:
+    \begin{itemize}
+        \item Data item $A$ has the latest value after $T4$’s update action ($LSN=11$),
+        \item Data item $B$ has the latest value after $T3$’s update action ($LSN=12$),
+        \item $pageLSN=12$ 
+    \end{itemize}
+    \newpage
+    \item P2:
+    \begin{itemize}
+        \item Data item $C$'s value hasn’t been changed so its value remains as the same,
+        \item Data item $D$ has the latest value after $T3$’s update action ($LSN=8$),
+        \item $pageLSN=8$ 
+    \end{itemize}
+\end{itemize}
+
+\paragraph{b)}
+Since we know that $T4$ has committed before the system crash, we do not have any problems with having the accumulated log pages in the disk. Therefore our Active Transaction Table ($XACT$) and Dirty Page Table ($DPT$) remains the same as in part a.
+\paragraph{c)}
+To determine at which $LSN$, Aries Recovery Manager’s Redo Phase starts, we check the smallest $recLSN$ in the $DPT$. We see that it is 1. Therefore starting from the log entry with $LSN=1$ we will only redo the actions specified by the $log$ $entry$ in $WAL$ that is either:
+\begin{itemize}
+    \item Has its page listed in $DPT$,
+    \item Has its $LSN$ smaller than the $recLSN$ (which is determined as 1 in above),
+    \item Has its $LSN$ smaller than or equal to $pageLSN$ that is read from the disk.
+\end{itemize}
+Therefore according to those we are going to redo the following changes with $LSN$ 5, 6, 8, 9, 11 and 12. In the pages of our memory at the end of the Redo Phase we have:
+\begin{itemize}
+    \item P1:
+    \begin{itemize}
+        \item Data item $A$ has the latest value after $T4$’s update action ($LSN=11$),
+        \item Data item $B$ has the latest value after $T3$’s update action ($LSN=12$),
+        \item $pageLSN=12$ 
+    \end{itemize}
+    \item P2:
+    \begin{itemize}
+        \item Data item $C$'s value hasn’t been changed so its value remains as the same,
+        \item Data item $D$ has the latest value after $T3$’s update action ($LSN=8$),
+        \item $pageLSN=8$ 
+    \end{itemize}
+\end{itemize}
+\end{document}

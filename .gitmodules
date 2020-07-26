@@ -16,3 +16,15 @@
 [submodule "443"]
 	path = 443
 	url = git@github.com:ysyesilyurt/Objecty.git
+[submodule "453"]
+	path = 453
+	url = git@github.com:ysyesilyurt/CoronaKiller.git
+[submodule "489/hw1"]
+	path = 489/hw1
+	url = git@github.com:ysyesilyurt/Smashing-RSA.git
+[submodule "489/hw2"]
+	path = 489/hw2
+	url = git@github.com:ysyesilyurt/virus.py.git
+[submodule "489/hw3"]
+	path = 489/hw3
+	url = git@github.com:ysyesilyurt/escalate-the-priviliges.git
