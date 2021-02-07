@@ -2,7 +2,7 @@
 Clone with submodules (since some courses have their own repositories I've bound them as submodules of this root repository):
 `git clone --recursive git@github.com:ysyesilyurt/Metu-CENG.git`
 
-Alternatively, if you didn't use `--recursive` option while cloning, you can type:
+Alternatively, if you didn't use `--recursive` option while cloning, you can use:
 ```
 cd Metu-CENG
 git submodule init
@@ -26,12 +26,12 @@ Implementations of several data structures with various scenarios, written in C+
 Some verilog stuff
 
 ## [CENG 242 Programming Language Concepts](https://github.com/ysyesilyurt/Metu-CENG/tree/master/242)
-Many tasks done in prolog, haskell, and C++ to understand concepts in different programming languages.
+Many tasks done using prolog, haskell, and C++ to understand concepts in different programming languages.
 
 ## [CENG 280 Formal Languages and Abstract Machines](https://github.com/ysyesilyurt/Metu-CENG/tree/master/280)
 
 ## [CENG 315 Algorithms](https://github.com/ysyesilyurt/Metu-CENG/tree/master/315)
-Contains a solution for an advanced graph algorithm, written in C++
+Contains a solution for an advanced graph algorithm, implemented using C++
 
 ## [CENG 331 Computer Organization](https://github.com/ysyesilyurt/Metu-CENG/tree/master/331)
 ### [Bomb Lab](https://github.com/ysyesilyurt/Metu-CENG/tree/master/331/bomb)
@@ -75,9 +75,9 @@ A maze-runner-robot simulation/RTOS project which aims to practice necessities o
 
 ## [CENG 351 Data Management and File Structures](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351)
 ### [Hw1](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw1)
-An assignment for achieving familiarity with SQL through programming languages, implementation done in Java.
+An assignment for achieving familiarity with SQL through programming languages, implementation done using Java.
 ### [Hw2](https://github.com/ysyesilyurt/Metu-CENG/tree/master/351/hw2)
-A B+Tree implementation as homework, done in Java.
+A B+Tree implementation as homework, done using Java.
 
 ## [CENG 352 Database Management Systems](https://github.com/ysyesilyurt/Metu-CENG/tree/master/352)
 ### [Mini Projects](https://github.com/ysyesilyurt/Metu-CENG/tree/master/352/mini-projects)
@@ -112,7 +112,7 @@ Log Filtering tool which watches sources and filters them by user-given rules. C
 A complex (!), online and multiplayer 2D virus shooting game which lets you find your way up to the harsh levels and finally defeat the CoronaVirus King 🦠. A Containerized `Spring Boot` on the backend and a `JavaFX` application that is managed within another `Spring Boot` application context on the frontend has been implemented. Visit submodule for some detailed visuals, documentation, testing etc.  
 
 ## [CENG 477 Introduction to Computer Graphics](https://github.com/ysyesilyurt/ComputerGraphics)
-Contains implementations for Ray Tracing and FRP rendering algorithms; also an interactive fly-through rendering implementation is done with OpenGL and programmable shaders in C++ and GLSL. 
+Contains implementations for Ray Tracing and FRP rendering algorithms; also an interactive fly-through rendering implementation is done using OpenGL and programmable shaders in C++ and GLSL. 
 
 ## [CENG 489 Introduction to Computer Security](https://github.com/ysyesilyurt/Metu-CENG/tree/master/489)
 ### [Smashing-RSA](https://github.com/ysyesilyurt/Smashing-RSA/tree/75bb2f59905b8747f5e729efbac4ac06bbe5685d)
